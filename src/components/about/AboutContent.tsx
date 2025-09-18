@@ -55,7 +55,7 @@ export default function AboutContent() {
             </div>
             <div>
               <p className="text-md text-black font-bold leading-relaxed">
-                At Freshly Baked, we approach design and branding as a unified process. We recognize that a successful brand isn't just about aesthetics—it's about creating a cohesive experience that's thoughtfully crafted. It's implemented seamlessly across every touchpoint. That's why we bring together a team of multidisciplinary experts who collaborate from concept to execution, ensuring alignment between strategy, design, and delivery. Our holistic methodology eliminates the disconnects often found in traditional workflows. By merging creativity with precision, we ensure that every element—whether visual, digital, or experiential—embodies your brand's vision and purpose.
+                At Freshly Baked, we approach design and branding as a unified process. We recognize that a successful brand isn&lsquo;t just about aesthetics—it&apos;s about creating a cohesive experience that&apos;s thoughtfully crafted. It&#39;s implemented seamlessly across every touchpoint. That&apos;s why we bring together a team of multidisciplinary experts who collaborate from concept to execution, ensuring alignment between strategy, design, and delivery. Our holistic methodology eliminates the disconnects often found in traditional workflows. By merging creativity with precision, we ensure that every element—whether visual, digital, or experiential—embodies your brand&apos;s vision and purpose.
               </p>
             </div>
           </div>
@@ -89,14 +89,6 @@ export default function AboutContent() {
           </div>
         </div>
       </div>
-
-
-
-
-      {/* Founder Testimonial Section - Full Width */}
-    
-
-      {/* Product Slider Section */}
    
     </section>
   );

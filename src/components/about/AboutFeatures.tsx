@@ -7,7 +7,7 @@ export default function AboutFeatures() {
             Why Choose EXCLAIM
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            We're committed to delivering excellence in every aspect of our business.
+            We&lsquo;re committed to delivering excellence in every aspect of our business.
           </p>
         </div>
 

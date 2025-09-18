@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '../../components/Navbar';

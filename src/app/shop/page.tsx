@@ -1,14 +1,8 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import HowProductFeels from '../../components/HowProductFeels';
-import Features from '../../components/Features';
-import FAQ from '../../components/FAQ';
-import Blogs from '../../components/Blogs';
-import Contact from '../../components/Contact';
 import Image from 'next/image';
 import SizeChart from '@/components/SizeChart';
 import Process from '@/components/Process';
-import ProductGrid from '@/components/ProductGrid';
 import RelevantProducts from '@/components/RelevantProducts';
 import Link from 'next/link';
 

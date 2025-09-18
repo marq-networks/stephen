@@ -83,41 +83,72 @@ export default function BlogPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {blogPosts.map((post, index) => {
-              const BlogCard = post.slug ? Link : 'article';
-              const cardProps = post.slug ? { href: `/blog/${post.slug}` } : {};
-
-              return (
-                <BlogCard
-                  key={post.id}
-                  {...cardProps}
-                  className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group block ${index === 0 ? 'md:col-span-2 lg:row-span-2' : ''
-                    }`}
-                >
-                  <div className={`bg-gray-200 relative overflow-hidden ${index === 0 ? 'aspect-[2/1] md:aspect-[4/3]' : 'aspect-[4/3]'
-                    }`}>
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className={`p-6 ${index === 0 ? 'md:p-8' : ''}`}>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide mb-2">
-                      {post.category}
-                    </div>
-                    <h3 className={`font-semibold text-black mb-2 leading-tight group-hover:text-orange-500 transition-colors duration-200 ${index === 0 ? 'text-xl md:text-2xl' : 'text-lg'
+              if (post.slug) {
+                return (
+                  <Link
+                    key={post.id}
+                    href={`/blog/${post.slug}`}
+                    className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group block ${index === 0 ? 'md:col-span-2 lg:row-span-2' : ''
+                      }`}
+                  >
+                    <div className={`bg-gray-200 relative overflow-hidden ${index === 0 ? 'aspect-[2/1] md:aspect-[4/3]' : 'aspect-[4/3]'
                       }`}>
-                      {post.title}
-                    </h3>
-                    {index === 0 && (
-                      <p className="text-gray-600 text-sm mt-3 hidden md:block">
-                        Discover the latest design trends shaping the digital world and how they impact business.
-                      </p>
-                    )}
-                  </div>
-                </BlogCard>
-              );
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className={`p-6 ${index === 0 ? 'md:p-8' : ''}`}>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+                        {post.category}
+                      </div>
+                      <h3 className={`font-semibold text-black mb-2 leading-tight group-hover:text-orange-500 transition-colors duration-200 ${index === 0 ? 'text-xl md:text-2xl' : 'text-lg'
+                        }`}>
+                        {post.title}
+                      </h3>
+                      {index === 0 && (
+                        <p className="text-gray-600 text-sm mt-3 hidden md:block">
+                          Discover the latest design trends shaping the digital world and how they impact business.
+                        </p>
+                      )}
+                    </div>
+                  </Link>
+                );
+              } else {
+                return (
+                  <article
+                    key={post.id}
+                    className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group block ${index === 0 ? 'md:col-span-2 lg:row-span-2' : ''
+                      }`}
+                  >
+                    <div className={`bg-gray-200 relative overflow-hidden ${index === 0 ? 'aspect-[2/1] md:aspect-[4/3]' : 'aspect-[4/3]'
+                      }`}>
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className={`p-6 ${index === 0 ? 'md:p-8' : ''}`}>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+                        {post.category}
+                      </div>
+                      <h3 className={`font-semibold text-black mb-2 leading-tight group-hover:text-orange-500 transition-colors duration-200 ${index === 0 ? 'text-xl md:text-2xl' : 'text-lg'
+                        }`}>
+                        {post.title}
+                      </h3>
+                      {index === 0 && (
+                        <p className="text-gray-600 text-sm mt-3 hidden md:block">
+                          Discover the latest design trends shaping the digital world and how they impact business.
+                        </p>
+                      )}
+                    </div>
+                  </article>
+                );
+              }
             })}
           </div>
 

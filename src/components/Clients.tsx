@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import { useState } from 'react';
 
@@ -43,7 +44,6 @@ export default function Clients() {
   const currentTestimonial = testimonials[currentSlide];
   
   // Simple dots for client logos
-  const clientDots = Array(6).fill(null);
 
   return (
     <section className="py-20 px-6 bg-white">
@@ -53,7 +53,7 @@ export default function Clients() {
           <div className="flex flex-col justify-start">
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">Clients</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Real words from the people we've partnered with — honest feedback, lasting impact.
+              Real words from the people we&apos;ve partnered with — honest feedback, lasting impact.
             </p>
           </div>
 

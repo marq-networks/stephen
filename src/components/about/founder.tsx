@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
 const Founder = () => {
@@ -19,7 +20,7 @@ const Founder = () => {
                         <h3 className="text-2xl font-bold text-black">The Founder</h3>
 
                         <blockquote className="text-xl font-bold text-black leading-relaxed">
-                            "The closest thing to having an in-house design team without actually hiring one"
+                            &quot;The closest thing to having an in-house design team without actually hiring one&ldquo;
                         </blockquote>
 
                         <p className="text-sm text-black font-light leading-relaxed">

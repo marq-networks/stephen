@@ -127,13 +127,13 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                     At Freshly Baked, our priorities partnership over the traditional client-agency dynamic. We integrate seamlessly with your team, working together to bring your vision to life. By immersing ourselves in your business, we uncover the values, ambitions, and audience that define your brand. Through open dialogue and close collaboration, we cultivate trust, transparency, and a shared sense of purpose—key ingredients for every successful project.
                   </p>
                   <p>
-                    <strong>Process.</strong> We recognize that a successful brand isn't just beautifully crafted; it's implemented seamlessly across every touchpoint. That's why we bring together a team of multidisciplinary experts who.
+                    <strong>Process.</strong> We recognize that a successful brand isn&lsquo;t just beautifully crafted; it&lsquo;s implemented seamlessly across every touchpoint. That&lsquo;s why we bring together a team of multidisciplinary experts who.
                   </p>
                   <p>
                     At Freshly Baked, our priorities partnership over the traditional client-agency dynamic. We integrate seamlessly with your team, working together to bring your vision to life. By immersing ourselves in your business, we uncover the values, ambitions, and audience that define your brand. Through open dialogue and close collaboration, we cultivate trust, transparency, and a shared sense of purpose—key ingredients for every successful project.
                   </p>
                   <p>
-                    <strong>Process.</strong> We recognize that a successful brand isn't just beautifully crafted; it's implemented seamlessly across every touchpoint. That's why we bring together a team of multidisciplinary experts who.
+                    <strong>Process.</strong> We recognize that a successful brand isn&lsquo;t just beautifully crafted; it&lsquo;s implemented seamlessly across every touchpoint. That&lsquo;s why we bring together a team of multidisciplinary experts who.
                   </p>
                 </div>
               </div>

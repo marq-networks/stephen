@@ -1,12 +1,6 @@
 import Navbar from '../../components/Navbar';
 import AboutHero from '../../components/about/AboutHero';
 import AboutContent from '../../components/about/AboutContent';
-import AboutProducts from '../../components/about/AboutProducts';
-import AboutFeatures from '../../components/about/AboutFeatures';
-import Clients from '../../components/Clients';
-import FAQ from '../../components/FAQ';
-import Blogs from '../../components/Blogs';
-import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
 import Founder from '@/components/about/founder';
 
