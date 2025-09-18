@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ProductShowcase() {
   return (
-    <section className="bg-gray-100  py-20 rounded-2xl mt-8">
+    <section className="bg-gray-100  py-20 rounded-2xl">
       <div className="max-w-6xl mx-auto px-6 ">
         {/* Main Description */}
         <div className="text-center mb-16 py-20">

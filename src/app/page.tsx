@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <div className="bg-white my-8 rounded-2xl">
+      <div className="bg-white mb-8 rounded-2xl">
         <ProductShowcase />
       </div>
 
