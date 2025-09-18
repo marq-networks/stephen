@@ -21,7 +21,7 @@ export default function Contact() {
           <div className="flex justify-between flex-col">
             <div>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                Let's talk<br />shop
+                Let&apos;s talk<br />shop
               </h2>
             </div>
             

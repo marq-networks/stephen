@@ -1,7 +1,8 @@
 "use client";
 
 import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
-import React, { useEffect, useState } from "react";
+import React from "react";
+// Removed: { useEffect, useState }
 
 export function InfiniteMovingFooter() {
   return (

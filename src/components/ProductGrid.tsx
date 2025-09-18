@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// Removed: import Image from 'next/image';
 
 const ProductGrid = () => {
   return (

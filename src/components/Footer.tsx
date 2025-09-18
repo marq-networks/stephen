@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { InfiniteMovingFooter } from './common/infiniteMovingFooter';
+// Removed: import { InfiniteMovingFooter } from './common/infiniteMovingFooter';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
