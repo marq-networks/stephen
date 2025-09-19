@@ -45,8 +45,9 @@ const Process = () => {
             <Image
               src="/one.png"
               alt="Life is Beautiful T-shirt - Male Model"
-              fill
-              className="o"
+              width={200}
+              height={240}
+              className="w-full"
             />
           </div>
           
@@ -55,8 +56,9 @@ const Process = () => {
             <Image
               src="/2.png"
               alt="Life is Beautiful T-shirt - Female Model"
-              fill
-              className=" "
+              width={200}
+              height={240}
+              className="w-full"
             />
           </div>
           
@@ -65,8 +67,9 @@ const Process = () => {
             <Image
               src="/3.png"
               alt="Life is Beautiful T-shirt - Female Model Side View"
-              fill
-              className=""
+               width={200}
+              height={240}
+              className="w-full"
             />
           </div>
           
@@ -75,8 +78,9 @@ const Process = () => {
             <Image
               src="/4.png"
               alt="Life is Beautiful T-shirt - Detail View"
-              fill
-              className=""
+              width={200}
+              height={240}
+              className="w-full"
             />
           </div>
         </div>
