@@ -1,14 +1,27 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      setScrolled(scrollPercentage > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.nav 
-      className="sticky top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md text-white px-6 py-6 border-b border-gray-800/50"
+      className={`sticky top-0 left-0 right-0 z-50 text-white px-6 py-6 transition-colors duration-300 ${
+        scrolled ? 'bg-black' : 'bg-transparent'
+      }`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -22,6 +35,7 @@ export default function Navbar() {
           transition={{ duration: 0.8, delay: 0.2, staggerChildren: 0.1 }}
         >
           {[
+            { href: "/", label: "Home" },
             { href: "/about", label: "About" },
             { href: "/shop", label: "Shop" },
             { href: "/blog", label: "Blogs" },
@@ -89,6 +103,7 @@ export default function Navbar() {
                 transition={{ duration: 0.3, delay: 0.1, staggerChildren: 0.05 }}
               >
                 {[
+                  { href: "/", label: "Home" },
                   { href: "/about", label: "About" },
                   { href: "/shop", label: "Shop" },
                   { href: "/blog", label: "Blogs" },
