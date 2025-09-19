@@ -5,6 +5,7 @@ import SizeChart from '@/components/SizeChart';
 import Process from '@/components/Process';
 import RelevantProducts from '@/components/RelevantProducts';
 import Link from 'next/link';
+import ShopHeroSection from '@/components/ShopHeroSection';
 
 export default function Shop() {
     return (
@@ -12,61 +13,7 @@ export default function Shop() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative text-white min-h-screen flex items-center justify-start p-4 overflow-hidden">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/productherobg.png"
-                        alt="Shop Hero Background"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                </div>
-                {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-black/40 z-1"></div>
-
-                {/* Main Shop heading */}
-                <div className="relative z-10 text-center">
-                    <h2 className="text-6xl lg:text-8xl font-bold">
-                        Shop.
-                    </h2>
-                </div>
-            </section>
-            <div className="bg-[#F5F5F5] my-4 rounded-2xl">
-                <section className="text-black py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-                            {/* Left Text */}
-                            <div className="text-left">
-                                <p className="text-lg font-bold leading-relaxed text-black">
-                                    We create brands and experiences that cut through the noise, promote style and, above all, endure.
-                                </p>
-                            </div>
-
-                            {/* Center - Product Image */}
-                            <div className="flex justify-center relative">
-                                <div className="relative -mt-32 z-20">
-                                    <Image
-                                        src="/shopbg.png"
-                                        alt="THE WHETHER IS IN U. T-shirt"
-                                        width={1000}
-                                        height={1000}
-                                        className="rounded-lg w-[1000px] drop-shadow-2xl"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Right Text */}
-                            <div className="text-right">
-                                <p className="text-lg font-bold leading-relaxed text-black">
-                                    We create brands and experiences that cut through the noise, promote style and, above all, endure.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <ShopHeroSection />
 
 
             {/* Product Selection Section */}
