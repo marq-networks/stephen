@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      className="absolute top-0 left-0 right-0 z-50 bg-transparent text-white px-6 py-6"
+      className="sticky top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md text-white px-6 py-6 border-b border-gray-800/50"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
