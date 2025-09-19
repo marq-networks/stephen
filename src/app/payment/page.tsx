@@ -27,22 +27,8 @@ export default function PaymentPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Payment submitted:', formData);
-    
-    // Simulate payment processing
-    if (paymentMethod === 'card') {
-      // Validate card form
-      if (!formData.email || !formData.cardNumber || !formData.expiryDate || !formData.cvv || !formData.cardName) {
-        alert('Please fill in all required fields');
-        return;
-      }
-    }
-    
-    // Show success message and redirect
-    alert('Payment processed successfully! Thank you for your order.');
-    
-    // For now, redirect to shop page
-    window.location.href = '/shop';
+    // Handle payment submission
+    // Redirect to success page or show confirmation
   };
   
   return (

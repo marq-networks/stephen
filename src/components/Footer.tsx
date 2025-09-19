@@ -20,10 +20,13 @@ export default function Footer() {
     return () => clearInterval(id);
   }, [slides.length]);
 
-  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Subscribing email:', email);
-    setEmail('');
+  const handleSubscribe = (e: React.FormEvent) => {
+      e.preventDefault();
+      if (email) {
+          // Handle newsletter subscription
+          setEmail('');
+          // Show success message
+      }
   };
 
   return (

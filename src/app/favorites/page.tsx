@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,7 +22,7 @@ const cardVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" }
   },
   exit: {
     scale: 0.8,
@@ -32,6 +32,7 @@ const cardVariants = {
 };
 
 export default function FavoritesPage() {
+  const [mounted, setMounted] = useState(false);
   const [favorites, setFavorites] = useState([
     {
       id: 1,
@@ -71,9 +72,16 @@ export default function FavoritesPage() {
 
   const moveToCart = (id: number) => {
     // In a real app, this would add to cart and remove from favorites
-    console.log(`Moving item ${id} to cart`);
     removeFavorite(id);
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // Prevent hydration mismatch
+  }
 
   return (
     <motion.div 

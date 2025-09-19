@@ -53,10 +53,10 @@ export default function ShippingPage() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Shipping info submitted:', formData);
-    // Handle form submission
-  };
+        e.preventDefault();
+        // Handle shipping form submission
+        // Redirect to payment or show confirmation
+    };
 
   return (
     <div className="min-h-screen bg-[#171717]">
