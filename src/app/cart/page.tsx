@@ -32,12 +32,17 @@ const itemVariants = {
   visible: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut",
+      // Custom transition properties can be added here
+     }
   },
   exit: {
     x: 100,
     opacity: 0,
-    transition: { duration: 0.3 }
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    }
   }
 };
 
@@ -67,7 +72,7 @@ export default function CartPage() {
     if (newQuantity === 0) {
       setCartItems(cartItems.filter(item => item.id !== id));
     } else {
-      setCartItems(cartItems.map(item => 
+      setCartItems(cartItems.map(item =>
         item.id === id ? { ...item, quantity: newQuantity } : item
       ));
     }
@@ -83,18 +88,18 @@ export default function CartPage() {
   const total = subtotal + shipping + tax;
 
   return (
-    <motion.div 
+    <motion.div
       className="min-h-screen bg-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -109,9 +114,9 @@ export default function CartPage() {
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </motion.div>
-        
+
         {/* Content */}
-        <motion.div 
+        <motion.div
           className="relative z-10 text-center text-white px-6"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -124,7 +129,7 @@ export default function CartPage() {
         </motion.div>
       </section>
 
-      <motion.div 
+      <motion.div
         className="bg-white my-4 rounded-2xl py-16 px-6"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -133,7 +138,7 @@ export default function CartPage() {
       >
         <div className="max-w-6xl mx-auto">
           {cartItems.length === 0 ? (
-            <motion.div 
+            <motion.div
               className="text-center py-20"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -142,8 +147,8 @@ export default function CartPage() {
               <div className="text-6xl mb-6">🛒</div>
               <h2 className="text-2xl font-bold text-black mb-4">Your cart is empty</h2>
               <p className="text-gray-600 mb-8">Add some items to get started</p>
-              <Link 
-                href="/shop" 
+              <Link
+                href="/shop"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
               >
                 Continue Shopping
@@ -153,7 +158,7 @@ export default function CartPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Cart Items */}
               <div className="lg:col-span-2">
-                <motion.div 
+                <motion.div
                   className="space-y-6"
                   variants={containerVariants}
                   initial="hidden"
@@ -161,8 +166,8 @@ export default function CartPage() {
                 >
                   <AnimatePresence>
                     {cartItems.map((item) => (
-                      <motion.div 
-                        key={item.id} 
+                      <motion.div
+                        key={item.id}
                         className="bg-white rounded-2xl p-6 shadow-sm"
                         variants={itemVariants}
                         layout
@@ -170,7 +175,7 @@ export default function CartPage() {
                         exit="exit"
                       >
                         <div className="flex items-center space-x-6">
-                          <motion.div 
+                          <motion.div
                             className="w-24 h-24 bg-gray-200 rounded-xl overflow-hidden flex-shrink-0"
                             whileHover={{ scale: 1.1 }}
                           >
@@ -182,7 +187,7 @@ export default function CartPage() {
                               className="object-cover w-full h-full"
                             />
                           </motion.div>
-                          
+
                           <div className="flex-1">
                             <h3 className="font-semibold text-black mb-1">{item.name}</h3>
                             <div className="text-sm text-gray-500 mb-2">
@@ -192,7 +197,7 @@ export default function CartPage() {
                               ${item.price}
                             </div>
                           </div>
-                          
+
                           <div className="flex items-center space-x-3">
                             <motion.button
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
@@ -212,7 +217,7 @@ export default function CartPage() {
                               +
                             </motion.button>
                           </div>
-                          
+
                           <motion.button
                             onClick={() => removeItem(item.id)}
                             className="p-2 text-gray-400 hover:text-red-500 transition-colors"
@@ -229,9 +234,9 @@ export default function CartPage() {
                   </AnimatePresence>
                 </motion.div>
               </div>
-              
+
               {/* Order Summary */}
-              <motion.div 
+              <motion.div
                 className="lg:col-span-1"
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -239,7 +244,7 @@ export default function CartPage() {
               >
                 <div className="bg-white rounded-2xl p-6 shadow-sm sticky top-8">
                   <h2 className="text-xl font-bold text-black mb-6">Order Summary</h2>
-                  
+
                   <div className="space-y-4 mb-6">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Subtotal</span>
@@ -262,9 +267,9 @@ export default function CartPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {shipping > 0 && (
-                    <motion.div 
+                    <motion.div
                       className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6"
                       initial={{ scale: 0.9, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
@@ -275,7 +280,7 @@ export default function CartPage() {
                       </p>
                     </motion.div>
                   )}
-                  
+
                   <Link
                     href="/shipping"
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
@@ -288,7 +293,7 @@ export default function CartPage() {
                       Proceed to Checkout
                     </motion.span>
                   </Link>
-                  
+
                   <Link
                     href="/shop"
                     className="w-full border border-gray-300 hover:border-orange-500 text-black py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center mt-3"
@@ -307,7 +312,7 @@ export default function CartPage() {
           )}
         </div>
       </motion.div>
-      
+
       <Footer />
     </motion.div>
   );
