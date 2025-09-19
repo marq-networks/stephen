@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 interface CartItem {
   id: number;
@@ -16,7 +16,7 @@ interface CartItem {
   quantity: number;
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -27,17 +27,17 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { x: -50, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.5 }
+    transition: { duration: 0.5, ease: "easeOut" }
   },
   exit: {
     x: 100,
     opacity: 0,
-    transition: { duration: 0.3 }
+    transition: { duration: 0.3, ease: "easeIn" }
   }
 };
 
