@@ -1,10 +1,17 @@
+'use client';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function AboutHero() {
   return (
     <section className="relative text-white min-h-screen flex items-center justify-start p-4 overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <motion.div 
+        className="absolute inset-0 z-0"
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
         <Image
           src="/aboutherobg.png"
           alt="About Hero Background"
@@ -12,17 +19,27 @@ export default function AboutHero() {
           className="object-cover"
           priority
         />
-      </div>
+      </motion.div>
+      
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40 z-1"></div>
-    
+      <motion.div 
+        className="absolute inset-0 bg-black/40 z-1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      />
 
       {/* Main About Us heading */}
-      <div className="relative z-10 text-left">
+      <motion.div 
+        className="relative z-10 text-left"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
         <h2 className="text-6xl lg:text-8xl font-bold">
           About Us.
         </h2>
-      </div>
+      </motion.div>
     </section>
   );
 }

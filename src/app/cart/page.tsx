@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface CartItem {
   id: number;
@@ -14,6 +15,31 @@ interface CartItem {
   color: string;
   quantity: number;
 }
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { x: -50, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" }
+  },
+  exit: {
+    x: 100,
+    opacity: 0,
+    transition: { duration: 0.3 }
+  }
+};
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([
@@ -57,13 +83,23 @@ export default function CartPage() {
   const total = subtotal + shipping + tax;
 
   return (
-    <div className="min-h-screen bg-black">
+    <motion.div 
+      className="min-h-screen bg-black"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Navbar />
       
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0">
+        <motion.div 
+          className="absolute inset-0"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <Image
             src="/blogs.png"
             alt="Background"
@@ -72,21 +108,37 @@ export default function CartPage() {
             priority
           />
           <div className="absolute inset-0 bg-black/50"></div>
-        </div>
+        </motion.div>
         
         {/* Content */}
-        <div className="relative z-10 text-center text-white px-6">
+        <motion.div 
+          className="relative z-10 text-center text-white px-6"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Shopping Cart.</h1>
           <p className="text-xl md:text-2xl opacity-90">
             {cartItems.length} {cartItems.length === 1 ? 'item' : 'items'} in your cart
           </p>
-        </div>
+        </motion.div>
       </section>
 
-      <div className="bg-white  my-4 rounded-2xl py-16 px-6">
+      <motion.div 
+        className="bg-white my-4 rounded-2xl py-16 px-6"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-6xl mx-auto">
           {cartItems.length === 0 ? (
-            <div className="text-center py-20">
+            <motion.div 
+              className="text-center py-20"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
               <div className="text-6xl mb-6">🛒</div>
               <h2 className="text-2xl font-bold text-black mb-4">Your cart is empty</h2>
               <p className="text-gray-600 mb-8">Add some items to get started</p>
@@ -96,67 +148,95 @@ export default function CartPage() {
               >
                 Continue Shopping
               </Link>
-            </div>
+            </motion.div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Cart Items */}
               <div className="lg:col-span-2">
-                <div className="space-y-6">
-                  {cartItems.map((item) => (
-                    <div key={item.id} className="bg-white rounded-2xl p-6 shadow-sm">
-                      <div className="flex items-center space-x-6">
-                        <div className="w-24 h-24 bg-gray-200 rounded-xl overflow-hidden flex-shrink-0">
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            width={96}
-                            height={96}
-                            className="object-cover w-full h-full"
-                          />
-                        </div>
-                        
-                        <div className="flex-1">
-                          <h3 className="font-semibold text-black mb-1">{item.name}</h3>
-                          <div className="text-sm text-gray-500 mb-2">
-                            Size: {item.size} • Color: {item.color}
-                          </div>
-                          <div className="text-lg font-bold text-black">
-                            ${item.price}
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-3">
-                          <button
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="w-8 h-8 rounded-full border text-orange-500 border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                <motion.div 
+                  className="space-y-6"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <AnimatePresence>
+                    {cartItems.map((item) => (
+                      <motion.div 
+                        key={item.id} 
+                        className="bg-white rounded-2xl p-6 shadow-sm"
+                        variants={itemVariants}
+                        layout
+                        whileHover={{ scale: 1.02 }}
+                        exit="exit"
+                      >
+                        <div className="flex items-center space-x-6">
+                          <motion.div 
+                            className="w-24 h-24 bg-gray-200 rounded-xl overflow-hidden flex-shrink-0"
+                            whileHover={{ scale: 1.1 }}
                           >
-                            -
-                          </button>
-                          <span className="w-8 text-center text-orange-500  font-medium">{item.quantity}</span>
-                          <button
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="w-8 h-8 rounded-full border text-orange-500 border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              width={96}
+                              height={96}
+                              className="object-cover w-full h-full"
+                            />
+                          </motion.div>
+                          
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-black mb-1">{item.name}</h3>
+                            <div className="text-sm text-gray-500 mb-2">
+                              Size: {item.size} • Color: {item.color}
+                            </div>
+                            <div className="text-lg font-bold text-black">
+                              ${item.price}
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-center space-x-3">
+                            <motion.button
+                              onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                              className="w-8 h-8 rounded-full border text-orange-500 border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                              whileHover={{ scale: 1.1 }}
+                              whileTap={{ scale: 0.9 }}
+                            >
+                              -
+                            </motion.button>
+                            <span className="w-8 text-center text-orange-500 font-medium">{item.quantity}</span>
+                            <motion.button
+                              onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                              className="w-8 h-8 rounded-full border text-orange-500 border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                              whileHover={{ scale: 1.1 }}
+                              whileTap={{ scale: 0.9 }}
+                            >
+                              +
+                            </motion.button>
+                          </div>
+                          
+                          <motion.button
+                            onClick={() => removeItem(item.id)}
+                            className="p-2 text-gray-400 hover:text-red-500 transition-colors"
+                            whileHover={{ scale: 1.1, rotate: 10 }}
+                            whileTap={{ scale: 0.9 }}
                           >
-                            +
-                          </button>
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                          </motion.button>
                         </div>
-                        
-                        <button
-                          onClick={() => removeItem(item.id)}
-                          className="p-2 text-gray-400 hover:text-red-500 transition-colors"
-                        >
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </motion.div>
               </div>
               
               {/* Order Summary */}
-              <div className="lg:col-span-1">
+              <motion.div 
+                className="lg:col-span-1"
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 <div className="bg-white rounded-2xl p-6 shadow-sm sticky top-8">
                   <h2 className="text-xl font-bold text-black mb-6">Order Summary</h2>
                   
@@ -184,34 +264,51 @@ export default function CartPage() {
                   </div>
                   
                   {shipping > 0 && (
-                    <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
+                    <motion.div 
+                      className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6"
+                      initial={{ scale: 0.9, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ duration: 0.3, delay: 0.5 }}
+                    >
                       <p className="text-sm text-orange-800">
                         Add ${(50 - subtotal).toFixed(2)} more for free shipping!
                       </p>
-                    </div>
+                    </motion.div>
                   )}
                   
                   <Link
                     href="/shipping"
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
                   >
-                    Proceed to Checkout
+                    <motion.span
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="block"
+                    >
+                      Proceed to Checkout
+                    </motion.span>
                   </Link>
                   
                   <Link
                     href="/shop"
                     className="w-full border border-gray-300 hover:border-orange-500 text-black py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center mt-3"
                   >
-                    Continue Shopping
+                    <motion.span
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="block"
+                    >
+                      Continue Shopping
+                    </motion.span>
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </div>
           )}
         </div>
-      </div>
+      </motion.div>
       
       <Footer />
-    </div>
+    </motion.div>
   );
 }
