@@ -3,7 +3,7 @@ import React from 'react';
 
 const ShopHeroSection = () => {
   return (
-    <div className="bg-white relative">
+    <div className="bg-white relative -mt-40">
       {/* Hero Section with Shop heading */}
       <section className="relative text-white min-h-screen flex items-center justify-start p-4 overflow-hidden bg-gray-800">
         {/* Large "SHOP" text in background */}
