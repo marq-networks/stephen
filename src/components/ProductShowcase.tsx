@@ -54,7 +54,7 @@ export default function ProductShowcase() {
           {/* Right Column - Product Images */}
           <div className="space-y-4 w-full">
             {/* First Row: 3 Divs */}
-            <motion.div 
+            {/* <motion.div 
               className="grid grid-cols-3 gap-4 w-full"
               variants={itemVariants}
             >
@@ -116,7 +116,7 @@ export default function ProductShowcase() {
                   </motion.div>
                 </motion.div>
               </Link>
-            </motion.div>
+            </motion.div> */}
 
             {/* Second Row: 2 Divs */}
             <motion.div 
@@ -134,13 +134,14 @@ export default function ProductShowcase() {
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
+                  className='w-full h-full'
                 >
                   <Image
                     src="/chart.png"
                     alt="THE WHETHER OR U. T-shirt"
-                    width={150}
-                    height={180}
-                    className="w-full h-auto"
+                   width={500}
+                   height={100}
+                    className="w-full "
                   />
                 </motion.div>
               </motion.div>

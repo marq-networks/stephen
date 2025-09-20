@@ -36,7 +36,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-20 px-6 bg-white h-[80vh]">
+    <section className="py-20 px-6 bg-white h-auto">
       <div className="max-w-7xl mx-auto">
         {/* Premium Cotton Description */}
         <div className="text-center mb-20">

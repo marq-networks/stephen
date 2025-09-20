@@ -1,7 +1,9 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import ProductShowcase from '../components/ProductShowcase';
+import ProductGrid from '../components/ProductGrid';
 import HowProductFeels from '../components/HowProductFeels';
+import EditorialFashion from '../components/EditorialFashion';
+import StatementSlider from '../components/StatementSlider';
 import Features from '../components/Features';
 import Clients from '../components/Clients';
 import FAQ from '../components/FAQ';
@@ -14,12 +16,20 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <div className="bg-white mb-8 rounded-2xl">
-        <ProductShowcase />
+      <div className="my-8">
+        <ProductGrid />
       </div>
 
       <div className="bg-white my-8 rounded-2xl">
         <HowProductFeels />
+      </div>
+
+      <div className="bg-white my-8 rounded-2xl">
+        <EditorialFashion />
+      </div>
+
+      <div className="my-8 rounded-2xl overflow-hidden">
+        <StatementSlider />
       </div>
 
       <div className="bg-white my-8 rounded-2xl">
