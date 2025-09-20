@@ -133,9 +133,9 @@ export default function EditorialFashion() {
           viewport={{ once: true }}
         >
           {[
-            { number: "500+", label: "Unique Designs" },
-            { number: "50K+", label: "Happy Customers" },
-            { number: "25+", label: "Countries Served" },
+            { number: "200+", label: "Unique Designs" },
+            { number: "10K+", label: "Happy Customers" },
+            { number: "5+", label: "Countries Served" },
             { number: "100%", label: "Sustainable Materials" }
           ].map((stat, index) => (
             <motion.div 
