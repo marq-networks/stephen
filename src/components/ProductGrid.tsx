@@ -1,7 +1,8 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 interface Product {
   id: number;
@@ -48,6 +49,15 @@ const products: Product[] = [
 ];
 
 export default function ProductGrid() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.8]);
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,8 +82,12 @@ export default function ProductGrid() {
   };
 
   return (
-    <section className=" py-20 rounded-2xl">
-      <div className="max-w-7xl mx-auto px-6">
+    <motion.section 
+      ref={sectionRef}
+      className="sticky top-0 bg-[#171717] py-20 rounded-2xl min-h-screen flex items-center z-20"
+      style={{ y, opacity }}
+    >
+      <div className="max-w-7xl mx-auto px-6 w-full">
         {/* Section Title */}
         <motion.div 
           className="text-center mb-16"
@@ -155,6 +169,6 @@ export default function ProductGrid() {
           ))}
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

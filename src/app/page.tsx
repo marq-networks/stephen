@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import BrandGrowthSection from '../components/BrandGrowthSection';
 import ProductGrid from '../components/ProductGrid';
 import HowProductFeels from '../components/HowProductFeels';
 import EditorialFashion from '../components/EditorialFashion';
@@ -14,41 +15,56 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#171717]">
       <Navbar />
-      <Hero />
-
-      <div className="my-8">
+      
+      {/* Sticky Scroll Container - All sections participate */}
+      <div className="relative">
+        {/* Hero Section - Sticky z-0 */}
+        <Hero />
+        
+        {/* Brand Growth Section - Sticky z-10 */}
+        <BrandGrowthSection />
+        
+        {/* Product Grid - Sticky z-20 */}
         <ProductGrid />
-      </div>
-
-      <div className="bg-white my-8 rounded-2xl">
+        
+        {/* How Product Feels - Sticky z-30 */}
         <HowProductFeels />
+        
+        {/* Editorial Fashion - Sticky z-40 */}
+        <div className="sticky top-0 z-40">
+          <EditorialFashion />
+        </div>
+        
+        {/* Statement Slider - Sticky z-50 */}
+        <div className="sticky top-0 z-50">
+          <StatementSlider />
+        </div>
+        
+        {/* Features - Sticky z-60 */}
+        <div className="sticky top-0 z-60">
+          <Features />
+        </div>
+        
+        {/* Clients - Sticky z-70 */}
+        <div className="sticky top-0 z-70">
+          <Clients />
+        </div>
+        
+        {/* FAQ - Sticky z-80 */}
+        <div className="sticky top-0 z-80">
+          <FAQ />
+        </div>
+        
+        {/* Contact - Sticky z-90 */}
+        <div className="sticky top-0 z-90">
+          <Contact />
+        </div>
+        
+        {/* Footer - Final section z-100 */}
+        <div className="relative z-100">
+          <Footer />
+        </div>
       </div>
-
-      <div className="bg-white my-8 rounded-2xl">
-        <EditorialFashion />
-      </div>
-
-      <div className="my-8 rounded-2xl overflow-hidden">
-        <StatementSlider />
-      </div>
-
-      <div className="bg-white my-8 rounded-2xl">
-        <Features />
-      </div>
-
-      <div className="bg-white my-8 rounded-2xl">
-        <Clients />
-      </div>
-
-      <div className="bg-white my-8 rounded-2xl">
-        <FAQ />
-      </div>
-
-      <div className="bg-white  my-8 rounded-2xl">
-        <Contact />
-      </div>
-
-      <Footer />
     </div>
   );
 }
