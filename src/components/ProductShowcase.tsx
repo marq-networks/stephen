@@ -91,7 +91,8 @@ export default function ProductShowcase() {
                 alt="Chart" 
                 width={600} 
                 height={400} 
-                className="w-full h-full object-cover rounded-2xl" 
+                
+                className="w-full h-[80%] rounded-2xl" 
               />
             </div>
 
@@ -104,7 +105,7 @@ export default function ProductShowcase() {
                     alt="Product 4"
                     width={400}
                     height={400}
-                    className="w-full h-auto max-h-[300px] object-contain"
+                    className="w-full h-auto max-h-[600px] object-contain"
                   />
                 </div>
               </div>

@@ -84,7 +84,7 @@ export default function ProductGrid() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="sticky top-0 bg-[#171717] py-20 rounded-2xl min-h-screen flex items-center z-20"
+      className="sticky top-0 bg-[#fff] text-black py-20 rounded-2xl min-h-screen flex items-center z-20"
       style={{ y, opacity }}
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
@@ -96,7 +96,7 @@ export default function ProductGrid() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-black text-4xl md:text-5xl font-bold mb-4">
             Shop the Collection
           </h2>
         </motion.div>
@@ -112,7 +112,7 @@ export default function ProductGrid() {
           {products.map((product) => (
             <motion.div
               key={product.id}
-              className="bg-gray-900 rounded-2xl overflow-hidden"
+              className=" rounded-2xl overflow-hidden"
               variants={itemVariants}
               whileHover={{ 
                 y: -10,
@@ -137,16 +137,16 @@ export default function ProductGrid() {
               </div>
 
               {/* Product Details */}
-              <div className="p-6">
-                <h3 className="text-white text-xl font-bold mb-3">
+              <div className="p-2">
+                <h3 className="text-black text-xl font-bold mb-1">
                   {product.name}
                 </h3>
-                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                <p className="text-gray-400 text-sm mb-1 leading-relaxed">
                   {product.description}
                 </p>
                 
                 {/* Price and Button */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-4">
                   <span className="text-orange-500 text-2xl font-bold">
                     ${product.price}
                   </span>

@@ -90,7 +90,7 @@ const products: Product[] = [
   }
 ];
 
-const categories = ["All", "T-Shirts", "Hoodies", "Accessories"];
+const categories = ["All", "New Arrivals", "Dresses", "Tops", "Outerwear", "Bottoms"];
 const sortOptions = [
   { value: "featured", label: "Featured" },
   { value: "price-low", label: "Price: Low to High" },
@@ -128,15 +128,8 @@ export default function Shop() {
       <Navbar />
        <ShopHeroSection />
       {/* Hero Section */}
-      <section className="relative bg-black text-white py-20 mt-20">
-        <div className="absolute inset-0">
-          <Image
-            src="/shopbg.png"
-            alt="Shop Background"
-            fill
-            className="object-cover opacity-50"
-          />
-        </div>
+      <section className="relative bg-white text-black py-20 mt-20">
+       
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-4"
@@ -147,7 +140,7 @@ export default function Shop() {
             Shop Collection
           </motion.h1>
           <motion.p 
-            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            className="text-xl text-black max-w-2xl mx-auto"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -158,58 +151,25 @@ export default function Shop() {
       </section>
 
       {/* Filters and Sort */}
-      <section className="bg-gray-50 border-b">
-        <div className="max-w-7xl mx-auto px-6 py-6">
+      <section className="bg-white border-b py-4">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            {/* Category Filters */}
-            <div className="flex flex-wrap gap-2">
+            {/* Category Filters - Tab Style */}
+            <div className="max-w-7xl flex flex-wrap mx-auto gap-0 border-b border-gray-200 w-full md:w-auto">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-[60px] py-2 rounded-2xl  text-sm font-medium transition-colors  whitespace-nowrap ${
                     selectedCategory === category
-                      ? 'bg-black text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                      ? 'border-yellow-400 text-black bg-yellow-400'
+                      : 'border-transparent text-gray-600 hover:text-black hover:border-gray-300'
                   }`}
                 >
                   {category}
                 </button>
               ))}
             </div>
-
-            {/* Sort and Filter Controls */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
-                >
-                  {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <button
-                onClick={() => setIsFilterOpen(!isFilterOpen)}
-                className="md:hidden flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-                </svg>
-                Filter
-              </button>
-            </div>
-          </div>
-
-          {/* Results Count */}
-          <div className="mt-4 text-sm text-gray-600">
-            Showing {sortedProducts.length} of {products.length} products
           </div>
         </div>
       </section>
