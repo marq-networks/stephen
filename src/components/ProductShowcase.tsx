@@ -33,10 +33,10 @@ export default function ProductShowcase() {
           {/* First Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
             {/* Text Card */}
-            <div className="bg-white rounded-2xl p-10 h-[85%] shadow-sm w-full flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-white rounded-2xl p-10 h-[85%] shadow-sm w-full flex flex-col justify-around hover:shadow-lg transition-shadow duration-300">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Thoughtful design that moves the needle.</h3>
-                <p className="text-gray-600 text-base leading-relaxed mb-6">
+                <p className="text-gray-600 text-base leading-relaxed mb-4">
                   This brand required a new approach to communicate their unique value proposition and stand out in a crowded market.
                 </p>
               </div>

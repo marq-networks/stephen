@@ -57,9 +57,9 @@ export default function Home() {
           <Features />
         </div>
         
-        <div className="relative z-10 bg-[#171717]">
+        {/* <div className="relative z-10 bg-[#171717]">
           <Clients />
-        </div>
+        </div> */}
         
         <div className="relative z-10 bg-[#171717]">
           <FAQ />

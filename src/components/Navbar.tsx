@@ -10,7 +10,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      setScrolled(scrollPercentage > 10);
+      setScrolled(scrollPercentage > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="max-w-[90%] mx-auto">
         {/* Desktop Navigation - Centered */}
         <motion.div 
-          className="hidden md:flex justify-center items-center space-x-8"
+          className="hidden md:flex justify-center items-center space-x-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1.5 }}
           transition={{ duration: 0.8, delay: 0.2, staggerChildren: 0.1 }}
@@ -50,7 +50,7 @@ export default function Navbar() {
               transition={{ duration: 0.5, delay: 0.1 * index }}
               whileHover={{ scale: 1.1 }}
             >
-              <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+              <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-[20 px] font-bold">
                 {item.label}
               </Link>
             </motion.div>
@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* Mobile Navigation Toggle */}
         <div className="md:hidden flex justify-between items-center">
           <motion.div 
-            className="text-xl font-bold"
+            className="text-2xl font-bold"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -79,7 +79,7 @@ export default function Navbar() {
               animate={{ rotate: isMenuOpen ? 45 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </motion.div>
@@ -119,7 +119,7 @@ export default function Navbar() {
                   >
                     <Link 
                       href={item.href} 
-                      className="text-gray-300 hover:text-white transition-colors text-sm font-medium block"
+                      className="text-gray-300 hover:text-white transition-colors text-[48px] font-medium block"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
