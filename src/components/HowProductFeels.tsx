@@ -31,28 +31,51 @@ export default function HowProductFeels() {
     },
     {
       id: 2,
-      name: 'Minimalist White Shirt',
-      price: '$95',
+      name: 'Casual White Tee',
+      price: '$89',
+      originalPrice: '$120',
       image: '/howporduct2.png',
       label: 'New',
-      labelColor: 'bg-yellow-400',
+      labelColor: 'bg-green-400',
       category: 'Tops'
     },
     {
       id: 3,
-      name: 'Editorial Black Jacket',
-      price: '$265',
+      name: 'Premium Denim Jacket',
+      price: '$299',
+      originalPrice: '$399',
       image: '/howporduct3.png',
-      label: '',
-      labelColor: '',
+      label: 'Sale',
+      labelColor: 'bg-yellow-400',
       category: 'Outerwear'
     },
     {
       id: 4,
-      name: 'Casual Brown Sweater',
-      price: '$145',
+      name: 'Comfort Fit Jeans',
+      price: '$159',
+      originalPrice: '$200',
       image: '/howporduct4.png',
-      label: 'Best Seller',
+      label: 'Popular',
+      labelColor: 'bg-blue-400',
+      category: 'Bottoms'
+    },
+    {
+      id: 5,
+      name: 'Summer Floral Dress',
+      price: '$199',
+      originalPrice: '$280',
+      image: '/howporduct1.png',
+      label: 'New',
+      labelColor: 'bg-green-400',
+      category: 'Dresses'
+    },
+    {
+      id: 6,
+      name: 'Classic Button Shirt',
+      price: '$129',
+      originalPrice: '$170',
+      image: '/howporduct2.png',
+      label: 'Sale',
       labelColor: 'bg-yellow-400',
       category: 'Tops'
     }
@@ -65,10 +88,10 @@ export default function HowProductFeels() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="sticky top-0 bg-white py-20 rounded-2xl min-h-screen flex items-center z-30"
+      className="sticky top-0 bg-white py-20 rounded-2xl min-h-screen flex items-center z-30 px-10 w-full"
       style={{ y, opacity }}
     >
-      <div className="max-w-7xl mx-auto px-6 w-full">
+      <div className="w-full">
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
@@ -84,16 +107,17 @@ export default function HowProductFeels() {
             transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            How Product Feels
+            How Our Products Feel
           </motion.h2>
+          
           <motion.p 
-            className="text-gray-600 text-lg max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 1, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            Experience the comfort and quality that defines our collection
+            Experience the perfect blend of comfort, style, and quality. Each piece is crafted with care to make you feel confident and comfortable all day long.
           </motion.p>
         </motion.div>
 
@@ -102,7 +126,7 @@ export default function HowProductFeels() {
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 1, delay: 0.8 }}
           viewport={{ once: true }}
         >
           {categories.map((category, index) => (
@@ -111,14 +135,14 @@ export default function HowProductFeels() {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  ? 'bg-black text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ 
                 duration: 0.5, 
-                delay: 0.6 + (index * 0.1),
+                delay: 1.0 + (index * 0.1),
                 type: "spring",
                 stiffness: 200
               }}
@@ -133,106 +157,87 @@ export default function HowProductFeels() {
 
         {/* Products Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.2, delay: 1.2 }}
           viewport={{ once: true }}
         >
           {filteredProducts.map((product, index) => (
             <motion.div
               key={product.id}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
-              initial={{ y: 100, opacity: 0, scale: 0.8 }}
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+              initial={{ y: 80, opacity: 0, scale: 0.9 }}
               whileInView={{ y: 0, opacity: 1, scale: 1 }}
               transition={{ 
-                duration: 1.2, 
-                delay: 1.0 + (index * 0.2),
-                ease: "easeOut",
+                duration: 0.8, 
+                delay: 1.4 + (index * 0.1),
                 type: "spring",
                 stiffness: 100
               }}
               viewport={{ once: true }}
-              whileHover={{ 
-                y: -15,
-                scale: 1.02,
-                boxShadow: "0 25px 50px rgba(0,0,0,0.15)"
-              }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
               {/* Product Image */}
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 {product.label && (
-                  <motion.div 
+                  <div 
                     className={`absolute top-4 left-4 ${product.labelColor} text-black px-3 py-1 rounded-full text-sm font-medium z-10`}
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileInView={{ scale: 1, rotate: 0 }}
-                    transition={{ 
-                      duration: 0.6, 
-                      delay: 1.2 + (index * 0.2),
-                      type: "spring",
-                      stiffness: 200
-                    }}
-                    viewport={{ once: true }}
                   >
                     {product.label}
-                  </motion.div>
+                  </div>
                 )}
-                
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                >
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
-
-                {/* Overlay */}
-                <motion.div
-                  className="absolute inset-0 bg-black/10"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
 
               {/* Product Info */}
-              <motion.div 
-                className="p-6"
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 + (index * 0.2) }}
-                viewport={{ once: true }}
-              >
-                <motion.h3 
-                  className="text-xl font-bold text-black mb-2"
-                  initial={{ y: 10, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 1.6 + (index * 0.2) }}
-                  viewport={{ once: true }}
-                >
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
                   {product.name}
-                </motion.h3>
-                
-                <motion.div 
-                  className="flex items-center gap-2"
-                  initial={{ y: 10, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 1.8 + (index * 0.2) }}
-                  viewport={{ once: true }}
-                >
-                  <span className="text-2xl font-bold text-black">{product.price}</span>
+                </h3>
+                <div className="flex items-center space-x-2">
+                  <span className="text-xl font-bold text-black">{product.price}</span>
                   {product.originalPrice && (
-                    <span className="text-gray-400 line-through">{product.originalPrice}</span>
+                    <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
                   )}
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <Link href="/shop">
+                  <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    View Details
+                  </button>
+                </Link>
+              </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.8 }}
+          viewport={{ once: true }}
+        >
+          <Link href="/shop">
+            <motion.button 
+              className="bg-black text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Shop All Products
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </motion.section>

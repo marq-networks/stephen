@@ -125,7 +125,7 @@ export default function EditorialFashion() {
         </div>
 
         {/* Stats Section */}
-        <motion.div 
+        {/* <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-gray-200"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ export default function EditorialFashion() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

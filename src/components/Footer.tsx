@@ -30,7 +30,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white z-100 py-16 px-6">
+    <footer className="bg-white relative py-16 px-6">
       {/* Styles for marquee */}
       <style jsx global>{`
         @keyframes marquee {

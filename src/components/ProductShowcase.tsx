@@ -31,7 +31,7 @@ export default function ProductShowcase() {
         {/* Product Grid */}
         <div className="w-full space-y-16">
           {/* First Row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {/* Text Card */}
             <div className="bg-white rounded-2xl p-10 h-[85%] shadow-sm w-full flex flex-col justify-around hover:shadow-lg transition-shadow duration-300">
               <div>

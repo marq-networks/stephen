@@ -17,10 +17,10 @@ export default function BrandGrowthSection() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="bg-gray-100 py-16 rounded-r-3xl rounded-l-3xl px-6 min-h-screen flex flex-col items-center"
+      className="bg-gray-100 py-16 rounded-r-3xl rounded-l-3xl px-10 min-h-screen flex flex-col items-center w-full"
       style={{ y, opacity }}
     >
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="w-full">
         {/* Original BrandGrowthSection Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-start mb-16">
           {/* Left Side - Large Number */}
@@ -169,7 +169,6 @@ export default function BrandGrowthSection() {
 
         {/* ProductShowcase Content */}
         <div className="w-full">
-          {/* Main Description */}
         
 
           {/* Product Grid */}

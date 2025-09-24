@@ -2,94 +2,81 @@
 import { useState } from 'react';
 
 export default function FAQ() {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: "What's included in a monthly retainer?",
-      answer: "Our monthly retainer includes dedicated design support, unlimited revisions, priority response times, and access to our full design team."
+      question: "What materials do you use in your clothing?",
+      answer: "We use premium, sustainable materials including 100% organic cotton, recycled polyester, and ethically sourced wool. All our fabrics are carefully selected for comfort, durability, and environmental responsibility."
     },
     {
-      question: "How many requests can I make per month?",
-      answer: "You can make unlimited design requests per month. We work through them one at a time to ensure quality and attention to detail."
+      question: "How do I determine my size?",
+      answer: "We provide detailed size charts for each product. We recommend measuring yourself and comparing with our size guide. If you're between sizes, we generally recommend sizing up for a more comfortable fit."
     },
     {
-      question: "Is a retainer better than a one-off project?",
-      answer: "Retainers provide consistent support, better rates, and priority access to our team, making them ideal for ongoing design needs."
+      question: "What is your return policy?",
+      answer: "We offer a 30-day return policy for unworn items in original condition with tags attached. Returns are free for exchanges, and we provide prepaid return labels for your convenience."
     },
     {
-      question: "Who will I be working with?",
-      answer: "You'll work directly with our senior designers and have a dedicated account manager to ensure smooth communication."
+      question: "How long does shipping take?",
+      answer: "Standard shipping takes 3-5 business days within the US. Express shipping (1-2 business days) and international shipping options are also available. You'll receive tracking information once your order ships."
     },
     {
-      question: "Do you work with international clients?",
-      answer: "Yes, we work with clients globally and accommodate different time zones to ensure effective collaboration."
+      question: "Do you offer international shipping?",
+      answer: "Yes, we ship to over 50 countries worldwide. International shipping times vary by location (typically 7-14 business days). Customs duties and taxes may apply depending on your country's regulations."
+    },
+    {
+      question: "How do I care for my garments?",
+      answer: "Each item comes with specific care instructions on the label. Generally, we recommend washing in cold water, using mild detergent, and air drying when possible to maintain the quality and longevity of your garments."
     }
   ];
 
-  const toggleItem = (index: number) => {
-    setOpenItems(prev =>
-      prev.includes(index)
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
-
   return (
-    <section className="py-20 px-6 bg-white h-auto">
-      <div className="max-w-7xl mx-auto">
-        {/* Premium Cotton Description */}
-        <div className="text-center mb-20">
-          <p className="text-lg text-gray-800 leading-relaxed max-w-4xl mx-auto font-extrabold">
-            Premium cotton shirts that redefine comfort and style — crafted from 100% pure cotton, designed for breathability, durability, and an effortlessly elegant look. Soft on skin, light as air, and perfect for every occasion. Just pure comfort, no compromise.
+    <section className="py-20 bg-white h-auto px-10 w-full">
+      <div className="w-full">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Find answers to common questions about our products, shipping, and policies.
           </p>
         </div>
 
-        {/* FAQ Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 items-start">
-          {/* Left Column - FAQ Title and Description */}
-          <div className="lg:col-span-1">
-            <h2 className="text-6xl md:text-7xl font-bold text-black mb-6">FAQ</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-              Get quick answers about working with us and our approach to digital solutions.
-            </p>
-
-            {/* Ask a Question Button */}
-            <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium">
-              Ask a question
-            </button>
-          </div>
-
-          {/* Right Column - FAQ Items */}
-          <div className="lg:col-span-2 space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-4">
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="w-full flex items-center justify-between text-left py-4 hover:text-gray-600 transition-colors duration-200 group"
+        <div className="max-w-4xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border border-gray-200 rounded-2xl overflow-hidden">
+              <button
+                className="w-full px-8 py-6 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                <span className="text-lg font-semibold text-black pr-8">{faq.question}</span>
+                <svg
+                  className={`w-6 h-6 text-gray-500 transform transition-transform duration-200 ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <span className="text-gray-800 font-medium pr-4 text-lg">{faq.question}</span>
-                  <div className="flex items-center">
-                    <span className="text-2xl text-gray-600 font-light">
-                      {openItems.includes(index) ? '−' : '+'}
-                    </span>
-                  </div>
-                </button>
-
-                {/* Expandable Answer */}
-                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openItems.includes(index)
-                    ? 'max-h-96 opacity-100 mt-4'
-                    : 'max-h-0 opacity-0'
-                  }`}>
-                  <p className="text-gray-600 leading-relaxed pr-8 text-base">
-                    {faq.answer}
-                  </p>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {openIndex === index && (
+                <div className="px-8 pb-6 bg-gray-50">
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
-              </div>
-            ))}
-          </div>
+              )}
+            </div>
+          ))}
         </div>
 
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-6">Still have questions?</p>
+          <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium">
+            Contact Support
+          </button>
+        </div>
       </div>
     </section>
   );
