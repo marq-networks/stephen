@@ -17,6 +17,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Cart Icon Component
+  const CartIcon = () => (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z" />
+    </svg>
+  );
+
+  // Heart/Favorite Icon Component
+  const HeartIcon = () => (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    </svg>
+  );
+
   return (
     <motion.nav 
       className={`sticky top-0 left-0 right-0 z-50 text-white px-6 py-6 transition-colors duration-300 ${
@@ -27,34 +41,65 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-[90%] mx-auto">
-        {/* Desktop Navigation - Centered */}
+        {/* Desktop Navigation - Centered with icons on the right */}
         <motion.div 
-          className="hidden md:flex justify-center items-center space-x-12"
+          className="hidden md:flex justify-between items-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1.5 }}
           transition={{ duration: 0.8, delay: 0.2, staggerChildren: 0.1 }}
         >
-          {[
-            { href: "/", label: "Home" },
-            { href: "/about", label: "About" },
-            { href: "/shop", label: "Shop" },
-            { href: "/blog", label: "Blogs" },
-            { href: "#", label: "Contact" },
-            { href: "/favorites", label: "Favorites" },
-            { href: "/cart", label: "Cart" }
-          ].map((item, index) => (
+          {/* Main Navigation Links */}
+          <div className="flex justify-center items-center space-x-12 flex-1">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/about", label: "About" },
+              { href: "/shop", label: "Shop" },
+              { href: "/blog", label: "Blogs" },
+              { href: "#", label: "Contact" }
+            ].map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-[20px] font-bold">
+                  {item.label}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Cart and Favorites Icons */}
+          <div className="flex items-center space-x-6">
             <motion.div
-              key={item.label}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
+              transition={{ duration: 0.5, delay: 0.6 }}
               whileHover={{ scale: 1.1 }}
             >
-              <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-[20 px] font-bold">
-                {item.label}
+              <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors relative group">
+                <HeartIcon />
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Favorites
+                </span>
               </Link>
             </motion.div>
-          ))}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              <Link href="/cart" className="text-gray-300 hover:text-white transition-colors relative group">
+                <CartIcon />
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Cart
+                </span>
+              </Link>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Mobile Navigation Toggle */}
@@ -67,23 +112,33 @@ export default function Navbar() {
           >
             STEPHEN
           </motion.div>
-          <motion.button
-            className="text-white focus:outline-none"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <motion.div
-              animate={{ rotate: isMenuOpen ? 45 : 0 }}
-              transition={{ duration: 0.3 }}
+          
+          {/* Mobile Cart and Favorites Icons */}
+          <div className="flex items-center space-x-4">
+            <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors">
+              <HeartIcon />
+            </Link>
+            <Link href="/cart" className="text-gray-300 hover:text-white transition-colors">
+              <CartIcon />
+            </Link>
+            <motion.button
+              className="text-white focus:outline-none ml-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </motion.div>
-          </motion.button>
+              <motion.div
+                animate={{ rotate: isMenuOpen ? 45 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </motion.div>
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
