@@ -11,18 +11,18 @@ export default function Features() {
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">Apps</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Websites</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Design system</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Wireframing</span>
+              <span className="text-[20px] text-gray-300">Apps</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Websites</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Design system</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Wireframing</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">Dashboards</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Prototyping</span>
+              <span className="text-[20px] text-gray-300">Dashboards</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Prototyping</span>
             </div>
           </div>
         </div>
@@ -34,16 +34,16 @@ export default function Features() {
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">Website copy</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Tone of voice guidelines</span>
+              <span className="text-[20px] text-gray-300">Website copy</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Tone of voice guidelines</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">Information architecture</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">UX writing</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Microcopy</span>
+              <span className="text-[20px] text-gray-300">Information architecture</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">UX writing</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Microcopy</span>
             </div>
           </div>
         </div>
@@ -55,16 +55,16 @@ export default function Features() {
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">Logo design</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Typography & color systems</span>
+              <span className="text-[20px] text-gray-300">Logo design</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Typography & color systems</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">Brand guidelines</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Art Direction</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Motion Identity</span>
+              <span className="text-[20px] text-gray-300">Brand guidelines</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Art Direction</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Motion Identity</span>
             </div>
           </div>
         </div>
@@ -76,16 +76,16 @@ export default function Features() {
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">Framer & Webflow builds</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">Migration</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">SEO</span>
+              <span className="text-[20px] text-gray-300">Framer & Webflow builds</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">Migration</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">SEO</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-sm text-gray-300">CMS Integration</span>
-              <span className="text-sm text-gray-300">•</span>
-              <span className="text-sm text-gray-300">E-commerce setup</span>
+              <span className="text-[20px] text-gray-300">CMS Integration</span>
+              <span className="text-[20px] text-gray-300">•</span>
+              <span className="text-[20px] text-gray-300">E-commerce setup</span>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function Features() {
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Why Choose Our Products
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-[20px] md:text-xl text-white max-w-3xl mx-auto">
             Experience the perfect blend of quality, sustainability, and style in every piece we create.
           </p>
         </div>
