@@ -76,7 +76,7 @@ export default function Features() {
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">Framer & Webflow builds</span>
+              <span className="text-[20px]   text-gray-300">Framer & Webflow builds</span>
               <span className="text-[20px] text-gray-300">•</span>
               <span className="text-[20px] text-gray-300">Migration</span>
               <span className="text-[20px] text-gray-300">•</span>

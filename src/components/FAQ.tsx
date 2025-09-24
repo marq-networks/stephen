@@ -43,7 +43,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className=" mx-auto space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border border-gray-200 rounded-2xl overflow-hidden">
               <button
