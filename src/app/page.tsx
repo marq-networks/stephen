@@ -10,7 +10,6 @@ import Clients from '../components/Clients';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import ProductShowcase from '@/components/ProductShowcase';
 
 export default function Home() {
   return (
@@ -30,11 +29,6 @@ export default function Home() {
         {/* Brand Growth Section - First section to overlay hero */}
         <div className="relative z-10 bg-[#171717]">
           <BrandGrowthSection />
-        </div>
-        
-        {/* All other sections scroll normally */}
-        <div className="relative z-10 bg-[#171717]">
-          <ProductShowcase />
         </div>
         
         {/* <div className="relative z-10 bg-[#171717]">
