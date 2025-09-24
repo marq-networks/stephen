@@ -37,9 +37,9 @@ export default function Home() {
           <ProductShowcase />
         </div>
         
-        <div className="relative z-10 bg-[#171717]">
+        {/* <div className="relative z-10 bg-[#171717]">
           <ProductGrid />
-        </div>
+        </div> */}
         
         <div className="relative z-10 bg-[#171717]">
           <HowProductFeels />
