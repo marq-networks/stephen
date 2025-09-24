@@ -28,7 +28,7 @@ export default function Blogs() {
 
   return (
     <section className="py-20 px-6 bg-gray-100">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">Blogs</h2>

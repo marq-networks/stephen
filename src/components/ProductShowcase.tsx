@@ -20,7 +20,7 @@ export default function ProductShowcase() {
       className="bg-gray-100 py-12 rounded-2xl min-h-screen flex items-start relative"
       style={{ y, opacity }}
     >
-      <div className=" mx-auto px-8 w-full">
+      <div className="max-w-7xl mx-auto px-6 w-full">
         {/* Main Description */}
         <div className="text-center mb-12">
           <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-4xl mx-auto">
@@ -35,32 +35,30 @@ export default function ProductShowcase() {
             {/* Text Card */}
             <div className="bg-white rounded-2xl p-10 h-[85%] shadow-sm w-full flex flex-col justify-around hover:shadow-lg transition-shadow duration-300">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Thoughtful design that moves the needle.</h3>
-                <p className="text-gray-600 text-base leading-relaxed mb-4">
-                  This brand required a new approach to communicate their unique value proposition and stand out in a crowded market.
+                <h3 className="text-2xl font-bold text-black mb-4">Premium Quality</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Crafted from the finest materials with attention to every detail. Our products are designed to last and provide unmatched comfort.
                 </p>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-8 bg-gray-900 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">JS</span>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-gray-900">John Smith</p>
-                  <p className="text-xs text-gray-500">Creative Director</p>
-                </div>
+              <div className="mt-6">
+                <Link href="/shop">
+                  <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300">
+                    Explore Collection
+                  </button>
+                </Link>
               </div>
             </div>
 
             {/* Image 1 */}
             <Link href="/shop">
-              <div className=" rounded-2xl  cursor-pointer w-full transition-shadow duration-300">
-                <div className="w-full h-full flex items-center justify-center ">
+              <div className="rounded-2xl cursor-pointer w-full transition-shadow duration-300">
+                <div className="w-full h-full flex items-center justify-center">
                   <Image
                     src="/2.png"
                     alt="Product 1"
                     width={600}
                     height={600}
-                    className="w-full h-auto  "
+                    className="w-full h-auto"
                   />
                 </div>
               </div>
@@ -68,14 +66,14 @@ export default function ProductShowcase() {
 
             {/* Image 2 */}
             <Link href="/shop">
-              <div className=" rounded-2xl  cursor-pointer w-full  transition-shadow duration-300">
-                <div className="w-full h-full flex items-center justify-center ">
+              <div className="rounded-2xl cursor-pointer w-full transition-shadow duration-300">
+                <div className="w-full h-full flex items-center justify-center">
                   <Image
                     src="/3.png"
                     alt="Product 2"
                     width={600}
                     height={600}
-                    className="w-full h-auto  "
+                    className="w-full h-auto"
                   />
                 </div>
               </div>
@@ -85,21 +83,20 @@ export default function ProductShowcase() {
           {/* Second Row */}
           <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 w-full">
             {/* Chart Image */}
-            <div className=" rounded-2xl  w-full overflow-hidden  transition-shadow duration-300">
+            <div className="rounded-2xl w-full overflow-hidden transition-shadow duration-300">
               <Image 
                 src="/chart.png" 
                 alt="Chart" 
                 width={600} 
                 height={400} 
-                
                 className="w-full h-[80%] rounded-2xl" 
               />
             </div>
 
             {/* Image 4 */}
             <Link href="/shop">
-              <div className=" rounded-2xl  cursor-pointer w-full overflow-hidden  transition-shadow duration-300"> 
-                <div className="w-full h-full flex items-center justify-center ">
+              <div className="rounded-2xl cursor-pointer w-full overflow-hidden transition-shadow duration-300"> 
+                <div className="w-full h-full flex items-center justify-center">
                   <Image
                     src="/4.png"
                     alt="Product 4"
