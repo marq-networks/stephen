@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="relative text-white min-h-screen flex items-center overflow-hidden"
+      className="relative text-white min-h-screen flex items-end overflow-hidden"
       style={{ y, opacity }}
     >
       {/* Background Image - Hero T-shirt */}
@@ -43,7 +43,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full">
         {/* Main Hero Content */}
-        <div className="flex items-center justify-between h-screen py-20">
+        <div className="flex items-end gap-3 justify-between h-screen py-20">
           {/* Left Side - Services List */}
           <div>
             <motion.div 
@@ -116,7 +116,7 @@ export default function Hero() {
          
 
               <motion.h2 
-                className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight relative z-10"
+                className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mt-6 leading-tight relative z-10"
                 initial={{ y: 50, opacity: 0, scale: 0.8 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ 
