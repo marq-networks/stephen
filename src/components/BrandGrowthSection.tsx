@@ -1,6 +1,9 @@
 'use client';
 import { motion, useScroll, useTransform } from 'motion/react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useRef } from 'react';
+import ProductShowcase from './ProductShowcase';
 
 export default function BrandGrowthSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -15,22 +18,22 @@ export default function BrandGrowthSection() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="sticky top-0 bg-gray-100 py-20 px-6 min-h-screen flex items-center z-10"
+      className="bg-gray-100 py-16 rounded-r-3xl rounded-l-3xl px-6 min-h-screen flex items-center"
       style={{ y, opacity }}
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Number and Branding */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-start">
+          {/* Left Side - Large Number */}
           <motion.div
-            className="space-y-8"
+            className="flex items-start justify-start lg:justify-start"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
           >
-            {/* Large Number */}
+            {/* Massive Number */}
             <motion.h2 
-              className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-black text-black leading-none select-none"
+              className="text-[12rem] font-black text-black leading-none select-none"
               initial={{ scale: 0.5, opacity: 0, rotateX: -90 }}
               whileInView={{ scale: 1, opacity: 1, rotateX: 0 }}
               transition={{ 
@@ -40,7 +43,7 @@ export default function BrandGrowthSection() {
                 type: "spring",
                 stiffness: 100
               }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: false, margin: "-100px" }}
             >
               0-1
             </motion.h2>
@@ -48,29 +51,29 @@ export default function BrandGrowthSection() {
 
           {/* Right Side - Content */}
           <motion.div
-            className="space-y-8"
+            className="space-y-6"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
           >
             {/* Brand Name */}
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
-              <h3 className="text-lg font-bold text-black mb-2 tracking-wider">STEPHEN™</h3>
+              <h3 className="text-sm font-bold text-black mb-4 tracking-[0.2em] uppercase">STEPHEN™</h3>
             </motion.div>
 
             {/* Client Avatars */}
             <motion.div
-              className="flex items-center space-x-4 mb-6"
+              className="flex items-center space-x-3 mb-4"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="flex -space-x-2">
                 {[
@@ -80,7 +83,7 @@ export default function BrandGrowthSection() {
                 ].map((gradient, index) => (
                   <motion.div
                     key={index}
-                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${gradient} border-2 border-white`}
+                    className={`w-10 h-10 rounded-full bg-gradient-to-r ${gradient} border-2 border-white`}
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
                     transition={{ 
@@ -89,11 +92,11 @@ export default function BrandGrowthSection() {
                       type: "spring",
                       stiffness: 200
                     }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                   />
                 ))}
                 <motion.div 
-                  className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-400 to-red-400 border-2 border-white flex items-center justify-center"
+                  className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-red-400 border-2 border-white flex items-center justify-center"
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   transition={{ 
@@ -102,9 +105,9 @@ export default function BrandGrowthSection() {
                     type: "spring",
                     stiffness: 200
                   }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                 >
-                  <span className="text-white text-sm font-bold">95+</span>
+                  <span className="text-white text-xs font-bold">95+</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -115,14 +118,14 @@ export default function BrandGrowthSection() {
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
-              <p className="text-gray-600 text-sm mb-2">Trusted by industry leaders</p>
+              <p className="text-gray-600 text-xs mb-2 font-medium">Trusted by Industry leaders</p>
               <div className="flex space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <motion.svg 
                     key={i} 
-                    className="w-4 h-4 text-orange-400 fill-current" 
+                    className="w-3 h-3 text-orange-400 fill-current" 
                     viewBox="0 0 20 20"
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
@@ -132,7 +135,7 @@ export default function BrandGrowthSection() {
                       type: "spring",
                       stiffness: 300
                     }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                   >
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </motion.svg>
@@ -145,16 +148,16 @@ export default function BrandGrowthSection() {
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.4 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
-              <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
-                We help brands grow with strategic design that{' '}
+              <h4 className="text-2xl md:text-3xl font-bold text-black leading-tight">
+                We help brands grow with strategic design that s{' '}
                 <motion.span
                   className="text-orange-500"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 2.0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                 >
                   thoughtful
                 </motion.span>

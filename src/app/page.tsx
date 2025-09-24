@@ -10,61 +10,68 @@ import Clients from '../components/Clients';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import ProductShowcase from '@/components/ProductShowcase';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#171717]">
       <Navbar />
       
-      {/* Sticky Scroll Container - All sections participate */}
-      <div className="relative">
-        {/* Hero Section - Sticky z-0 */}
+      {/* Hero Section - Fixed background */}
+      <div className="fixed top-0 left-0 w-full z-0">
         <Hero />
+      </div>
+      
+      {/* Scrollable content that overlays the hero */}
+      <div className="relative z-10">
+        {/* Spacer to push content down initially */}
+        <div className="h-screen"></div>
         
-        {/* Brand Growth Section - Sticky z-10 */}
-        <BrandGrowthSection />
+        {/* Brand Growth Section - First section to overlay hero */}
+        <div className="relative z-10 bg-[#171717]">
+          <BrandGrowthSection />
+        </div>
         
-        {/* Product Grid - Sticky z-20 */}
-        <ProductGrid />
+        {/* All other sections scroll normally */}
+        <div className="relative z-10 bg-[#171717]">
+          <ProductShowcase />
+        </div>
         
-        {/* How Product Feels - Sticky z-30 */}
-        <HowProductFeels />
+        <div className="relative z-10 bg-[#171717]">
+          <ProductGrid />
+        </div>
         
-        {/* Editorial Fashion - Sticky z-40 */}
-        <div className="sticky top-0 z-40">
+        <div className="relative z-10 bg-[#171717]">
+          <HowProductFeels />
+        </div>
+        
+        <div className="relative z-10 bg-[#171717]">
           <EditorialFashion />
         </div>
         
-        {/* Statement Slider - Sticky z-50 */}
-        <div className="sticky top-0 z-50">
+        <div className="relative z-10 bg-[#171717]">
           <StatementSlider />
         </div>
         
-        {/* Features - Sticky z-60 */}
-        <div className="sticky top-0 z-60">
+        <div className="relative z-10 bg-[#171717]">
           <Features />
         </div>
         
-        {/* Clients - Sticky z-70 */}
-        <div className="sticky top-0 z-70">
+        <div className="relative z-10 bg-[#171717]">
           <Clients />
         </div>
         
-        {/* FAQ - Sticky z-80 */}
-        <div className="sticky top-0 z-80">
+        <div className="relative z-10 bg-[#171717]">
           <FAQ />
         </div>
         
-        {/* Contact - Sticky z-90 */}
-        <div className="sticky top-0 z-90">
+        <div className="relative z-10 bg-[#171717]">
           <Contact />
         </div>
-        
-        {/* Footer - Final section z-100 */}
-        <div className="relative z-100">
-          <Footer />
-        </div>
       </div>
+      
+      {/* Footer - Normal flow */}
+      <Footer />
     </div>
   );
 }

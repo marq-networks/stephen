@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="sticky top-0 relative text-white min-h-screen flex items-center overflow-hidden z-0"
+      className="relative text-white min-h-screen flex items-center overflow-hidden"
       style={{ y, opacity }}
     >
       {/* Background Image - Hero T-shirt */}

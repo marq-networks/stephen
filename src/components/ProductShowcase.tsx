@@ -1,195 +1,126 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, Variants } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function ProductShowcase() {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
-  };
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
 
-  const itemVariants: Variants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.9, 1], [1, 1, 0.9]);
 
   return (
-    <section className="bg-gray-100 py-20 rounded-2xl">
-      <div className="max-w-6xl mx-auto px-6">
+    <motion.section
+      ref={sectionRef}
+      className="bg-gray-100 py-12 rounded-2xl min-h-screen flex items-start relative"
+      style={{ y, opacity }}
+    >
+      <div className=" mx-auto px-8 w-full">
         {/* Main Description */}
-        <motion.div 
-          className="text-center mb-16 py-20"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <p className="text-black text-lg md:text-2xl leading-7 font-bold max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-4xl mx-auto">
             <strong>Premium cotton shirts that redefine comfort and style crafted from 100% pure cotton, designed for breathability, durability, and an effortlessly elegant look. Soft on skin, light as air, and perfect for every occasion. Just pure comfort, no compromise.</strong>
           </p>
-        </motion.div>
+        </div>
 
         {/* Product Grid */}
-        <motion.div 
-          className="gap-12 w-full items-start"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {/* Right Column - Product Images */}
-          <div className="space-y-4 w-full">
-            {/* First Row: 3 Divs */}
-            {/* <motion.div 
-              className="grid grid-cols-3 gap-4 w-full"
-              variants={itemVariants}
-            >
-              <motion.div 
-                className="bg-white rounded-2xl p-6 shadow-sm w-full"
-                whileHover={{ 
-                  y: -10,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Thoughtful design that moves the needle.</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+        <div className="w-full space-y-16">
+          {/* First Row */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {/* Text Card */}
+            <div className="bg-white rounded-2xl p-10 h-[85%] shadow-sm w-full flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Thoughtful design that moves the needle.</h3>
+                <p className="text-gray-600 text-base leading-relaxed mb-6">
                   This brand required a new approach to communicate their unique value proposition and stand out in a crowded market.
                 </p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">JS</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">Jane Doe</p>
-                    <p className="text-xs text-gray-500">Creative Director</p>
-                  </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">JS</span>
                 </div>
-              </motion.div>
+                <div>
+                  <p className="text-sm font-medium text-gray-900">John Smith</p>
+                  <p className="text-xs text-gray-500">Creative Director</p>
+                </div>
+              </div>
+            </div>
 
-              <Link href="/shop">
-                <motion.div 
-                  className="bg-white rounded-2xl shadow-sm cursor-pointer w-full overflow-hidden"
-                  whileHover={{ 
-                    y: -10,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Image src="/howporduct1.png" alt="T-shirt" width={150} height={180} className="w-full h-auto" />
-                  </motion.div>
-                </motion.div>
-              </Link>
-
-              <Link href="/shop">
-                <motion.div 
-                  className="bg-white rounded-2xl shadow-sm cursor-pointer w-full overflow-hidden"
-                  whileHover={{ 
-                    y: -10,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Image src="/howporduct2.png" alt="T-shirt" width={150} height={180} className="w-full h-auto" />
-                  </motion.div>
-                </motion.div>
-              </Link>
-            </motion.div> */}
-
-            {/* Second Row: 2 Divs */}
-            <motion.div 
-              className="grid grid-cols-2 gap-4 w-full"
-              variants={itemVariants}
-            >
-              <motion.div 
-                className="bg-white rounded-2xl shadow-sm w-full overflow-hidden"
-                whileHover={{ 
-                  y: -10,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
-                  className='w-full h-full'
-                >
+            {/* Image 1 */}
+            <Link href="/shop">
+              <div className=" rounded-2xl  cursor-pointer w-full transition-shadow duration-300">
+                <div className="w-full h-full flex items-center justify-center ">
                   <Image
-                    src="/chart.png"
-                    alt="THE WHETHER OR U. T-shirt"
-                   width={500}
-                   height={100}
-                    className="w-full "
+                    src="/2.png"
+                    alt="Product 1"
+                    width={600}
+                    height={600}
+                    className="w-full h-auto  "
                   />
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
+            </Link>
 
-              <Link href="/shop">
-                <motion.div 
-                  className="bg-white rounded-2xl shadow-sm cursor-pointer w-full overflow-hidden"
-                  whileHover={{ 
-                    y: -10,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Image src="/howporduct4.png" alt="T-shirt" width={150} height={180} className="w-full h-auto" />
-                  </motion.div>
-                </motion.div>
-              </Link>
-            </motion.div>
+            {/* Image 2 */}
+            <Link href="/shop">
+              <div className=" rounded-2xl  cursor-pointer w-full  transition-shadow duration-300">
+                <div className="w-full h-full flex items-center justify-center ">
+                  <Image
+                    src="/3.png"
+                    alt="Product 2"
+                    width={600}
+                    height={600}
+                    className="w-full h-auto  "
+                  />
+                </div>
+              </div>
+            </Link>
           </div>
-        </motion.div>
 
-        {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <Link href="/shop">
-            <motion.div
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-medium shadow-md inline-block"
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 10px 25px rgba(249, 115, 22, 0.4)"
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
-              View Work
-            </motion.div>
-          </Link>
-        </motion.div>
+          {/* Second Row */}
+          <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 w-full">
+            {/* Chart Image */}
+            <div className=" rounded-2xl  w-full overflow-hidden  transition-shadow duration-300">
+              <Image 
+                src="/chart.png" 
+                alt="Chart" 
+                width={600} 
+                height={400} 
+                className="w-full h-full object-cover rounded-2xl" 
+              />
+            </div>
+
+            {/* Image 4 */}
+            <Link href="/shop">
+              <div className=" rounded-2xl  cursor-pointer w-full overflow-hidden  transition-shadow duration-300"> 
+                <div className="w-full h-full flex items-center justify-center ">
+                  <Image
+                    src="/4.png"
+                    alt="Product 4"
+                    width={400}
+                    height={400}
+                    className="w-full h-auto max-h-[300px] object-contain"
+                  />
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-12">
+            <Link href="/shop">
+              <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors duration-300">
+                Shop Now
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

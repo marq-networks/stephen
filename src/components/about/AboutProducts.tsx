@@ -14,7 +14,7 @@ export default function AboutProducts() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Product 1 */}
           <Link href="/shop" className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group">
             <div className="aspect-square bg-gray-100 rounded-xl mb-4 overflow-hidden">
