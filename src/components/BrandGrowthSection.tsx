@@ -170,11 +170,7 @@ export default function BrandGrowthSection() {
         {/* ProductShowcase Content */}
         <div className="w-full">
           {/* Main Description */}
-          <div className="text-center mb-12">
-            <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-4xl mx-auto">
-              <strong>Premium cotton shirts that redefine comfort and style crafted from 100% pure cotton, designed for breathability, durability, and an effortlessly elegant look. Soft on skin, light as air, and perfect for every occasion. Just pure comfort, no compromise.</strong>
-            </p>
-          </div>
+        
 
           {/* Product Grid */}
           <div className="w-full space-y-16">
