@@ -33,23 +33,23 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      className={`sticky top-0 left-0 right-0 z-50 text-white px-6 py-6 transition-colors duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 text-white  py-6 transition-colors duration-300 ${
         scrolled ? 'bg-black' : 'bg-transparent'
       }`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="max-w-[90%] mx-auto">
+      <div className="w-[1570px] mx-auto">
         {/* Desktop Navigation - Centered with icons on the right */}
         <motion.div 
-          className="hidden md:flex justify-between items-center"
+          className="hidden md:flex justify-between items-center gap-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1.5 }}
           transition={{ duration: 0.8, delay: 0.2, staggerChildren: 0.1 }}
         >
           {/* Main Navigation Links */}
-          <div className="flex justify-center items-center space-x-12 flex-1">
+          <div className="flex justify-between items-around  flex-1">
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About" },
@@ -114,7 +114,7 @@ export default function Navbar() {
           </motion.div>
           
           {/* Mobile Cart and Favorites Icons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-end space-x-2">
             <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors">
               <HeartIcon />
             </Link>

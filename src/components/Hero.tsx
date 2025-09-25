@@ -61,7 +61,7 @@ export default function Hero() {
                   type: "spring",
                   stiffness: 100
                 }}
-                className="text-white/80 text-lg font-medium"
+                className="text-white/80 text-xl font-bold"
               >
                 Product design
               </motion.div>
@@ -74,7 +74,7 @@ export default function Hero() {
                   type: "spring",
                   stiffness: 100
                 }}
-                className="text-white/80 text-lg font-medium"
+                className="text-white/80 text-xl font-bold"
               >
                 Content strategy
               </motion.div>
@@ -87,7 +87,7 @@ export default function Hero() {
                   type: "spring",
                   stiffness: 100
                 }}
-                className="text-white/80 text-lg font-medium"
+                className="text-white/80 text-xl font-bold"
               >
                 Brand identity design
               </motion.div>
@@ -100,7 +100,7 @@ export default function Hero() {
                   type: "spring",
                   stiffness: 100
                 }}
-                className="text-white/80 text-lg font-medium"
+                className="text-white/80 text-xl font-bold"
               >
                 Front-end development
               </motion.div>
@@ -155,7 +155,7 @@ export default function Hero() {
               transition={{ duration: 1.2, delay: 1.0, ease: "easeOut" }}
             >
               <motion.p 
-                className="text-white text-lg md:text-xl leading-relaxed mb-8"
+                className="text-white font-bold text-lg md:text-xl leading-relaxed mb-8"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ 
