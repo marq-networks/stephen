@@ -10,306 +10,277 @@ import ShopHeroSection from '@/components/ShopHeroSection';
 interface Product {
   id: number;
   name: string;
-  price: number;
-  originalPrice?: number;
+  price: string;
+  originalPrice?: string;
   image: string;
   slug: string;
   category: string;
-  colors: string[];
-  sizes: string[];
-  isNew?: boolean;
-  isSale?: boolean;
+  label?: string;
+  labelColor?: string;
 }
 
 const products: Product[] = [
   {
     id: 1,
     name: "Processing... Tee",
-    price: 40,
+    price: "$40",
     image: "/2.png",
     slug: "processing-tee",
-    category: "T-Shirts",
-    colors: ["Black", "White", "Gray"],
-    sizes: ["S", "M", "L", "XL"],
-    isNew: true
+    category: "Tees",
+    label: "New",
+    labelColor: "bg-green-400"
   },
   {
     id: 2,
     name: "Processor Tee",
-    price: 40,
+    price: "$40",
     image: "/3.png",
     slug: "processor-tee",
-    category: "T-Shirts",
-    colors: ["Black", "White", "Navy"],
-    sizes: ["S", "M", "L", "XL"],
+    category: "Tees",
+    label: "Popular",
+    labelColor: "bg-blue-400"
   },
   {
     id: 3,
     name: "What's Your Forecast? Tee",
-    price: 40,
-    originalPrice: 50,
+    price: "$40",
+    originalPrice: "$50",
     image: "/4.png",
     slug: "whats-your-forecast-tee",
-    category: "T-Shirts",
-    colors: ["Black", "White", "Gray"],
-    sizes: ["S", "M", "L", "XL"],
-    isSale: true
+    category: "Tees",
+    label: "Sale",
+    labelColor: "bg-yellow-400"
   },
   {
     id: 4,
     name: "The Whether is in U Tee",
-    price: 40,
+    price: "$40",
     image: "/one.png",
     slug: "the-whether-is-in-u-tee",
-    category: "T-Shirts",
-    colors: ["Black", "White", "Navy"],
-    sizes: ["S", "M", "L", "XL"],
+    category: "Tees"
   },
   {
     id: 5,
     name: "Life is Beautiful Tee",
-    price: 45,
+    price: "$45",
     image: "/hero.png",
     slug: "life-is-beautiful-tee",
-    category: "T-Shirts",
-    colors: ["White", "Black"],
-    sizes: ["S", "M", "L", "XL"],
-    isNew: true
+    category: "Tees",
+    label: "New",
+    labelColor: "bg-green-400"
   },
   {
     id: 6,
     name: "Mindful Statement Tee",
-    price: 40,
-    originalPrice: 55,
+    price: "$40",
+    originalPrice: "$55",
     image: "/howporduct1.png",
     slug: "mindful-statement-tee",
-    category: "T-Shirts",
-    colors: ["Black", "Gray"],
-    sizes: ["S", "M", "L", "XL"],
-    isSale: true
+    category: "Tees",
+    label: "Sale",
+    labelColor: "bg-yellow-400"
   }
 ];
 
-const categories = ["All", "New Arrivals", "Dresses", "Tops", "Outerwear", "Bottoms"];
-const sortOptions = [
-  { value: "featured", label: "Featured" },
-  { value: "price-low", label: "Price: Low to High" },
-  { value: "price-high", label: "Price: High to Low" },
-  { value: "newest", label: "Newest" },
-  { value: "name", label: "Name A-Z" }
-];
-
 export default function Shop() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [sortBy, setSortBy] = useState("featured");
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-
-  const filteredProducts = products.filter(product => 
-    selectedCategory === "All" || product.category === selectedCategory
-  );
-
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    switch (sortBy) {
-      case "price-low":
-        return a.price - b.price;
-      case "price-high":
-        return b.price - a.price;
-      case "newest":
-        return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0);
-      case "name":
-        return a.name.localeCompare(b.name);
-      default:
-        return 0;
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [cart, setCart] = useState<{id: number, quantity: number}[]>([]);
+  
+  const categories = ['All', 'New Arrivals', 'Tees'];
+  
+  // Show all products for each filter category
+  const filteredProducts = (() => {
+    if (activeCategory === 'All') {
+      return products;
+    } else if (activeCategory === 'New Arrivals') {
+      return products; // Show all products in New Arrivals
+    } else if (activeCategory === 'Tees') {
+      return products; // Show all products in Tees
     }
-  });
+    return products;
+  })();
+
+  const addToCart = (productId: number) => {
+    setCart(prevCart => {
+      const existingItem = prevCart.find(item => item.id === productId);
+      if (existingItem) {
+        return prevCart.map(item =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        return [...prevCart, { id: productId, quantity: 1 }];
+      }
+    });
+    
+    // Show success message (you can implement a toast notification here)
+    console.log('Product added to cart!');
+  };
 
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-       <ShopHeroSection />
-      {/* Hero Section */}
-      <section className="relative bg-white text-black py-20 mt-20">
-       
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-4"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            Shop Collection
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-black max-w-2xl mx-auto"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Premium streetwear that speaks your truth. Sustainable fashion for the conscious consumer.
-          </motion.p>
-        </div>
-      </section>
+      <ShopHeroSection />
 
-      {/* Filters and Sort */}
-      <section className="bg-white border-b py-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            {/* Category Filters - Tab Style */}
-            <div className="max-w-7xl flex flex-wrap mx-auto gap-0 border-b border-gray-200 w-full md:w-auto">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-[60px] py-2 rounded-2xl  text-sm font-medium transition-colors  whitespace-nowrap ${
-                    selectedCategory === category
-                      ? 'border-yellow-400 text-black bg-yellow-400'
-                      : 'border-transparent text-gray-600 hover:text-black hover:border-gray-300'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Grid */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* Main Shop Section */}
+      <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            {sortedProducts.map((product, index) => (
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Shop Our Collection
+            </motion.h2>
+            
+            <motion.p 
+              className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Experience the perfect blend of comfort, style, and quality. Each piece is crafted with care to make you feel confident and comfortable all day long.
+            </motion.p>
+          </motion.div>
+
+          {/* Category Filter */}
+          <motion.div 
+            className="flex flex-wrap justify-center gap-4 mb-12"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
+            {categories.map((category, index) => (
+              <motion.button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeCategory === category
+                    ? 'bg-black text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 1.0 + (index * 0.1),
+                  type: "spring",
+                  stiffness: 200
+                }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {category}
+              </motion.button>
+            ))}
+          </motion.div>
+
+          {/* Products Grid */}
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.2, delay: 1.2 }}
+            viewport={{ once: true }}
+          >
+            {filteredProducts.map((product, index) => (
               <motion.div
                 key={product.id}
-                className="group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+                initial={{ y: 80, opacity: 0, scale: 0.9 }}
+                whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 1.4 + (index * 0.1),
+                  type: "spring",
+                  stiffness: 100
+                }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
               >
                 {/* Product Image */}
-                <div className="relative aspect-square overflow-hidden bg-gray-100">
-                  <Link href={`/product/${product.slug}`}>
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </Link>
-                  
-                  {/* Badges */}
-                  <div className="absolute top-3 left-3 flex flex-col gap-2">
-                    {product.isNew && (
-                      <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                        NEW
-                      </span>
-                    )}
-                    {product.isSale && (
-                      <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                        SALE
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Quick Actions */}
-                  <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50">
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
-                    </button>
-                    <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50">
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                    </button>
-                  </div>
-
-                  {/* Quick Add to Cart */}
-                  <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Link href={`/product/${product.slug}`}>
-                      <button className="w-full bg-black text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
-                        Quick View
-                      </button>
-                    </Link>
-                  </div>
+                <div className="overflow-hidden h-[60vh] relative">
+                  {product.label && (
+                    <div 
+                      className={`absolute top-4 left-4 ${product.labelColor} text-black px-3 py-1 rounded-full text-sm font-medium z-10`}
+                    >
+                      {product.label}
+                    </div>
+                  )}
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                 </div>
 
                 {/* Product Info */}
                 <div className="p-4">
-                  <Link href={`/product/${product.slug}`}>
-                    <h3 className="font-medium text-gray-900 mb-2 hover:text-gray-600 transition-colors">
-                      {product.name}
-                    </h3>
-                  </Link>
-                  
-                  {/* Price */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-lg font-bold text-gray-900">
-                      ${product.price}
-                    </span>
+                  <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
+                    {product.name}
+                  </h3>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xl font-bold text-black">{product.price}</span>
                     {product.originalPrice && (
-                      <span className="text-sm text-gray-500 line-through">
-                        ${product.originalPrice}
-                      </span>
+                      <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
                     )}
                   </div>
+                </div>
 
-                  {/* Colors */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs text-gray-500">Colors:</span>
-                    <div className="flex gap-1">
-                      {product.colors.slice(0, 3).map((color, colorIndex) => (
-                        <div
-                          key={colorIndex}
-                          className={`w-4 h-4 rounded-full border border-gray-300 ${
-                            color === 'Black' ? 'bg-black' :
-                            color === 'White' ? 'bg-white' :
-                            color === 'Gray' ? 'bg-gray-400' :
-                            color === 'Navy' ? 'bg-blue-900' :
-                            'bg-gray-300'
-                          }`}
-                        />
-                      ))}
-                      {product.colors.length > 3 && (
-                        <span className="text-xs text-gray-500">+{product.colors.length - 3}</span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Sizes */}
-                  <div className="text-xs text-gray-500">
-                    Sizes: {product.sizes.join(', ')}
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="flex flex-col gap-3">
+                    <Link href={`/product/${product.slug}`}>
+                      <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        View Details
+                      </button>
+                    </Link>
+                    <button 
+                      onClick={() => addToCart(product.id)}
+                      className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-full font-medium hover:from-orange-600 hover:to-pink-600 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                    >
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
 
-      {/* Newsletter Section */}
-      <section className="bg-black text-white py-16">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-gray-300 mb-8">Get notified about new products and exclusive offers</p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-              Subscribe
-            </button>
-          </div>
+          {/* CTA Section */}
+          <motion.div 
+            className="text-center mt-16"
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.8 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/contact">
+              <motion.button 
+                className="bg-black text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Us
+              </motion.button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 

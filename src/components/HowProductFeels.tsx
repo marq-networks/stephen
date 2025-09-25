@@ -15,6 +15,7 @@ export default function HowProductFeels() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.8]);
 
   const [activeCategory, setActiveCategory] = useState('All');
+  const [cart, setCart] = useState<{id: number, quantity: number}[]>([]);
   
   const categories = ['All', 'New Arrivals', 'Dresses', 'Tops', 'Outerwear', 'Bottoms'];
   
@@ -51,9 +52,8 @@ export default function HowProductFeels() {
     },
     {
       id: 4,
-      name: 'Comfort Fit Jeans',
-      price: '$159',
-      originalPrice: '$200',
+      name: 'Comfortable Joggers',
+      price: '$129',
       image: '/howporduct4.png',
       label: 'Popular',
       labelColor: 'bg-blue-400',
@@ -61,9 +61,9 @@ export default function HowProductFeels() {
     },
     {
       id: 5,
-      name: 'Summer Floral Dress',
-      price: '$199',
-      originalPrice: '$280',
+      name: 'Elegant Evening Gown',
+      price: '$459',
+      originalPrice: '$599',
       image: '/howporduct1.png',
       label: 'New',
       labelColor: 'bg-green-400',
@@ -71,12 +71,9 @@ export default function HowProductFeels() {
     },
     {
       id: 6,
-      name: 'Classic Button Shirt',
-      price: '$129',
-      originalPrice: '$170',
+      name: 'Vintage Band Tee',
+      price: '$79',
       image: '/howporduct2.png',
-      label: 'Sale',
-      labelColor: 'bg-yellow-400',
       category: 'Tops'
     }
   ];
@@ -84,6 +81,24 @@ export default function HowProductFeels() {
   const filteredProducts = activeCategory === 'All' 
     ? products 
     : products.filter(product => product.category === activeCategory);
+
+  const addToCart = (productId: number) => {
+    setCart(prevCart => {
+      const existingItem = prevCart.find(item => item.id === productId);
+      if (existingItem) {
+        return prevCart.map(item =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        return [...prevCart, { id: productId, quantity: 1 }];
+      }
+    });
+    
+    // Show success message (you can implement a toast notification here)
+    console.log('Product added to cart!');
+  };
 
   return (
     <motion.section 
@@ -194,22 +209,9 @@ export default function HowProductFeels() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                
-                {/* Product Name and Price Overlay at bottom of image */}
-                {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-                  <h3 className="text-lg font-semibold text-white mb-1">
-                    {product.name}
-                  </h3>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xl font-bold text-white">{product.price}</span>
-                    {product.originalPrice && (
-                      <span className="text-sm text-gray-300 line-through">{product.originalPrice}</span>
-                    )}
-                  </div>
-                </div> */}
               </div>
 
-              {/* Product Info - keeping original for consistency but could be removed if not needed */}
+              {/* Product Info */}
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
                   {product.name}
@@ -224,11 +226,19 @@ export default function HowProductFeels() {
 
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <Link href="/shop">
-                  <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    View Details
+                <div className="flex flex-col gap-3">
+                  <Link href="/shop">
+                    <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      View Details
+                    </button>
+                  </Link>
+                  <button 
+                    onClick={() => addToCart(product.id)}
+                    className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-full font-medium hover:from-orange-600 hover:to-pink-600 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  >
+                    Add to Cart
                   </button>
-                </Link>
+                </div>
               </div>
             </motion.div>
           ))}

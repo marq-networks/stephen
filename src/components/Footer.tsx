@@ -1,6 +1,6 @@
 'use client';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
-// Removed: import { InfiniteMovingFooter } from './common/infiniteMovingFooter';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -50,23 +50,21 @@ export default function Footer() {
           {/* Navigation Links */}
           <div>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">Home</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">Studio</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">Projects</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">Project single</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">News</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">News single</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">Pricing</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">Privacy policy</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">Terms of service</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-black transition-colors text-sm">404</a></li>
+              <li><Link href="/" className="text-gray-700 hover:text-black transition-colors text-sm">Home</Link></li>
+              <li><Link href="/about" className="text-gray-700 hover:text-black transition-colors text-sm">About</Link></li>
+              <li><Link href="/shop" className="text-gray-700 hover:text-black transition-colors text-sm">Shop</Link></li>
+              <li><Link href="/blog" className="text-gray-700 hover:text-black transition-colors text-sm">Blog</Link></li>
+              <li><Link href="/contact" className="text-gray-700 hover:text-black transition-colors text-sm">Contact</Link></li>
+              <li><Link href="/privacy" className="text-gray-700 hover:text-black transition-colors text-sm">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-gray-700 hover:text-black transition-colors text-sm">Terms of Service</Link></li>
+              <li><Link href="/shipping" className="text-gray-700 hover:text-black transition-colors text-sm">Shipping Policy</Link></li>
             </ul>
           </div>
 
           {/* Contact Information */}
           <div>
             <div className="space-y-3">
-              <p className="text-gray-700 text-sm">hello@overa.studio</p>
+              <p className="text-gray-700 text-sm">hello@stephen.studio</p>
               <p className="text-gray-700 text-sm">(0023) 6763-362</p>
               <p className="text-gray-700 text-sm">Los Angeles</p>
             </div>
@@ -99,8 +97,6 @@ export default function Footer() {
             </form>
           </div>
         </div>
-
-     
       </div>
 
       {/* Rotating Marquee Section (right → left, shows immediately) */}
@@ -124,9 +120,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-{/* <InfiniteMovingFooter /> */}
-
     </footer>
   );
 }
