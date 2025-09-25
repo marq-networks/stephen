@@ -179,7 +179,7 @@ export default function HowProductFeels() {
               whileHover={{ y: -10, scale: 1.02 }}
             >
               {/* Product Image */}
-              <div className="overflow-hidden h-[400px]">
+              <div className="overflow-hidden h-[60vh] relative">
                 {product.label && (
                   <div 
                     className={`absolute top-4 left-4 ${product.labelColor} text-black px-3 py-1 rounded-full text-sm font-medium z-10`}
@@ -194,9 +194,22 @@ export default function HowProductFeels() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                
+                {/* Product Name and Price Overlay at bottom of image */}
+                {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+                  <h3 className="text-lg font-semibold text-white mb-1">
+                    {product.name}
+                  </h3>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xl font-bold text-white">{product.price}</span>
+                    {product.originalPrice && (
+                      <span className="text-sm text-gray-300 line-through">{product.originalPrice}</span>
+                    )}
+                  </div>
+                </div> */}
               </div>
 
-              {/* Product Info */}
+              {/* Product Info - keeping original for consistency but could be removed if not needed */}
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
                   {product.name}
