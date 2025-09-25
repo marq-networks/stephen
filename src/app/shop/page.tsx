@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import ShopHeroSection from '@/components/ShopHeroSection';
+import ShopHero from '@/components/ShopHero';
 
 interface Product {
   id: number;
@@ -119,171 +119,172 @@ export default function Shop() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#171717]">
       <Navbar />
-      <ShopHeroSection />
+      
+      {/* Hero Section - Fixed background */}
+      <div className="fixed top-0 left-0 w-full z-0">
+        <ShopHero />
+      </div>
+      
+      {/* Scrollable content that overlays the hero */}
+      <div className="relative z-10">
+        {/* Spacer to push content down initially */}
+        <div className="h-screen"></div>
+        
+        {/* Full-width background container */}
+        <div className="w-full bg-white">
+          {/* Main Shop Section - First section to overlay hero */}
+          <div className="w-full max-w-[1570px] mx-auto bg-white rounded-t-2xl">
+            <section className="py-12 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-[1570px] mx-auto">
+                {/* Header */}
+                <motion.div 
+                  className="text-center mb-12"
+                  initial={{ y: 80, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                >
+                  <motion.h2 
+                    className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                  >
+                    Shop Our Collection
+                  </motion.h2>
+                  
+                  <motion.p 
+                    className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.6 }}
+                    viewport={{ once: true }}
+                  >
+                    Experience the perfect blend of comfort, style, and quality. Each piece is crafted with care to make you feel confident and comfortable all day long.
+                  </motion.p>
+                </motion.div>
 
-      {/* Main Shop Section */}
-      <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ y: 80, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-          >
-            <motion.h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              Shop Our Collection
-            </motion.h2>
-            
-            <motion.p 
-              className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              Experience the perfect blend of comfort, style, and quality. Each piece is crafted with care to make you feel confident and comfortable all day long.
-            </motion.p>
-          </motion.div>
-
-          {/* Category Filter */}
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            viewport={{ once: true }}
-          >
-            {categories.map((category, index) => (
-              <motion.button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeCategory === category
-                    ? 'bg-black text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-                initial={{ scale: 0, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: 1.0 + (index * 0.1),
-                  type: "spring",
-                  stiffness: 200
-                }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </motion.div>
-
-          {/* Products Grid */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.2, delay: 1.2 }}
-            viewport={{ once: true }}
-          >
-            {filteredProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
-                initial={{ y: 80, opacity: 0, scale: 0.9 }}
-                whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: 1.4 + (index * 0.1),
-                  type: "spring",
-                  stiffness: 100
-                }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                {/* Product Image */}
-                <div className="overflow-hidden h-[60vh] relative">
-                  {product.label && (
-                    <div 
-                      className={`absolute top-4 left-4 ${product.labelColor} text-black px-3 py-1 rounded-full text-sm font-medium z-10`}
+                {/* Category Filter */}
+                <motion.div 
+                  className="flex flex-wrap justify-center gap-4 mb-12"
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  {categories.map((category, index) => (
+                    <motion.button
+                      key={category}
+                      onClick={() => setActiveCategory(category)}
+                      className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                        activeCategory === category
+                          ? 'bg-black text-white shadow-lg'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                      viewport={{ once: true }}
                     >
-                      {product.label}
-                    </div>
-                  )}
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                </div>
+                      {category}
+                    </motion.button>
+                  ))}
+                </motion.div>
 
-                {/* Product Info */}
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
-                    {product.name}
-                  </h3>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xl font-bold text-black">{product.price}</span>
-                    {product.originalPrice && (
-                      <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex flex-col gap-3">
-                    <Link href={`/product/${product.slug}`}>
-                      <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                        View Details
-                      </button>
-                    </Link>
-                    <button 
-                      onClick={() => addToCart(product.id)}
-                      className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-full font-medium hover:from-orange-600 hover:to-pink-600 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                {/* Products Grid */}
+                <motion.div 
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 1 }}
+                  viewport={{ once: true }}
+                >
+                  {filteredProducts.map((product, index) => (
+                    <motion.div
+                      key={product.id}
+                      className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ 
+                        duration: 0.8, 
+                        delay: 1.2 + index * 0.1,
+                        ease: "easeOut"
+                      }}
+                      viewport={{ once: true }}
+                      whileHover={{ y: -8 }}
                     >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+                      {/* Product Label */}
+                      {product.label && (
+                        <div className={`absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-xs font-semibold text-white ${product.labelColor}`}>
+                          {product.label}
+                        </div>
+                      )}
 
-          {/* CTA Section */}
-          <motion.div 
-            className="text-center mt-16"
-            initial={{ y: 80, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.8 }}
-            viewport={{ once: true }}
-          >
-            <Link href="/contact">
-              <motion.button 
-                className="bg-black text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact Us
-              </motion.button>
-            </Link>
-          </motion.div>
+                      {/* Product Image */}
+                      <div className="relative aspect-square bg-gray-50 overflow-hidden">
+                        <Link href={`/product/${product.slug}`}>
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                        </Link>
+                        
+                        {/* Quick Add to Cart Button */}
+                        <motion.button
+                          onClick={() => addToCart(product.id)}
+                          className="absolute bottom-4 right-4 bg-black text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-gray-800"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                          </svg>
+                        </motion.button>
+                      </div>
+
+                      {/* Product Info */}
+                      <div className="p-6">
+                        <Link href={`/product/${product.slug}`}>
+                          <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-orange-500 transition-colors duration-200">
+                            {product.name}
+                          </h3>
+                        </Link>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            <span className="text-xl font-bold text-gray-900">{product.price}</span>
+                            {product.originalPrice && (
+                              <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
+                            )}
+                          </div>
+                          
+                          <motion.button
+                            onClick={() => addToCart(product.id)}
+                            className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            Add to Cart
+                          </motion.button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+            </section>
+          </div>
         </div>
-      </section>
-
+      </div>
+      
+      {/* Footer - Normal flow */}
       <Footer />
     </div>
   );
