@@ -57,7 +57,7 @@ export default function StatementSlider() {
 
   return (
     <motion.section 
-      className="py-20 bg-black mx-auto px-10"
+      className="py-20  mx-auto px-10"
       style={{ width: '1500px' }}
       ref={sectionRef}
     >

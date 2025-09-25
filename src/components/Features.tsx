@@ -2,27 +2,27 @@
 
 export default function Features() {
   return (
-    <section className="py-20 bg-black px-10 mx-auto" style={{ width: '1500px' }}>
+    <section className="py-20  px-10 mx-auto" style={{ width: '1500px' }}>
       <div className="w-full">
         {/* Sleek Design */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-b border-gray-600 pb-8 mb-8">
           <div>
-            <h2 className="text-2xl md:text-4xl font-bold mb-2">Sleek design</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2 text-black">Sleek design</h2>
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">Apps</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Websites</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Design system</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Wireframing</span>
+              <span className="text-[28px] text-black">Apps</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Websites</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Design system</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Wireframing</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">Dashboards</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Prototyping</span>
+              <span className="text-[28px] text-black">Dashboards</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Prototyping</span>
             </div>
           </div>
         </div>
@@ -30,20 +30,20 @@ export default function Features() {
         {/* Bamboo Cotton */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-b border-gray-600 pb-8 mb-8">
           <div>
-            <h2 className="text-2xl md:text-4xl font-bold mb-2">Bamboo Cotton</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2 text-black">Bamboo Cotton</h2>
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">Website copy</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Tone of voice guidelines</span>
+              <span className="text-[28px] text-black">Website copy</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Tone of voice guidelines</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">Information architecture</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">UX writing</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Microcopy</span>
+              <span className="text-[28px] text-black">Information architecture</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">UX writing</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Microcopy</span>
             </div>
           </div>
         </div>
@@ -51,20 +51,20 @@ export default function Features() {
         {/* Natural Cotton */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-b border-gray-600 pb-8 mb-8">
           <div>
-            <h2 className="text-2xl md:text-4xl font-bold mb-2">Natural Cotton</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2 text-black">Natural Cotton</h2>
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">Logo design</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Typography & color systems</span>
+              <span className="text-[28px] text-black">Logo design</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Typography & color systems</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">Brand guidelines</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Art Direction</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Motion Identity</span>
+              <span className="text-[28px] text-black">Brand guidelines</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Art Direction</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Motion Identity</span>
             </div>
           </div>
         </div>
@@ -72,28 +72,28 @@ export default function Features() {
         {/* ECO Friendly */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-8">
           <div>
-            <h2 className="text-2xl md:text-4xl font-bold mb-2">ECO Friendly</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2 text-black">ECO Friendly</h2>
           </div>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px]   text-gray-300">Framer & Webflow builds</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">Migration</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">SEO</span>
+              <span className="text-[28px]   text-black">Framer & Webflow builds</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">Migration</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">SEO</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="text-[20px] text-gray-300">CMS Integration</span>
-              <span className="text-[20px] text-gray-300">•</span>
-              <span className="text-[20px] text-gray-300">E-commerce setup</span>
+              <span className="text-[28px] text-black">CMS Integration</span>
+              <span className="text-[28px] text-black">•</span>
+              <span className="text-[28px] text-black">E-commerce setup</span>
             </div>
           </div>
         </div>
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 text-black">
             Why Choose Our Products
           </h2>
-          <p className="text-[20px] md:text-xl text-white max-w-3xl mx-auto">
+          <p className="text-[28px] md:text-xl text-white max-w-3xl mx-auto">
             Experience the perfect blend of quality, sustainability, and style in every piece we create.
           </p>
         </div>

@@ -17,7 +17,7 @@ export default function BrandGrowthSection() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="bg-gray-100 py-16 rounded-r-3xl rounded-l-3xl px-10 min-h-screen flex flex-col items-center mx-auto"
+      className=" py-16 rounded-r-3xl rounded-l-3xl px-10 min-h-screen flex flex-col items-center mx-auto"
       style={{ y, opacity, width: '1500px' }}
     >
       <div className="w-full">

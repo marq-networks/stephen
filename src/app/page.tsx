@@ -27,7 +27,7 @@ export default function Home() {
         <div className="h-screen"></div>
         
         {/* Brand Growth Section - First section to overlay hero */}
-        <div className="relative z-10 bg-[#171717]">
+        <div className="relative z-10 bg-[#fff]">
           <BrandGrowthSection />
         </div>
         
@@ -35,19 +35,19 @@ export default function Home() {
           <ProductGrid />
         </div> */}
         
-        <div className="relative z-10 bg-[#171717]">
+        <div className="relative z-10 bg-[#fff]">
           <HowProductFeels />
         </div>
         
-        <div className="relative z-10 bg-[#171717]">
+        <div className="relative z-10 bg-[#fff]">
           <EditorialFashion />
         </div>
         
-        <div className="relative z-10 bg-[#171717]">
+        <div className="relative z-10 bg-[#fff]">
           <StatementSlider />
         </div>
         
-        <div className="relative z-10 bg-[#171717]">
+        <div className="relative z-10 bg-[#fff]">
           <Features />
         </div>
         
@@ -55,11 +55,11 @@ export default function Home() {
           <Clients />
         </div> */}
         
-        <div className="relative z-10 bg-[#171717]">
+        <div className="relative z-10 bg-[#fff]">
           <FAQ />
         </div>
         
-        <div className="relative z-10 bg-[#171717]">
+        <div className="relative z-10 bg-[#fff]">
           <Contact />
         </div>
       </div>

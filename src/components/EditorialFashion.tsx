@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 export default function EditorialFashion() {
   return (
-    <section className="py-20 bg-black mx-auto px-10" style={{ width: '1500px' }}>
+    <section className="py-20  mx-auto px-10" style={{ width: '1500px' }}>
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Content */}
