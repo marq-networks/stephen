@@ -32,7 +32,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-20 bg-white h-auto px-10 w-full">
+    <section className="py-20 bg-white h-auto px-10 mx-auto" style={{ width: '1500px' }}>
       <div className="w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">

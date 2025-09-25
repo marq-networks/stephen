@@ -2,7 +2,7 @@
 
 export default function Features() {
   return (
-    <section className="py-20 bg-black px-10 w-full">
+    <section className="py-20 bg-black px-10 mx-auto" style={{ width: '1500px' }}>
       <div className="w-full">
         {/* Sleek Design */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-b border-gray-600 pb-8 mb-8">

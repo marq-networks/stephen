@@ -1,10 +1,11 @@
 'use client';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 export default function StatementSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const slides = [
     {
@@ -55,8 +56,12 @@ export default function StatementSlider() {
   };
 
   return (
-    <section className="bg-gray-50 py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <motion.section 
+      className="py-20 bg-black mx-auto px-10"
+      style={{ width: '1500px' }}
+      ref={sectionRef}
+    >
+      <div className="w-full">
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
@@ -196,6 +201,6 @@ export default function StatementSlider() {
           </motion.button>
         </motion.div>
       </div>
-    </section>
+    </motion.section >
   );
 }
