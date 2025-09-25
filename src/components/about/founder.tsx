@@ -1,7 +1,8 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
+import { ShoppingCart, Plus } from 'lucide-react';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -23,10 +24,34 @@ const itemVariants: Variants = {
   }
 };
 
+interface Product {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+}
+
+const products: Product[] = [
+  { id: 1, name: "Premium Cotton Tee", price: "$45", image: "/howporduct1.png" },
+  { id: 2, name: "Comfort Blend Shirt", price: "$50", image: "/howporduct2.png" },
+  { id: 3, name: "Classic Design Tee", price: "$40", image: "/howporduct3.png" },
+  { id: 4, name: "Versatile Style Shirt", price: "$48", image: "/howporduct4.png" }
+];
+
 const Founder = () => {
+    const [addedToCart, setAddedToCart] = useState<number[]>([]);
+
+    const handleAddToCart = (productId: number) => {
+        setAddedToCart(prev => [...prev, productId]);
+        // Remove the "added" state after 2 seconds
+        setTimeout(() => {
+            setAddedToCart(prev => prev.filter(id => id !== productId));
+        }, 2000);
+    };
+
     return (
         <div className="w-full bg-white py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div 
                     className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                     variants={containerVariants}
@@ -53,7 +78,7 @@ const Founder = () => {
                         <h3 className="text-2xl font-bold text-black">The Founder</h3>
 
                         <blockquote className="text-xl font-bold text-black leading-relaxed">
-                            &quot;The closest thing to having an in-house design team without actually hiring one&ldquo;
+                            &quot;The closest thing to having an in-house design team without actually hiring one&rdquo;
                         </blockquote>
 
                         <p className="text-sm text-black font-light leading-relaxed">
@@ -75,7 +100,7 @@ const Founder = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8 }}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="grid grid-cols-2 md:grid-cols-4 gap-6"
                         variants={containerVariants}
@@ -83,19 +108,79 @@ const Founder = () => {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
                     >
-                        {[1, 2, 3, 4].map((index) => (
+                        {products.map((product, index) => (
                             <motion.div 
-                                key={index}
-                                className="rounded-lg aspect-square overflow-hidden"
+                                key={product.id}
+                                className="relative rounded-lg aspect-square overflow-hidden group"
                                 variants={itemVariants}
-                                whileHover={{ scale: 1.1, rotate: 2 }}
+                                whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
                             >
                                 <img
-                                    src={`/howporduct${index}.png`}
-                                    alt={`Product ${index}`}
+                                    src={product.image}
+                                    alt={product.name}
                                     className="w-full h-full object-cover"
                                 />
+                                
+                                {/* Product Info Overlay */}
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                                    <h4 className="text-white font-semibold text-sm mb-1">{product.name}</h4>
+                                    <p className="text-white/80 text-xs mb-3">{product.price}</p>
+                                    
+                                    {/* Add to Cart Button */}
+                                    <motion.button
+                                        onClick={() => handleAddToCart(product.id)}
+                                        className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-300 ${
+                                            addedToCart.includes(product.id)
+                                                ? 'bg-green-500 text-white'
+                                                : 'bg-white text-black hover:bg-gray-100'
+                                        }`}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        disabled={addedToCart.includes(product.id)}
+                                    >
+                                        {addedToCart.includes(product.id) ? (
+                                            <>
+                                                <motion.div
+                                                    initial={{ scale: 0 }}
+                                                    animate={{ scale: 1 }}
+                                                    className="w-3 h-3 rounded-full bg-white"
+                                                />
+                                                Added!
+                                            </>
+                                        ) : (
+                                            <>
+                                                <ShoppingCart size={12} />
+                                                Add to Cart
+                                            </>
+                                        )}
+                                    </motion.button>
+                                </div>
+
+                                {/* Quick Add Button (Always Visible on Mobile) */}
+                                <div className="absolute top-2 right-2 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                                    <motion.button
+                                        onClick={() => handleAddToCart(product.id)}
+                                        className={`p-2 rounded-full shadow-lg transition-all duration-300 ${
+                                            addedToCart.includes(product.id)
+                                                ? 'bg-green-500 text-white'
+                                                : 'bg-white text-black hover:bg-gray-100'
+                                        }`}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        disabled={addedToCart.includes(product.id)}
+                                    >
+                                        {addedToCart.includes(product.id) ? (
+                                            <motion.div
+                                                initial={{ scale: 0, rotate: -180 }}
+                                                animate={{ scale: 1, rotate: 0 }}
+                                                className="w-4 h-4 rounded-full bg-white"
+                                            />
+                                        ) : (
+                                            <Plus size={16} />
+                                        )}
+                                    </motion.button>
+                                </div>
                             </motion.div>
                         ))}
                     </motion.div>

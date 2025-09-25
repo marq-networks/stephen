@@ -1,46 +1,73 @@
 'use client';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function AboutHero() {
-  return (
-    <section className="relative text-white min-h-screen flex items-center justify-start p-4 overflow-hidden">
-      {/* Background Image */}
-      <motion.div 
-        className="absolute inset-0 z-0"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-      >
-        <Image
-          src="/aboutherobg.png"
-          alt="About Hero Background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </motion.div>
-      
-      {/* Dark overlay for better text readability */}
-      <motion.div 
-        className="absolute inset-0 bg-black/40 z-1"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.3 }}
-      />
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
 
-      {/* Main About Us heading */}
-      <motion.div 
-        className="relative z-10 text-left"
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-      >
-        <h2 className="text-6xl lg:text-8xl font-bold">
-          About Us.
-        </h2>
-      </motion.div>
-    </section>
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.8]);
+
+  return (
+    <motion.section 
+      ref={sectionRef}
+      className="relative text-white min-h-screen flex items-center justify-start overflow-hidden"
+      style={{ y, opacity }}
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <motion.div
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="relative w-full h-full"
+        >
+          <Image
+            src="/aboutherobg.png"
+            alt="About Hero Background"
+            width={1400}
+            height={1400}
+            className="w-full h-full object-cover object-center"
+            priority
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </motion.div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full">
+        {/* Main Hero Content */}
+        <div className="flex items-center justify-start h-screen py-20">
+          {/* Main About Us heading */}
+          <motion.div 
+            className="text-left"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <motion.h2 
+              className="text-6xl lg:text-8xl font-bold"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ 
+                duration: 1.0, 
+                delay: 0.8, 
+                ease: "easeOut",
+                type: "spring",
+                stiffness: 80
+              }}
+            >
+              About Us.
+            </motion.h2>
+          </motion.div>
+        </div>
+      </div>
+    </motion.section>
   );
 }
 

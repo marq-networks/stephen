@@ -25,7 +25,7 @@ const itemVariants: Variants = {
 export default function AboutContent() {
   return (
     <section className="py-20 font-extrabold text-black">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1570px] mx-auto px-6">
         {/* Top Content - Heading, Button and Text Paragraphs */}
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 items-center justify-baseline"
