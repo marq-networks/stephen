@@ -34,7 +34,9 @@ export default function Home() {
         {/* <div className="relative z-10 bg-[#171717]">
           <ProductGrid />
         </div> */}
-        
+          <div className="relative z-10 bg-[#fff]">
+          <StatementSlider />
+        </div>
         <div className="relative z-10 bg-[#fff]">
           <HowProductFeels />
         </div>
@@ -43,9 +45,7 @@ export default function Home() {
           <EditorialFashion />
         </div>
         
-        <div className="relative z-10 bg-[#fff]">
-          <StatementSlider />
-        </div>
+      
         
         <div className="relative z-10 bg-[#fff]">
           <Features />
