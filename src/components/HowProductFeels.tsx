@@ -88,8 +88,8 @@ export default function HowProductFeels() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="sticky top-0 bg-white py-12 mx-auto rounded-2xl flex items-center z-30 px-10 w-full"
-      style={{ y, opacity, minHeight: 'auto' ,width: '1500px' }}
+      className="sticky top-0 bg-white py-12 mx-auto rounded-2xl flex items-center z-30  w-full"
+      style={{ y, opacity, minHeight: 'auto' ,width: '1570px' }}
     >
       <div className="w-full">
         {/* Header */}

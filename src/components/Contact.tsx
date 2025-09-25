@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section 
       className="relative py-20 min-h-screen flex items-center px-10 mx-auto"
-      style={{ width: '1500px' }}
+      style={{ width: '1570px' }}
     >
       <div className="w-full">
        

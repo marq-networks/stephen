@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 export default function EditorialFashion() {
   return (
-    <section className="py-20  mx-auto px-10" style={{ width: '1500px' }}>
+    <section className="py-20  mx-auto " style={{ width: '1570px' }}>
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Content */}
@@ -17,12 +17,12 @@ export default function EditorialFashion() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h2 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Redefining<br />
+              Redefining
               Editorial<br />
               <span className="text-yellow-400">Fashion</span>
             </motion.h2>
