@@ -88,13 +88,13 @@ export default function HowProductFeels() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="sticky top-0 bg-white py-20 rounded-2xl min-h-screen flex items-center z-30 px-10 w-full"
-      style={{ y, opacity }}
+      className="sticky top-0 bg-white py-12 rounded-2xl flex items-center z-30 px-10 w-full"
+      style={{ y, opacity, minHeight: 'auto' }}
     >
       <div className="w-full">
         {/* Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ y: 80, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -179,7 +179,7 @@ export default function HowProductFeels() {
               whileHover={{ y: -10, scale: 1.02 }}
             >
               {/* Product Image */}
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="overflow-hidden h-[400px]">
                 {product.label && (
                   <div 
                     className={`absolute top-4 left-4 ${product.labelColor} text-black px-3 py-1 rounded-full text-sm font-medium z-10`}
@@ -191,13 +191,13 @@ export default function HowProductFeels() {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
 
               {/* Product Info */}
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
                   {product.name}
                 </h3>
