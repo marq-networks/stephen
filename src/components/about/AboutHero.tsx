@@ -28,19 +28,19 @@ export default function AboutHero() {
           className="relative w-full h-full"
         >
           <Image
-            src="/aboutherobg.png"
-            alt="About Hero Background"
+            src="/homeherobg.png"
+            alt="Life is Beautiful T-shirt"
             width={1400}
             height={1400}
             className="w-full h-full object-cover object-center"
             priority
           />
           {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </motion.div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full">
+      <div className="relative z-10 max-w-[1570px] mx-auto  w-full h-full">
         {/* Main Hero Content */}
         <div className="flex items-center justify-start h-screen py-20">
           {/* Main About Us heading */}
