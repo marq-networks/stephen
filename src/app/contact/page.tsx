@@ -141,10 +141,10 @@ function ContactUsSection() {
             >
               <div className="bg-gray-50 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-black mb-6">
-                  Let's Start a Conversation
+                  Lets Start a Conversation
                 </h3>
                 <p className="text-gray-600 mb-8 leading-relaxed">
-                  We're here to help bring your ideas to life. Whether you have a specific project in mind or just want to explore possibilities, we'd love to hear from you.
+                  We are here to help bring your ideas to life. Whether you have a specific project in mind or just want to explore possibilities, we will love to hear from you.
                 </p>
 
                 <div className="space-y-6">
