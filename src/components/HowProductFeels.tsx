@@ -254,7 +254,7 @@ export default function HowProductFeels() {
         >
           <Link href="/shop">
             <motion.button 
-              className="bg-black text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg"
+              className="bg-[#46c34c] text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-[#46c34c]/80 transition-all duration-300 shadow-lg"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

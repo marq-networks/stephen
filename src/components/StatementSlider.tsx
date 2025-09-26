@@ -102,7 +102,7 @@ export default function StatementSlider() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <motion.p 
-                  className="text-orange-500 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4 sm:mb-6"
+                  className="text-[#46c34c] text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4 sm:mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}

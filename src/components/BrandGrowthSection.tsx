@@ -183,7 +183,7 @@ export default function BrandGrowthSection() {
                 </div>
                 <div className="mt-6">
                   <Link href="/shop">
-                    <button className="bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-gray-800 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
+                    <button className="bg-[#46c34c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#46c34c]/80 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
                       Explore Collection
                     </button>
                   </Link>
@@ -253,7 +253,7 @@ export default function BrandGrowthSection() {
             {/* CTA Button */}
             <div className="text-center mt-8 sm:mt-12">
               <Link href="/shop">
-                <button className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-800 transition-colors duration-300 w-full sm:w-auto">
+                <button className="bg-[#46c34c] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-[#46c34c]/80 transition-colors duration-300 w-full sm:w-auto">
                   Shop Now
                 </button>
               </Link>

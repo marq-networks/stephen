@@ -42,7 +42,7 @@ export default function ProductShowcase() {
               </div>
               <div className="mt-6">
                 <Link href="/shop">
-                  <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300">
+                  <button className="bg-[#46c34c] text-white px-6 py-3 rounded-full hover:bg-[#46c34c]/80 transition-colors duration-300">
                     Explore Collection
                   </button>
                 </Link>
@@ -112,7 +112,7 @@ export default function ProductShowcase() {
           {/* CTA Button */}
           <div className="text-center mt-12">
             <Link href="/shop">
-              <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors duration-300">
+              <button className="bg-[#46c34c] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#46c34c]/80 transition-colors duration-300">
                 Shop Now
               </button>
             </Link>
