@@ -103,20 +103,20 @@ export default function HowProductFeels() {
   return (
     <motion.section 
       ref={sectionRef}
-      className="sticky top-0 bg-white py-12 mx-auto rounded-2xl flex items-center z-30  w-full"
-      style={{ y, opacity, minHeight: 'auto' ,width: '1570px' }}
+      className="sticky top-0 bg-white py-8 sm:py-12 lg:py-16 max-w-[1570px] mx-auto rounded-2xl flex items-center z-30 w-full px-4 sm:px-6 lg:px-8"
+      style={{ y, opacity, minHeight: 'auto' }}
     >
       <div className="w-full">
         {/* Header */}
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
           initial={{ y: 80, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <motion.h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
@@ -126,7 +126,7 @@ export default function HowProductFeels() {
           </motion.h2>
           
           <motion.p 
-            className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -138,7 +138,7 @@ export default function HowProductFeels() {
 
         {/* Category Filter */}
         <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
@@ -148,7 +148,7 @@ export default function HowProductFeels() {
             <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                 activeCategory === category
                   ? 'bg-black text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -172,7 +172,7 @@ export default function HowProductFeels() {
 
         {/* Products Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2 }}
@@ -194,10 +194,10 @@ export default function HowProductFeels() {
               whileHover={{ y: -10, scale: 1.02 }}
             >
               {/* Product Image */}
-              <div className="overflow-hidden h-[60vh] relative">
+              <div className="overflow-hidden h-[40vh] sm:h-[50vh] lg:h-[60vh] relative">
                 {product.label && (
                   <div 
-                    className={`absolute top-4 left-4 ${product.labelColor} text-black px-3 py-1 rounded-full text-sm font-medium z-10`}
+                    className={`absolute top-2 sm:top-4 left-2 sm:left-4 ${product.labelColor} text-black px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium z-10`}
                   >
                     {product.label}
                   </div>
@@ -212,12 +212,12 @@ export default function HowProductFeels() {
               </div>
 
               {/* Product Info */}
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
+              <div className="p-3 sm:p-4">
+                <h3 className="text-base sm:text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
                   {product.name}
                 </h3>
                 <div className="flex items-center space-x-2">
-                  <span className="text-xl font-bold text-black">{product.price}</span>
+                  <span className="text-lg sm:text-xl font-bold text-black">{product.price}</span>
                   {product.originalPrice && (
                     <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
                   )}
@@ -226,15 +226,15 @@ export default function HowProductFeels() {
 
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 px-4">
                   <Link href="/shop">
-                    <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <button className="bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full">
                       View Details
                     </button>
                   </Link>
                   <button 
                     onClick={() => addToCart(product.id)}
-                    className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-full font-medium hover:from-orange-600 hover:to-pink-600 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                    className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:from-orange-600 hover:to-pink-600 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full"
                   >
                     Add to Cart
                   </button>
@@ -246,7 +246,7 @@ export default function HowProductFeels() {
 
         {/* CTA Section */}
         <motion.div 
-          className="text-center mt-16"
+          className="text-center mt-12 sm:mt-16"
           initial={{ y: 80, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.8 }}
@@ -254,7 +254,7 @@ export default function HowProductFeels() {
         >
           <Link href="/shop">
             <motion.button 
-              className="bg-black text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg"
+              className="bg-black text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

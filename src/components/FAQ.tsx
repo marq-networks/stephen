@@ -32,27 +32,27 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-20 bg-white h-auto px-10 mx-auto" style={{ width: '1570px' }}>
+    <section className="py-12 sm:py-16 lg:py-20 bg-white h-auto px-4 sm:px-6 lg:px-8 mx-auto" style={{ maxWidth: '1570px', width: '100%' }}>
       <div className="w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Find answers to common questions about our products, shipping, and policies.
           </p>
         </div>
 
-        <div className=" mx-auto space-y-4">
+        <div className="mx-auto space-y-4 max-w-4xl">
           {faqs.map((faq, index) => (
             <div key={index} className="border border-gray-200 rounded-2xl overflow-hidden">
               <button
-                className="w-full px-8 py-6 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center"
+                className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="text-lg font-semibold text-black pr-8">{faq.question}</span>
+                <span className="text-base sm:text-lg font-semibold text-gray-900 pr-4">{faq.question}</span>
                 <svg
-                  className={`w-6 h-6 text-gray-500 transform transition-transform duration-200 ${
+                  className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -63,19 +63,12 @@ export default function FAQ() {
                 </svg>
               </button>
               {openIndex === index && (
-                <div className="px-8 pb-6 bg-gray-50">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 bg-gray-50">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">Still have questions?</p>
-          <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium">
-            Contact Support
-          </button>
         </div>
       </div>
     </section>

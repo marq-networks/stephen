@@ -57,21 +57,21 @@ export default function StatementSlider() {
 
   return (
     <motion.section 
-      className="py-20  mx-auto px-10"
-      style={{ width: '1570px' }}
+      className="py-12 sm:py-16 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8"
+      style={{ maxWidth: '1570px', width: '100%' }}
       ref={sectionRef}
     >
       <div className="w-full">
         {/* Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-5xl md:text-6xl font-bold text-gray-900 mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -79,7 +79,7 @@ export default function StatementSlider() {
             Statements That Matter
           </motion.h2>
           <motion.p 
-            className="text-gray-600 text-lg max-w-2xl mx-auto"
+            className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -91,116 +91,79 @@ export default function StatementSlider() {
         {/* Slider Container */}
         <div className="relative">
           {/* Main Slider Content */}
-          <div className="relative h-96 flex items-center justify-center">
+          <div className="relative h-64 sm:h-80 lg:h-96 flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                className="text-center"
+                className="text-center px-4"
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
-                {/* Main Quote */}
-                <motion.h3 
-                  className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8"
-                  initial={{ opacity: 0, y: 30 }}
+                <motion.p 
+                  className="text-orange-500 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4 sm:mb-6"
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  {slides[currentSlide].title}
-                </motion.h3>
-
-                {/* Subtitle */}
-                <motion.p 
-                  className="text-2xl md:text-3xl text-gray-600 mb-8"
+                  {slides[currentSlide].philosophy}
+                </motion.p>
+                
+                <motion.h3 
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  {slides[currentSlide].subtitle}
-                </motion.p>
-
-                {/* Philosophy Tag */}
-                <motion.div 
-                  className="inline-flex items-center gap-2"
-                  initial={{ opacity: 0, y: 30 }}
+                  {slides[currentSlide].title}
+                </motion.h3>
+                
+                <motion.p 
+                  className="text-lg sm:text-xl md:text-2xl text-gray-600 font-medium"
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  <div className="w-12 h-px bg-yellow-400"></div>
-                  <span className="text-yellow-400 font-semibold text-sm tracking-wider">
-                    {slides[currentSlide].philosophy}
-                  </span>
-                  <div className="w-12 h-px bg-yellow-400"></div>
-                </motion.div>
+                  {slides[currentSlide].subtitle}
+                </motion.p>
               </motion.div>
             </AnimatePresence>
           </div>
 
           {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-          >
-            <ChevronLeftIcon className="w-6 h-6 text-gray-600 group-hover:text-gray-900 transition-colors" />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-          >
-            <ChevronRightIcon className="w-6 h-6 text-gray-600 group-hover:text-gray-900 transition-colors" />
-          </button>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="flex justify-center gap-3 mt-12">
-          {slides.map((_, index) => (
+          <div className="absolute inset-y-0 left-0 flex items-center">
             <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? 'bg-yellow-400 scale-125'
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
-        </div>
+              onClick={prevSlide}
+              className="p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 ml-2 sm:ml-4"
+            >
+              <ChevronLeftIcon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
+            </button>
+          </div>
+          
+          <div className="absolute inset-y-0 right-0 flex items-center">
+            <button
+              onClick={nextSlide}
+              className="p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 mr-2 sm:mr-4"
+            >
+              <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
+            </button>
+          </div>
 
-        {/* Progress Bar */}
-        <div className="mt-8 max-w-md mx-auto">
-          <div className="w-full bg-gray-200 rounded-full h-1">
-            <motion.div
-              className="bg-yellow-400 h-1 rounded-full"
-              initial={{ width: "0%" }}
-              animate={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
-              transition={{ duration: 0.5 }}
-            />
+          {/* Slide Indicators */}
+          <div className="flex justify-center space-x-2 sm:space-x-3 mt-8 sm:mt-12">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-300 ${
+                  index === currentSlide ? 'bg-orange-500' : 'bg-gray-300'
+                }`}
+              />
+            ))}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <motion.button
-            className="bg-black hover:bg-gray-800 text-white px-12 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)"
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Discover Our Philosophy
-          </motion.button>
-        </motion.div>
       </div>
-    </motion.section >
+    </motion.section>
   );
 }

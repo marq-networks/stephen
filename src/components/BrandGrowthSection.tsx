@@ -17,15 +17,15 @@ export default function BrandGrowthSection() {
   return (
     <motion.section 
       ref={sectionRef}
-      className=" py-16 rounded-r-3xl rounded-l-3xl  min-h-screen flex flex-col items-center mx-auto"
-      style={{ y, opacity, width: '1570px' }}
+      className="py-8 sm:py-12 lg:py-16 rounded-r-3xl rounded-l-3xl min-h-screen flex flex-col items-center mx-auto px-4 sm:px-6 lg:px-8"
+      style={{ y, opacity, maxWidth: '1570px', width: '100%' }}
     >
       <div className="w-full">
         {/* Original BrandGrowthSection Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 items-start mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-1 items-start mb-8 sm:mb-12 lg:mb-16">
           {/* Left Side - Large Number */}
           <motion.div
-            className="flex items-start justify-start lg:justify-start"
+            className="flex items-start justify-center lg:justify-start"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -33,7 +33,7 @@ export default function BrandGrowthSection() {
           >
             {/* Massive Number */}
             <motion.h2 
-              className="text-[8rem] font-black text-black leading-none select-none"
+              className="text-[4rem] sm:text-[6rem] lg:text-[8rem] font-black text-black leading-none select-none"
               initial={{ scale: 0.5, opacity: 0, rotateX: -90 }}
               whileInView={{ scale: 1, opacity: 1, rotateX: 0 }}
               transition={{ 
@@ -51,7 +51,7 @@ export default function BrandGrowthSection() {
 
           {/* Right Side - Content */}
           <motion.div
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6 text-center lg:text-left"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
@@ -69,7 +69,7 @@ export default function BrandGrowthSection() {
 
             {/* Client Avatars */}
             <motion.div
-              className="flex items-center space-x-3 mb-4"
+              className="flex items-center justify-center lg:justify-start space-x-3 mb-4"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -83,7 +83,7 @@ export default function BrandGrowthSection() {
                 ].map((gradient, index) => (
                   <motion.div
                     key={index}
-                    className={`w-10 h-10 rounded-full bg-gradient-to-r ${gradient} border-2 border-white`}
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r ${gradient} border-2 border-white`}
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
                     transition={{ 
@@ -96,7 +96,7 @@ export default function BrandGrowthSection() {
                   />
                 ))}
                 <motion.div 
-                  className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-red-400 border-2 border-white flex items-center justify-center"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-orange-400 to-red-400 border-2 border-white flex items-center justify-center"
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   transition={{ 
@@ -121,7 +121,7 @@ export default function BrandGrowthSection() {
               viewport={{ once: false }}
             >
               <p className="text-gray-600 text-xs mb-2 font-medium">Trusted by Industry leaders</p>
-              <div className="flex space-x-1">
+              <div className="flex justify-center lg:justify-start space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <motion.svg 
                     key={i} 
@@ -150,7 +150,7 @@ export default function BrandGrowthSection() {
               transition={{ duration: 1, delay: 1.4 }}
               viewport={{ once: false }}
             >
-              <h4 className="text-2xl md:text-3xl font-bold text-black leading-tight">
+              <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
                 We help brands grow with strategic design that s{' '}
                 <motion.span
                   className="text-orange-500"
@@ -169,23 +169,21 @@ export default function BrandGrowthSection() {
 
         {/* ProductShowcase Content */}
         <div className="w-full">
-        
-
           {/* Product Grid */}
-          <div className="w-full ">
+          <div className="w-full space-y-6">
             {/* First Row */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full">
               {/* Text Card */}
-              <div className="bg-white rounded-2xl p-10 h-[85%] shadow-sm w-full flex flex-col justify-around hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm w-full flex flex-col justify-around hover:shadow-lg transition-shadow duration-300">
                 <div>
-                  <h3 className="text-2xl font-bold text-black mb-4">Premium Quality</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">Premium Quality</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                     Crafted from the finest materials with attention to every detail. Our products are designed to last and provide unmatched comfort.
                   </p>
                 </div>
                 <div className="mt-6">
                   <Link href="/shop">
-                    <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300">
+                    <button className="bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-gray-800 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
                       Explore Collection
                     </button>
                   </Link>
@@ -224,7 +222,7 @@ export default function BrandGrowthSection() {
             </div>
 
             {/* Second Row */}
-            <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 sm:gap-6 w-full">
               {/* Chart Image */}
               <div className="rounded-2xl w-full overflow-hidden transition-shadow duration-300">
                 <Image 
@@ -232,7 +230,7 @@ export default function BrandGrowthSection() {
                   alt="Chart" 
                   width={600} 
                   height={400} 
-                  className="w-full h-[80%] rounded-2xl" 
+                  className="w-full h-auto rounded-2xl" 
                 />
               </div>
 
@@ -253,9 +251,9 @@ export default function BrandGrowthSection() {
             </div>
 
             {/* CTA Button */}
-            <div className="text-center mt-12">
+            <div className="text-center mt-8 sm:mt-12">
               <Link href="/shop">
-                <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors duration-300">
+                <button className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-800 transition-colors duration-300 w-full sm:w-auto">
                   Shop Now
                 </button>
               </Link>

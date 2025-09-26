@@ -33,7 +33,7 @@ export default function Hero() {
             alt="Life is Beautiful T-shirt"
             width={1400}
             height={1400}
-            className="w-full h-full object-cover object-center"
+            className="w-full sm:w-[100%] sm:h-[100vh] h-full object-cover object-center"
             priority
           />
           {/* Dark overlay for better text readability */}
@@ -47,7 +47,7 @@ export default function Hero() {
           {/* Left Side - Services List */}
           <div>
             <motion.div 
-              className="flex flex-col space-y-2 text-left"
+              className="flex flex-col sm:items-start items-center gap-3 sm:gap-5 text-left"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
