@@ -40,18 +40,19 @@ export default function AboutHero() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 max-w-[1570px] mx-auto  w-full h-full">
+      {/* Responsive Container with max width */}
+      <div className="relative z-10 w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Hero Content */}
-        <div className="flex items-center justify-start h-screen py-20">
+        <div className="flex items-center justify-start h-screen py-12 sm:py-16 lg:py-20">
           {/* Main About Us heading */}
           <motion.div 
-            className="text-left"
+            className="text-left w-full"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <motion.h2 
-              className="text-6xl lg:text-8xl font-bold"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ 

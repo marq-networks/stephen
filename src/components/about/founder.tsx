@@ -50,10 +50,10 @@ const Founder = () => {
     };
 
     return (
-        <div className="w-full bg-white py-20">
-            <div className="max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full bg-white py-12 sm:py-16 lg:py-20">
+            <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div 
-                    className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -74,10 +74,10 @@ const Founder = () => {
                     </motion.div>
 
                     {/* Right - Testimonial Content */}
-                    <motion.div className="space-y-6" variants={itemVariants}>
-                        <h3 className="text-2xl font-bold text-black">The Founder</h3>
+                    <motion.div className="space-y-4 sm:space-y-6" variants={itemVariants}>
+                        <h3 className="text-xl sm:text-2xl font-bold text-black">The Founder</h3>
 
-                        <blockquote className="text-xl font-bold text-black leading-relaxed">
+                        <blockquote className="text-lg sm:text-xl font-bold text-black leading-relaxed">
                             &quot;The closest thing to having an in-house design team without actually hiring one&rdquo;
                         </blockquote>
 
@@ -85,7 +85,7 @@ const Founder = () => {
                             From strategy to execution, they integrated seamlessly into our workflow and brought clarity to every step of the process.
                         </p>
 
-                        <div className="pt-4">
+                        <div className="pt-2 sm:pt-4">
                             <p className="font-medium text-black">Alex Morgan</p>
                             <p className="text-sm text-black">CEO at IDEO</p>
                         </div>
@@ -94,15 +94,15 @@ const Founder = () => {
             </div>
 
             <motion.div 
-                className="w-full bg-gray-50 py-20"
+                className="w-full bg-gray-50 py-12 sm:py-16 lg:py-20 mt-12 lg:mt-20"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8 }}
             >
-                <div className="max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -123,14 +123,14 @@ const Founder = () => {
                                 />
                                 
                                 {/* Product Info Overlay */}
-                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                                    <h4 className="text-white font-semibold text-sm mb-1">{product.name}</h4>
-                                    <p className="text-white/80 text-xs mb-3">{product.price}</p>
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
+                                    <h4 className="text-white font-semibold text-xs sm:text-sm mb-1">{product.name}</h4>
+                                    <p className="text-white/80 text-xs mb-2 sm:mb-3">{product.price}</p>
                                     
                                     {/* Add to Cart Button */}
                                     <motion.button
                                         onClick={() => handleAddToCart(product.id)}
-                                        className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-300 ${
+                                        className={`flex items-center justify-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs font-medium transition-all duration-300 ${
                                             addedToCart.includes(product.id)
                                                 ? 'bg-green-500 text-white'
                                                 : 'bg-white text-black hover:bg-gray-100'
@@ -144,14 +144,16 @@ const Founder = () => {
                                                 <motion.div
                                                     initial={{ scale: 0 }}
                                                     animate={{ scale: 1 }}
-                                                    className="w-3 h-3 rounded-full bg-white"
+                                                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white"
                                                 />
-                                                Added!
+                                                <span className="hidden sm:inline">Added!</span>
+                                                <span className="sm:hidden">✓</span>
                                             </>
                                         ) : (
                                             <>
-                                                <ShoppingCart size={12} />
-                                                Add to Cart
+                                                <ShoppingCart size={10} className="sm:w-3 sm:h-3" />
+                                                <span className="hidden sm:inline">Add to Cart</span>
+                                                <span className="sm:hidden">Add</span>
                                             </>
                                         )}
                                     </motion.button>
@@ -161,7 +163,7 @@ const Founder = () => {
                                 <div className="absolute top-2 right-2 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                                     <motion.button
                                         onClick={() => handleAddToCart(product.id)}
-                                        className={`p-2 rounded-full shadow-lg transition-all duration-300 ${
+                                        className={`p-1.5 sm:p-2 rounded-full shadow-lg transition-all duration-300 ${
                                             addedToCart.includes(product.id)
                                                 ? 'bg-green-500 text-white'
                                                 : 'bg-white text-black hover:bg-gray-100'
@@ -174,10 +176,10 @@ const Founder = () => {
                                             <motion.div
                                                 initial={{ scale: 0, rotate: -180 }}
                                                 animate={{ scale: 1, rotate: 0 }}
-                                                className="w-4 h-4 rounded-full bg-white"
+                                                className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white"
                                             />
                                         ) : (
-                                            <Plus size={16} />
+                                            <Plus size={12} className="sm:w-4 sm:h-4" />
                                         )}
                                     </motion.button>
                                 </div>

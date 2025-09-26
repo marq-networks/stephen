@@ -23,32 +23,32 @@ export default function About() {
         {/* Full-width background container */}
         <div className="w-full bg-white">
           {/* About Content Section - First section to overlay hero */}
-          <div className="w-full max-w-[1570px] mx-auto bg-white rounded-t-2xl">
+          <div className="w-full bg-white rounded-t-2xl">
             <AboutContent />
           </div>
         </div>
         
         {/* Full-width background container for Founder */}
         <div className="w-full bg-white py-2">
-          <div className="w-full max-w-[1570px] mx-auto bg-white rounded-2xl">
+          <div className="w-full bg-white rounded-2xl">
             <Founder />
           </div>
         </div>
         
         {/* Full-width background container for last section */}
-        <div className="w-full bg-white py-2 ">
-          <div className="w-full max-w-[1570px] mx-auto bg-white rounded-2xl">
-            <section className="w-full py-20">
-              <div className=" mx-auto  ">
+        <div className="w-full bg-white py-2">
+          <div className="w-full bg-white rounded-2xl">
+            <section className="w-full py-12 sm:py-16 lg:py-20">
+              <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl">
-                  <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-8">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8">
                     WE ARE <span className="text-gray-500">NUMEROUS</span>,<br />
                     YET, WE OPERATE<br />
                     AS A <span className="text-black">UNIFIED<br />
                       BEING.</span>
                   </h2>
 
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base">
                     Shop Now
                   </button>
                 </div>

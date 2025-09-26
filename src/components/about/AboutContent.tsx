@@ -24,11 +24,11 @@ const itemVariants: Variants = {
 
 export default function AboutContent() {
   return (
-    <section className="py-20 font-extrabold text-black">
-      <div className="max-w-[1570px] mx-auto px-6">
+    <section className="py-12 sm:py-16 lg:py-20 font-extrabold text-black">
+      <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Content - Heading, Button and Text Paragraphs */}
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 items-center justify-baseline"
+          className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 lg:mb-16 items-center justify-baseline"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -36,11 +36,11 @@ export default function AboutContent() {
         >
           {/* Left - Main Heading and Button */}
           <motion.div className="lg:col-span-2" variants={itemVariants}>
-            <h2 className="text-3xl lg:text-3xl font-extrabold text-black mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-black mb-4 sm:mb-6">
               We create brands and experiences that cut through the noise, speak with style and, above all, endure.
             </h2>
             <motion.button 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-colors duration-300 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -65,7 +65,7 @@ export default function AboutContent() {
 
         {/* Bottom - Team Image */}
         <motion.div 
-          className="w-full"
+          className="w-full mb-12 lg:mb-20"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -82,7 +82,7 @@ export default function AboutContent() {
 
         {/* Philosophy Section */}
         <motion.div 
-          className="space-y-16 mt-20"
+          className="space-y-12 lg:space-y-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -90,15 +90,15 @@ export default function AboutContent() {
         >
           {/* Our Philosophy */}
           <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
             variants={itemVariants}
           >
             <div>
-              <h3 className="text-4xl font-bold text-black mb-4">Our Philosophy</h3>
-              <p className="text-md text-black">Redefining design through integrated solutions.</p>
+              <h3 className="text-3xl sm:text-4xl font-bold text-black mb-3 sm:mb-4">Our Philosophy</h3>
+              <p className="text-sm sm:text-md text-black">Redefining design through integrated solutions.</p>
             </div>
             <div>
-              <p className="text-md text-black font-bold leading-relaxed">
+              <p className="text-sm sm:text-md text-black font-bold leading-relaxed">
                 At Freshly Baked, we approach design and branding as a unified process. We recognize that a successful brand isn&lsquo;t just about aesthetics—it&apos;s about creating a cohesive experience that&apos;s thoughtfully crafted. It&#39;s implemented seamlessly across every touchpoint. T...
               </p>
             </div>
@@ -106,15 +106,15 @@ export default function AboutContent() {
 
           {/* Fabric & Feel */}
           <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
             variants={itemVariants}
           >
             <div>
-              <h3 className="text-4xl font-bold text-black mb-4">Fabric & Feel</h3>
-              <p className="text-md text-black">Collaboration as the cornerstone of success.</p>
+              <h3 className="text-3xl sm:text-4xl font-bold text-black mb-3 sm:mb-4">Fabric & Feel</h3>
+              <p className="text-sm sm:text-md text-black">Collaboration as the cornerstone of success.</p>
             </div>
             <div>
-              <p className="text-md font-bold text-black leading-relaxed">
+              <p className="text-sm sm:text-md font-bold text-black leading-relaxed">
                 At Freshly Baked, we prioritize partnership over the traditional client-agency dynamic. We integrate seamlessly with your team, working together to bring your vision to life. By immersing ourselves in your business, we uncover the values, ambitions, and audience that define your bran...
               </p>
             </div>
@@ -122,15 +122,15 @@ export default function AboutContent() {
 
           {/* Why we do it */}
           <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
             variants={itemVariants}
           >
             <div>
-              <h3 className="text-4xl font-bold text-black mb-4">Why we do it</h3>
-              <p className="text-md text-black">Creating brands that inspire and transform.</p>
+              <h3 className="text-3xl sm:text-4xl font-bold text-black mb-3 sm:mb-4">Why we do it</h3>
+              <p className="text-sm sm:text-md text-black">Creating brands that inspire and transform.</p>
             </div>
             <div>
-              <p className="text-md font-bold text-black leading-relaxed">
+              <p className="text-sm sm:text-md font-bold text-black leading-relaxed">
                 Our mission is to craft brands and experiences that inspire, resonate, and drive meaningful change. At Freshly Baked, we believe that design is a powerful tool to elevate businesses and enrich society. Each project is an opportunity to leave a lasting impact—sparking innovation, fo...
               </p>
             </div>
