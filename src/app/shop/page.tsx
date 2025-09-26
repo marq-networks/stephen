@@ -252,7 +252,7 @@ export default function Shop() {
                       {/* Product Info */}
                       <div className="p-6">
                         <Link href={`/product/${product.slug}`}>
-                          <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-orange-500 transition-colors duration-200">
+                          <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-[#46c34c] transition-colors duration-200">
                             {product.name}
                           </h3>
                         </Link>

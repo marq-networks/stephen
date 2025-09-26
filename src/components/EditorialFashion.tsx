@@ -24,7 +24,7 @@ export default function EditorialFashion() {
             >
               Redefining
               Editorial<br />
-              <span className="text-yellow-400">Fashion</span>
+              <span className="text-[#46c34c]">Fashion</span>
             </motion.h2>
             
             <motion.div 
@@ -49,12 +49,12 @@ export default function EditorialFashion() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <Link href="/about">
-                <button className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-gray-800 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
+                <button className="bg-[#46c34c] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-gray-800 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
                   Our Story
                 </button>
               </Link>
               <Link href="/shop">
-                <button className="border-2 border-black text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-black hover:text-white transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
+                <button className="border-2 border-[#46c34c] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#46c34c] hover:text-white transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
                   Shop Collection
                 </button>
               </Link>

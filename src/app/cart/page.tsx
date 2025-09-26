@@ -196,16 +196,16 @@ export default function CartPage() {
                           <div className="flex items-center space-x-3">
                             <motion.button
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                              className="w-8 h-8 rounded-full border text-orange-500 border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                              className="w-8 h-8 rounded-full border text-[#46c34c] border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                             >
                               -
                             </motion.button>
-                            <span className="w-8 text-center text-orange-500 font-medium">{item.quantity}</span>
+                            <span className="w-8 text-center text-[#46c34c] font-medium">{item.quantity}</span>
                             <motion.button
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                              className="w-8 h-8 rounded-full border text-orange-500 border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                              className="w-8 h-8 rounded-full border text-[#46c34c] border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                             >

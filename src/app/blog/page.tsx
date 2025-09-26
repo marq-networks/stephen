@@ -121,7 +121,7 @@ export default function BlogPage() {
                             <div className="text-xs text-gray-500 uppercase tracking-wide mb-2">
                               {post.category}
                             </div>
-                            <h3 className={`font-semibold text-black mb-2 leading-tight group-hover:text-orange-500 transition-colors duration-200 ${index === 0 ? 'text-xl md:text-2xl' : 'text-lg'
+                            <h3 className={`font-semibold text-black mb-2 leading-tight group-hover:text-[#46c34c] transition-colors duration-200 ${index === 0 ? 'text-xl md:text-2xl' : 'text-lg'
                               }`}>
                               {post.title}
                             </h3>
@@ -155,7 +155,7 @@ export default function BlogPage() {
                           <div className="text-xs text-gray-500 uppercase tracking-wide mb-2">
                             {post.category}
                           </div>
-                          <h3 className="font-semibold text-black mb-2 leading-tight group-hover:text-orange-500 transition-colors duration-200 text-lg">
+                          <h3 className="font-semibold text-black mb-2 leading-tight group-hover:text-[#46c34c] transition-colors duration-200 text-lg">
                             {post.title}
                           </h3>
                         </div>

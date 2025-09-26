@@ -147,7 +147,7 @@ export default function ProductGrid() {
                 
                 {/* Price and Button */}
                 <div className="flex items-center justify-between mt-4">
-                  <span className="text-orange-500 text-2xl font-bold">
+                  <span className="text-[#46c34c] text-2xl font-bold">
                     ${product.price}
                   </span>
                   <Link href={`/product/${product.slug}`}>

@@ -27,7 +27,7 @@ export default function HowProductFeels() {
       originalPrice: '$250',
       image: '/howporduct1.png',
       label: 'Sale',
-      labelColor: 'bg-yellow-400',
+      labelColor: 'bg-[#46c34c]',
       category: 'Dresses'
     },
     {
@@ -37,7 +37,7 @@ export default function HowProductFeels() {
       originalPrice: '$120',
       image: '/howporduct2.png',
       label: 'New',
-      labelColor: 'bg-green-400',
+      labelColor: 'bg-[#46c34c]',
       category: 'Tops'
     },
     {
@@ -47,7 +47,7 @@ export default function HowProductFeels() {
       originalPrice: '$399',
       image: '/howporduct3.png',
       label: 'Sale',
-      labelColor: 'bg-yellow-400',
+      labelColor: 'bg-[#46c34c]',
       category: 'Outerwear'
     },
     {
@@ -56,7 +56,7 @@ export default function HowProductFeels() {
       price: '$129',
       image: '/howporduct4.png',
       label: 'Popular',
-      labelColor: 'bg-blue-400',
+      labelColor: 'bg-[#46c34c]',
       category: 'Bottoms'
     },
     {
@@ -66,7 +66,7 @@ export default function HowProductFeels() {
       originalPrice: '$599',
       image: '/howporduct1.png',
       label: 'New',
-      labelColor: 'bg-green-400',
+      labelColor: 'bg-[#46c34c]',
       category: 'Dresses'
     },
     {
@@ -126,7 +126,7 @@ export default function HowProductFeels() {
           </motion.h2>
           
           <motion.p 
-            className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
+            className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto leading-relaxed px-4"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -150,8 +150,8 @@ export default function HowProductFeels() {
               onClick={() => setActiveCategory(category)}
               className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                 activeCategory === category
-                  ? 'bg-black text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-[#46c34c] text-white shadow-lg'
+                  : 'bg-gray-100 text-black hover:bg-gray-200'
               }`}
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -172,7 +172,7 @@ export default function HowProductFeels() {
 
         {/* Products Grid */}
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2 }}
@@ -213,13 +213,13 @@ export default function HowProductFeels() {
 
               {/* Product Info */}
               <div className="p-3 sm:p-4">
-                <h3 className="text-base sm:text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
+                <h3 className="text-base sm:text-lg font-semibold text-black mb-2 group-hover:text-[#46c34c] transition-colors">
                   {product.name}
                 </h3>
                 <div className="flex items-center space-x-2">
                   <span className="text-lg sm:text-xl font-bold text-black">{product.price}</span>
                   {product.originalPrice && (
-                    <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
+                    <span className="text-sm text-black line-through">{product.originalPrice}</span>
                   )}
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function HowProductFeels() {
                   </Link>
                   <button 
                     onClick={() => addToCart(product.id)}
-                    className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:from-orange-600 hover:to-pink-600 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full"
+                    className="bg-[#46c34c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-[#46c34c]/80 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full"
                   >
                     Add to Cart
                   </button>

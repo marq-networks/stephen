@@ -153,7 +153,7 @@ export default function BrandGrowthSection() {
               <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
                 We help brands grow with strategic design that s{' '}
                 <motion.span
-                  className="text-orange-500"
+                  className="text-[#46c34c]"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 2.0 }}

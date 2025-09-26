@@ -243,7 +243,7 @@ export default function ShippingPage() {
                         name="saveAddress"
                         checked={formData.saveAddress}
                         onChange={handleInputChange}
-                        className="w-4 h-4 text-orange-500 rounded"
+                        className="w-4 h-4 text-[#46c34c] rounded"
                       />
                       <label className="ml-2 text-sm text-gray-600">
                         Save this address for future orders
@@ -256,7 +256,7 @@ export default function ShippingPage() {
                         name="sameAsBilling"
                         checked={formData.sameAsBilling}
                         onChange={handleInputChange}
-                        className="w-4 h-4 text-orange-500 rounded"
+                        className="w-4 h-4 text-[#46c34c] rounded"
                       />
                       <label className="ml-2 text-sm text-gray-600">
                         Billing address same as shipping address
@@ -285,7 +285,7 @@ export default function ShippingPage() {
                             value={option.id}
                             checked={shippingMethod === option.id}
                             onChange={(e) => setShippingMethod(e.target.value)}
-                            className="w-4 h-4 text-orange-500"
+                            className="w-4 h-4 text-[#46c34c]"
                           />
                           <div>
                             <label htmlFor={option.id} className="font-medium cursor-pointer">

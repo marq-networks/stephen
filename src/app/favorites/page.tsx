@@ -223,7 +223,7 @@ export default function FavoritesPage() {
                         </motion.button>
                         <motion.button
                           onClick={() => removeFavorite(item.id)}
-                          className="p-2 border border-orange-500 text-orange-500 rounded-full hover:border-red-500 hover:text-red-500 transition-colors duration-200"
+                          className="p-2 border border-orange-500 text-[#46c34c] rounded-full hover:border-red-500 hover:text-red-500 transition-colors duration-200"
                           whileHover={{ scale: 1.1, rotate: 10 }}
                           whileTap={{ scale: 0.9 }}
                         >

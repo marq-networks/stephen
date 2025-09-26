@@ -108,7 +108,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-white text-2xl mb-4">Product Not Found</h1>
-          <Link href="/" className="text-orange-500 hover:text-orange-400">
+          <Link href="/" className="text-[#46c34c] hover:text-orange-400">
             Return to Home
           </Link>
         </div>
@@ -221,7 +221,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                     <p className="text-gray-600 text-lg mb-6">
                       {product.shortDescription}
                     </p>
-                    <div className="text-orange-500 text-3xl font-bold mb-6">
+                    <div className="text-[#46c34c] text-3xl font-bold mb-6">
                       ${product.price}
                     </div>
                   </div>

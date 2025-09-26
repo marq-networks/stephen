@@ -198,7 +198,7 @@ export default function PaymentPage() {
                       name="saveCard"
                       checked={formData.saveCard}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-orange-500 rounded"
+                      className="w-4 h-4 text-[#46c34c] rounded"
                     />
                     <label className="ml-2 text-sm text-gray-600">
                       Save this card for future purchases
