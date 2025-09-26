@@ -144,7 +144,7 @@ export default function CartPage() {
               <p className="text-gray-600 mb-8">Add some items to get started</p>
               <Link
                 href="/shop"
-                className="bg-[#46c34c] hover:bg-orange-600 text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
+                className="bg-[#46c34c] hover:bg-[#479f78] text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
               >
                 Continue Shopping
               </Link>
@@ -196,7 +196,7 @@ export default function CartPage() {
                           <div className="flex items-center space-x-3">
                             <motion.button
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                              className="w-8 h-8 rounded-full border text-[#46c34c] border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                              className="w-8 h-8 rounded-full border text-[#46c34c] border-[#479f78] flex items-center justify-center hover:border-[#479f78] transition-colors"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                             >
@@ -205,7 +205,7 @@ export default function CartPage() {
                             <span className="w-8 text-center text-[#46c34c] font-medium">{item.quantity}</span>
                             <motion.button
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                              className="w-8 h-8 rounded-full border text-[#46c34c] border-orange-500 flex items-center justify-center hover:border-orange-500 transition-colors"
+                              className="w-8 h-8 rounded-full border text-[#46c34c] border-[#479f78] flex items-center justify-center hover:border-[#479f78] transition-colors"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                             >
@@ -242,23 +242,23 @@ export default function CartPage() {
 
                   <div className="space-y-4 mb-6">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Subtotal</span>
-                      <span className="font-medium">${subtotal.toFixed(2)}</span>
+                      <span className="text-black">Subtotal</span>
+                      <span className="font-medium text-[#46c34c]">${subtotal.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Shipping</span>
-                      <span className="font-medium">
+                      <span className="text-black">Shipping</span>
+                      <span className="font-medium text-[#46c34c]">
                         {shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Tax</span>
-                      <span className="font-medium">${tax.toFixed(2)}</span>
+                      <span className="text-black">Tax</span>
+                      <span className="font-medium text-[#46c34c]">${tax.toFixed(2)}</span>
                     </div>
                     <div className="border-t pt-4">
                       <div className="flex justify-between">
-                        <span className="text-lg font-bold">Total</span>
-                        <span className="text-lg font-bold">${total.toFixed(2)}</span>
+                        <span className="text-lg font-bold text-black">Total</span> 
+                        <span className="text-lg font-bold text-[#46c34c]">${total.toFixed(2)}</span>
                       </div>
                     </div>
                   </div>
@@ -278,7 +278,7 @@ export default function CartPage() {
 
                   <Link
                     href="/shipping"
-                    className="w-full bg-[#46c34c] hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
+                    className="w-full bg-[#46c34c] hover:bg-[#479f78] text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
                   >
                     <motion.span
                       whileHover={{ scale: 1.05 }}
@@ -291,7 +291,7 @@ export default function CartPage() {
 
                   <Link
                     href="/shop"
-                    className="w-full border border-gray-300 hover:border-orange-500 text-black py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center mt-3"
+                    className="w-full border border-gray-300 hover:border-[#479f78] text-black py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center mt-3"
                   >
                     <motion.span
                       whileHover={{ scale: 1.05 }}

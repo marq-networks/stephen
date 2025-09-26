@@ -83,7 +83,7 @@ export default function AboutHero() {
     <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
       We believe in creating products that inspire and bring joy to everyday life. Our mission is to spread positivity through thoughtful design.
     </p>
-    <button className="bg-[#46c34c] hover:bg-orange-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
+    <button className="bg-[#46c34c] hover:bg-[#479f78] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg">
       Learn More
     </button>
   </div>

@@ -40,7 +40,7 @@ export default function AboutContent() {
               We create brands and experiences that cut through the noise, speak with style and, above all, endure.
             </h2>
             <motion.button 
-              className="bg-[#46c34c] hover:bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-colors duration-300 text-sm sm:text-base"
+              className="bg-[#46c34c] hover:bg-[#479f78] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-colors duration-300 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

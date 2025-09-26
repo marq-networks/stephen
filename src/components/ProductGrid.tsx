@@ -152,7 +152,7 @@ export default function ProductGrid() {
                   </span>
                   <Link href={`/product/${product.slug}`}>
                     <motion.button
-                      className="bg-[#46c34c] hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium"
+                      className="bg-[#46c34c] hover:bg-[#479f78] text-white px-6 py-2 rounded-full font-medium"
                       whileHover={{ 
                         scale: 1.05,
                         boxShadow: "0 10px 25px rgba(249, 115, 22, 0.4)"

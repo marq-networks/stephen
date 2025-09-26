@@ -191,7 +191,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                           key={index}
                           onClick={() => setSelectedImage(index)}
                           className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                            selectedImage === index ? 'border-orange-500' : 'border-gray-300 hover:border-gray-400'
+                            selectedImage === index ? 'border-[#479f78]' : 'border-gray-300 hover:border-gray-400'
                           }`}
                         >
                           <Image
@@ -236,7 +236,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                           onClick={() => setSelectedSize(size)}
                           className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
                             selectedSize === size
-                              ? 'border-orange-500 bg-[#46c34c] text-white'
+                              ? 'border-[#479f78] bg-[#46c34c] text-white'
                               : 'border-gray-300 text-gray-700 hover:border-gray-400'
                           }`}
                         >
@@ -256,7 +256,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                           onClick={() => setSelectedColor(color)}
                           className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
                             selectedColor === color
-                              ? 'border-orange-500 bg-[#46c34c] text-white'
+                              ? 'border-[#479f78] bg-[#46c34c] text-white'
                               : 'border-gray-300 text-gray-700 hover:border-gray-400'
                           }`}
                         >
@@ -291,7 +291,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                   {/* Add to Cart Button */}
                   <motion.button
                     onClick={handleAddToCart}
-                    className="w-full bg-[#46c34c] hover:bg-orange-600 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+                    className="w-full bg-[#46c34c] hover:bg-[#479f78] text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >

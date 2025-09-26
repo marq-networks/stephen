@@ -146,7 +146,7 @@ export default function FavoritesPage() {
               <p className="text-gray-600 mb-8">Start adding items you love to keep track of them</p>
               <Link 
                 href="/shop" 
-                className="bg-[#46c34c] hover:bg-orange-600 text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
+                className="bg-[#46c34c] hover:bg-[#479f78] text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
               >
                 Continue Shopping
               </Link>
@@ -213,7 +213,7 @@ export default function FavoritesPage() {
                           disabled={!item.inStock}
                           className={`flex-1 py-2 px-4 rounded-full font-medium transition-colors duration-200 ${
                             item.inStock
-                              ? 'bg-[#46c34c] hover:bg-orange-600 text-white'
+                              ? 'bg-[#46c34c] hover:bg-[#479f78] text-white'
                               : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                           }`}
                           whileHover={item.inStock ? { scale: 1.05 } : {}}
@@ -223,7 +223,7 @@ export default function FavoritesPage() {
                         </motion.button>
                         <motion.button
                           onClick={() => removeFavorite(item.id)}
-                          className="p-2 border border-orange-500 text-[#46c34c] rounded-full hover:border-red-500 hover:text-red-500 transition-colors duration-200"
+                          className="p-2 border border-[#479f78] text-[#46c34c] rounded-full hover:border-red-500 hover:text-red-500 transition-colors duration-200"
                           whileHover={{ scale: 1.1, rotate: 10 }}
                           whileTap={{ scale: 0.9 }}
                         >

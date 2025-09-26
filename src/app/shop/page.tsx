@@ -267,7 +267,7 @@ export default function Shop() {
                           
                           <motion.button
                             onClick={() => addToCart(product.id)}
-                            className="bg-[#46c34c] hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+                            className="bg-[#46c34c] hover:bg-[#479f78] text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                           >

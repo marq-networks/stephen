@@ -77,7 +77,7 @@ export default function PaymentPage() {
                   <div className="w-6 h-6 rounded-full border-2 flex items-center justify-center">
                     {paymentMethod === 'card' && <div className="w-3 h-3 bg-green-500 rounded-full"></div>}
                   </div>
-                  <span className="font-medium">Card</span>
+                  <span className="font-medium text-black">Card</span>
                 </button>
                 
                 <button
@@ -92,7 +92,7 @@ export default function PaymentPage() {
                   <div className="w-6 h-6 rounded-full border-2 flex items-center justify-center">
                     {paymentMethod === 'paypal' && <div className="w-3 h-3 bg-green-500 rounded-full"></div>}
                   </div>
-                  <span className="font-medium">Paypal</span>
+                  <span className="font-medium text-black">Paypal</span>
                 </button>
                 
                 <button
@@ -107,7 +107,7 @@ export default function PaymentPage() {
                   <div className="w-6 h-6 rounded-full border-2 flex items-center justify-center">
                     {paymentMethod === 'gpay' && <div className="w-3 h-3 bg-green-500 rounded-full"></div>}
                   </div>
-                  <span className="font-medium">G Pay</span>
+                  <span className="font-medium text-black">G Pay</span>
                 </button>
                 
                 <button
@@ -122,7 +122,7 @@ export default function PaymentPage() {
                   <div className="w-6 h-6 rounded-full border-2 flex items-center justify-center">
                     {paymentMethod === 'applepay' && <div className="w-3 h-3 bg-green-500 rounded-full"></div>}
                   </div>
-                  <span className="font-medium">A Pay</span>
+                  <span className="font-medium text-black">A Pay</span>
                 </button>
               </div>
                 
@@ -217,7 +217,7 @@ export default function PaymentPage() {
                 <div className="text-center py-8">
                   <button 
                     type="button"
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors"
+                    className="w-full bg-[#46c34c] hover:bg-[#3a9e40] text-white py-3 px-6 rounded-lg font-medium transition-colors"
                   >
                     Continue with PayPal
                   </button>

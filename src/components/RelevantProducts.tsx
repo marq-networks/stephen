@@ -64,7 +64,7 @@ const RelevantProducts = () => {
         
         {/* Shop All Button */}
         <div className="text-center">
-          <Link href="/shop" className="bg-[#46c34c] hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 inline-block">
+          <Link href="/shop" className="bg-[#46c34c] hover:bg-[#479f78] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 inline-block">
             Shop All
           </Link>
         </div>

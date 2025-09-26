@@ -275,7 +275,7 @@ export default function ShippingPage() {
                 
                 <div className="space-y-4">
                   {shippingOptions.map((option) => (
-                    <div key={option.id} className="border border-gray-200 rounded-lg p-4 hover:border-orange-500 transition-colors">
+                    <div key={option.id} className="border border-gray-200 rounded-lg p-4 hover:border-[#479f78] transition-colors">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-3">
                           <input
@@ -288,13 +288,13 @@ export default function ShippingPage() {
                             className="w-4 h-4 text-[#46c34c]"
                           />
                           <div>
-                            <label htmlFor={option.id} className="font-medium cursor-pointer">
+                            <label htmlFor={option.id} className="font-medium text-black cursor-pointer">
                               {option.name}
                             </label>
-                            <p className="text-sm text-gray-500">{option.description}</p>
+                            <p className="text-sm text-[#479f78]">{option.description}</p>
                           </div>
                         </div>
-                        <div className="font-bold">
+                        <div className="font-bold text-black">
                           {option.price === 0 ? 'Free' : `$${option.price}`}
                         </div>
                       </div>
@@ -337,14 +337,14 @@ export default function ShippingPage() {
                 <div className="space-y-3">
                   <Link
                     href="/payment"
-                    className="w-full bg-[#46c34c] hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
+                    className="w-full bg-[#46c34c] hover:bg-[#479f78] text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
                   >
                     Continue to Payment
                   </Link>
                   
                   <Link
                     href="/cart"
-                    className="w-full border border-gray-300 hover:border-orange-500 text-black py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
+                    className="w-full border border-gray-300 hover:border-[#479f78] text-black py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
                   >
                     Back to Cart
                   </Link>
