@@ -40,7 +40,7 @@ export default function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Desktop Navigation */}
         <motion.div 
           className="hidden lg:flex justify-between items-center"
