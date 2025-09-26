@@ -33,23 +33,35 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      className={`sticky top-0 left-0 right-0 z-50 text-white  py-6 transition-colors duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 text-white py-4 md:py-6 transition-colors duration-300 ${
         scrolled ? 'bg-black' : 'bg-transparent'
       }`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="w-[1570px] mx-auto">
-        {/* Desktop Navigation - Centered with icons on the right */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Desktop Navigation */}
         <motion.div 
-          className="hidden md:flex justify-between items-center gap-10"
+          className="hidden lg:flex justify-between items-center"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1.5 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2, staggerChildren: 0.1 }}
         >
+          {/* Brand/Logo */}
+          <motion.div 
+            className="text-2xl font-bold"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link href="/" className="hover:text-gray-300 transition-colors">
+              STEPHEN
+            </Link>
+          </motion.div>
+
           {/* Main Navigation Links */}
-          <div className="flex justify-between items-around  flex-1">
+          <div className="flex items-center space-x-8 xl:space-x-12">
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About" },
@@ -62,9 +74,9 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
               >
-                <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-[20px] font-bold">
+                <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-lg font-medium">
                   {item.label}
                 </Link>
               </motion.div>
@@ -72,7 +84,7 @@ export default function Navbar() {
           </div>
 
           {/* Cart and Favorites Icons */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -81,7 +93,7 @@ export default function Navbar() {
             >
               <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors relative group">
                 <HeartIcon />
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   Favorites
                 </span>
               </Link>
@@ -94,7 +106,7 @@ export default function Navbar() {
             >
               <Link href="/cart" className="text-gray-300 hover:text-white transition-colors relative group">
                 <CartIcon />
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   Cart
                 </span>
               </Link>
@@ -102,19 +114,73 @@ export default function Navbar() {
           </div>
         </motion.div>
 
-        {/* Mobile Navigation Toggle */}
-        <div className="md:hidden flex justify-between items-center">
+        {/* Tablet Navigation (md to lg) */}
+        <motion.div 
+          className="hidden md:flex lg:hidden justify-between items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {/* Brand/Logo */}
           <motion.div 
-            className="text-2xl font-bold"
+            className="text-xl font-bold"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            STEPHEN
+            <Link href="/" className="hover:text-gray-300 transition-colors">
+              STEPHEN
+            </Link>
+          </motion.div>
+
+          {/* Condensed Navigation */}
+          <div className="flex items-center space-x-6">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/shop", label: "Shop" },
+              { href: "/blog", label: "Blog" },
+              { href: "/contact", label: "Contact" }
+            ].map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+                  {item.label}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Icons */}
+          <div className="flex items-center space-x-3">
+            <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors">
+              <HeartIcon />
+            </Link>
+            <Link href="/cart" className="text-gray-300 hover:text-white transition-colors">
+              <CartIcon />
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Mobile Navigation Toggle */}
+        <div className="md:hidden flex justify-between items-center">
+          <motion.div 
+            className="text-xl sm:text-2xl font-bold"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link href="/" className="hover:text-gray-300 transition-colors">
+              STEPHEN
+            </Link>
           </motion.div>
           
           {/* Mobile Cart and Favorites Icons */}
-          <div className="flex items-end space-x-2">
+          <div className="flex items-center space-x-3">
             <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors">
               <HeartIcon />
             </Link>
@@ -122,7 +188,7 @@ export default function Navbar() {
               <CartIcon />
             </Link>
             <motion.button
-              className="text-white focus:outline-none ml-2"
+              className="text-white focus:outline-none ml-2 p-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, x: 20 }}
@@ -133,7 +199,7 @@ export default function Navbar() {
                 animate={{ rotate: isMenuOpen ? 45 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </motion.div>
@@ -145,14 +211,14 @@ export default function Navbar() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="md:hidden mt-4 bg-black/90 rounded-lg p-4"
+              className="md:hidden mt-4 bg-black/90 rounded-lg p-4 sm:p-6"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
               <motion.div 
-                className="flex flex-col space-y-4"
+                className="flex flex-col space-y-3 sm:space-y-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.1, staggerChildren: 0.05 }}
@@ -162,9 +228,7 @@ export default function Navbar() {
                   { href: "/about", label: "About" },
                   { href: "/shop", label: "Shop" },
                   { href: "/blog", label: "Blogs" },
-                  { href: "/contact", label: "Contact" },
-                  { href: "/favorites", label: "Favorites" },
-                  { href: "/cart", label: "Cart" }
+                  { href: "/contact", label: "Contact" }
                 ].map((item) => (
                   <motion.div
                     key={item.label}
@@ -174,7 +238,7 @@ export default function Navbar() {
                   >
                     <Link 
                       href={item.href} 
-                      className="text-gray-300 hover:text-white transition-colors text-[48px] font-medium block"
+                      className="text-gray-300 hover:text-white transition-colors text-2xl sm:text-3xl font-medium block py-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
