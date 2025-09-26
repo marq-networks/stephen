@@ -14,6 +14,11 @@ export default function BrandGrowthSection() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.8]);
 
+  const addToCart = (productName: string) => {
+    // Add to cart functionality
+    console.log(`Added ${productName} to cart`);
+  };
+
   return (
     <motion.section 
       ref={sectionRef}
@@ -112,20 +117,20 @@ export default function BrandGrowthSection() {
               </div>
             </motion.div>
 
-            {/* Trust Indicator */}
+            {/* Stats */}
             <motion.div
-              className="mb-6"
+              className="space-y-2"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.0 }}
               viewport={{ once: false }}
             >
               <p className="text-gray-600 text-xs mb-2 font-medium">Trusted by Industry leaders</p>
-              <div className="flex justify-center lg:justify-start space-x-1">
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
                 {[...Array(5)].map((_, i) => (
-                  <motion.svg 
-                    key={i} 
-                    className="w-3 h-3 text-orange-400 fill-current" 
+                  <motion.svg
+                    key={i}
+                    className="w-3 h-3 text-orange-400 fill-current"
                     viewBox="0 0 20 20"
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
@@ -142,28 +147,29 @@ export default function BrandGrowthSection() {
                 ))}
               </div>
             </motion.div>
+          </motion.div>
 
-            {/* Main Description */}
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.4 }}
-              viewport={{ once: false }}
-            >
-              <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
-                We help brands grow with strategic design that s{' '}
-                <motion.span
-                  className="text-[#46c34c]"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 2.0 }}
-                  viewport={{ once: false }}
-                >
-                  thoughtful
-                </motion.span>
-                , visually bold, and built to make an impression.
-              </h4>
-            </motion.div>
+          {/* Third Column - Main Heading */}
+          <motion.div
+            className="text-center lg:text-left"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.4 }}
+            viewport={{ once: false }}
+          >
+            <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
+              We help brands grow with strategic design that s{' '}
+              <motion.span
+                className="text-[#46c34c]"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 2.0 }}
+                viewport={{ once: false }}
+              >
+                thoughtful
+              </motion.span>
+              , visually bold, and built to make an impression.
+            </h4>
           </motion.div>
         </div>
 
@@ -191,34 +197,52 @@ export default function BrandGrowthSection() {
               </div>
 
               {/* Image 1 */}
-              <Link href="/shop">
-                <div className="rounded-2xl cursor-pointer w-full transition-shadow duration-300">
+              <div className="relative rounded-2xl cursor-pointer w-full transition-shadow duration-300 group overflow-hidden">
+                <Link href="/shop">
                   <div className="w-full h-full flex items-center justify-center">
                     <Image
                       src="/2.png"
                       alt="Product 1"
                       width={600}
                       height={600}
-                      className="w-full h-auto"
+                      className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                </div>
-              </Link>
+                </Link>
+                {/* Add to Cart Icon */}
+                <button
+                  onClick={() => addToCart('Product 1')}
+                  className="absolute bottom-4 right-4 bg-[#46c34c] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
+                  </svg>
+                </button>
+              </div>
 
               {/* Image 2 */}
-              <Link href="/shop">
-                <div className="rounded-2xl cursor-pointer w-full transition-shadow duration-300">
+              <div className="relative rounded-2xl cursor-pointer w-full transition-shadow duration-300 group overflow-hidden">
+                <Link href="/shop">
                   <div className="w-full h-full flex items-center justify-center">
                     <Image
                       src="/3.png"
                       alt="Product 2"
                       width={600}
                       height={600}
-                      className="w-full h-auto"
+                      className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                </div>
-              </Link>
+                </Link>
+                {/* Add to Cart Icon */}
+                <button
+                  onClick={() => addToCart('Product 2')}
+                  className="absolute bottom-4 right-4 bg-[#46c34c] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             {/* Second Row */}
@@ -235,19 +259,28 @@ export default function BrandGrowthSection() {
               </div>
 
               {/* Image 4 */}
-              <Link href="/shop">
-                <div className="rounded-2xl cursor-pointer w-full overflow-hidden transition-shadow duration-300"> 
+              <div className="relative rounded-2xl cursor-pointer w-full overflow-hidden transition-shadow duration-300 group">
+                <Link href="/shop">
                   <div className="w-full h-full flex items-center justify-center">
                     <Image
                       src="/4.png"
                       alt="Product 4"
                       width={400}
                       height={400}
-                      className="w-full h-auto max-h-[600px] object-contain"
+                      className="w-full h-auto max-h-[600px] object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                </div>
-              </Link>
+                </Link>
+                {/* Add to Cart Icon */}
+                <button
+                  onClick={() => addToCart('Product 4')}
+                  className="absolute bottom-4 right-4 bg-[#46c34c] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             {/* CTA Button */}
