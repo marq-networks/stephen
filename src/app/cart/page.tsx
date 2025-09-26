@@ -144,7 +144,7 @@ export default function CartPage() {
               <p className="text-gray-600 mb-8">Add some items to get started</p>
               <Link
                 href="/shop"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
+                className="bg-[#46c34c] hover:bg-orange-600 text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
               >
                 Continue Shopping
               </Link>
@@ -278,7 +278,7 @@ export default function CartPage() {
 
                   <Link
                     href="/shipping"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
+                    className="w-full bg-[#46c34c] hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
                   >
                     <motion.span
                       whileHover={{ scale: 1.05 }}

@@ -63,7 +63,7 @@ export default function Blogs() {
         
         {/* Bottom Actions */}
         <div className="flex justify-between items-center">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full transition-colors duration-200 text-sm font-medium">
+          <button className="bg-[#46c34c] hover:bg-orange-600 text-white px-6 py-2.5 rounded-full transition-colors duration-200 text-sm font-medium">
             See More
           </button>
           <button className="text-gray-600 hover:text-black transition-colors duration-200 text-sm font-medium">

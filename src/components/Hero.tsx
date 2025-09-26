@@ -181,7 +181,7 @@ export default function Hero() {
               >
                 <Link href="/shop">
                   <motion.button
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg"
+                    className="bg-[#46c34c] hover:bg-[#46c34cd0] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg"
                     whileHover={{ 
                       scale: 1.05,
                       boxShadow: "0 15px 35px rgba(249, 115, 22, 0.5)",

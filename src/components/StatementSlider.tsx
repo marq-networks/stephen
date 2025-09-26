@@ -157,7 +157,7 @@ export default function StatementSlider() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-300 ${
-                  index === currentSlide ? 'bg-orange-500' : 'bg-gray-300'
+                  index === currentSlide ? 'bg-[#46c34c]' : 'bg-gray-300'
                 }`}
               />
             ))}

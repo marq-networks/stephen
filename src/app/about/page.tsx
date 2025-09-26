@@ -48,7 +48,7 @@ export default function About() {
                       BEING.</span>
                   </h2>
 
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base">
+                  <button className="bg-[#46c34c] hover:bg-orange-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base">
                     Shop Now
                   </button>
                 </div>

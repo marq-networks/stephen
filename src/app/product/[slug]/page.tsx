@@ -236,7 +236,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                           onClick={() => setSelectedSize(size)}
                           className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
                             selectedSize === size
-                              ? 'border-orange-500 bg-orange-500 text-white'
+                              ? 'border-orange-500 bg-[#46c34c] text-white'
                               : 'border-gray-300 text-gray-700 hover:border-gray-400'
                           }`}
                         >
@@ -256,7 +256,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                           onClick={() => setSelectedColor(color)}
                           className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
                             selectedColor === color
-                              ? 'border-orange-500 bg-orange-500 text-white'
+                              ? 'border-orange-500 bg-[#46c34c] text-white'
                               : 'border-gray-300 text-gray-700 hover:border-gray-400'
                           }`}
                         >
@@ -291,7 +291,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                   {/* Add to Cart Button */}
                   <motion.button
                     onClick={handleAddToCart}
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+                    className="w-full bg-[#46c34c] hover:bg-orange-600 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -304,7 +304,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                     <ul className="space-y-2">
                       {product.features.map((feature, index) => (
                         <li key={index} className="text-gray-600 flex items-center">
-                          <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                          <span className="w-2 h-2 bg-[#46c34c] rounded-full mr-3"></span>
                           {feature}
                         </li>
                       ))}

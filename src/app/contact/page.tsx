@@ -123,7 +123,7 @@ function ContactUsSection() {
                 </div>
 
                 <motion.button
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-[#46c34c] hover:bg-orange-600 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

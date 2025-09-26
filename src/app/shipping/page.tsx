@@ -337,7 +337,7 @@ export default function ShippingPage() {
                 <div className="space-y-3">
                   <Link
                     href="/payment"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
+                    className="w-full bg-[#46c34c] hover:bg-orange-600 text-white py-3 px-6 rounded-full font-medium transition-colors duration-200 block text-center"
                   >
                     Continue to Payment
                   </Link>

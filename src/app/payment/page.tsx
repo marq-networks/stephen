@@ -282,7 +282,7 @@ export default function PaymentPage() {
                   <div className="flex space-x-2">
                     <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">VISA</div>
                     <div className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
-                    <div className="w-8 h-5 bg-orange-500 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
+                    <div className="w-8 h-5 bg-[#46c34c] rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
                     <div className="w-8 h-5 bg-gray-700 rounded text-white text-xs flex items-center justify-center font-bold">PP</div>
                     <div className="w-8 h-5 bg-green-500 rounded text-white text-xs flex items-center justify-center font-bold">GP</div>
                     <div className="w-8 h-5 bg-black rounded text-white text-xs flex items-center justify-center font-bold">AP</div>
