@@ -40,17 +40,29 @@ export default function About() {
           <div className="w-full bg-white rounded-2xl">
             <section className="w-full py-12 sm:py-16 lg:py-20">
               <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl">
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8">
-                    WE ARE <span className="text-gray-500">NUMEROUS</span>,<br />
-                    YET, WE OPERATE<br />
-                    AS A <span className="text-black">UNIFIED<br />
-                      BEING.</span>
-                  </h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                  {/* Left - Text Content */}
+                  <div className="max-w-4xl">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8">
+                      WE ARE <span className="text-gray-500">NUMEROUS</span>,<br />
+                      YET, WE OPERATE<br />
+                      AS A <span className="text-black">UNIFIED<br />
+                        BEING.</span>
+                    </h2>
 
-                  <button className="bg-[#46c34c] hover:bg-[#479f78] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base">
-                    Shop Now
-                  </button>
+                    <button className="bg-[#46c34c] hover:bg-[#479f78] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base">
+                      Shop Now
+                    </button>
+                  </div>
+
+                  {/* Right - Image */}
+                  <div className="rounded-lg overflow-hidden">
+                    <img
+                      src="/about.png"
+                      alt="Team collaboration"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </section>

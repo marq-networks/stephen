@@ -61,7 +61,7 @@ const Founder = () => {
                 >
                     {/* Left - Product Image */}
                     <motion.div 
-                        className="rounded-lg aspect-square overflow-hidden"
+                        className="relative rounded-lg aspect-square overflow-hidden group"
                         variants={itemVariants}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
@@ -71,6 +71,37 @@ const Founder = () => {
                             alt="Product"
                             className="w-full h-full object-cover"
                         />
+                        
+                        {/* Add to Cart Button */}
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <motion.button
+                                onClick={() => handleAddToCart(1)}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                                    addedToCart.includes(1)
+                                        ? 'bg-green-500 text-white'
+                                        : 'bg-white text-black hover:bg-gray-100'
+                                }`}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                disabled={addedToCart.includes(1)}
+                            >
+                                {addedToCart.includes(1) ? (
+                                    <>
+                                        <motion.div
+                                            initial={{ scale: 0 }}
+                                            animate={{ scale: 1 }}
+                                            className="w-4 h-4 rounded-full bg-white"
+                                        />
+                                        Added!
+                                    </>
+                                ) : (
+                                    <>
+                                        <ShoppingCart size={16} />
+                                        Add to Cart
+                                    </>
+                                )}
+                            </motion.button>
+                        </div>
                     </motion.div>
 
                     {/* Right - Testimonial Content */}
