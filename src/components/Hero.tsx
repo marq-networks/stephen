@@ -59,7 +59,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-           Creative is
+           Life is
           </motion.span>
           <br />
           <motion.span
