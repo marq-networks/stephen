@@ -145,8 +145,8 @@ function ShippingPolicyContent() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Order Tracking</h2>
               <p className="text-lg leading-relaxed">
-                Once your order ships, you'll receive a confirmation email with tracking information. You can track your package 
-                using the provided tracking number on our website or the carrier's website.
+                Once your order ships, you ll receive a confirmation email with tracking information. You can track your package 
+                using the provided tracking number on our website or the carrier s website.
               </p>
             </div>
 
@@ -170,8 +170,8 @@ function ShippingPolicyContent() {
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Contact us within 48 hours of expected delivery</li>
-                <li>We'll work with the carrier to locate your package</li>
-                <li>If the package is lost, we'll send a replacement at no charge</li>
+                <li>We ll work with the carrier to locate your package</li>
+                <li>If the package is lost, we ll send a replacement at no charge</li>
                 <li>Damaged packages should be reported immediately</li>
               </ul>
             </div>
