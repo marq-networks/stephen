@@ -14,6 +14,12 @@ export default function BrandGrowthSection() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.8]);
 
+  const products = [
+    { id: 1, name: "Premium T-Shirt", price: "$29.99", image: "/2.png" },
+    { id: 2, name: "Classic Hoodie", price: "$49.99", image: "/3.png" },
+    { id: 3, name: "Designer Cap", price: "$19.99", image: "/4.png" }
+  ];
+
   const addToCart = (productName: string) => {
     // Add to cart functionality
     console.log(`Added ${productName} to cart`);
@@ -196,52 +202,72 @@ export default function BrandGrowthSection() {
                 </div>
               </div>
 
-              {/* Image 1 */}
-              <div className="relative rounded-2xl cursor-pointer w-full transition-shadow duration-300 group overflow-hidden">
+              {/* Product 1 */}
+              <div className="relative rounded-2xl cursor-pointer w-full transition-shadow duration-300 group overflow-hidden bg-white shadow-sm hover:shadow-lg">
                 <Link href="/shop">
-                  <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-full h-full flex items-center justify-center p-4">
                     <Image
-                      src="/2.png"
-                      alt="Product 1"
+                      src={products[0].image}
+                      alt={products[0].name}
                       width={600}
                       height={600}
                       className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 </Link>
-                {/* Add to Cart Icon */}
-                <button
-                  onClick={() => addToCart('Product 1')}
-                  className="absolute bottom-4 right-4 bg-[#46c34c] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
-                  </svg>
-                </button>
+                
+                {/* Product Info */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold text-black text-sm">{products[0].name}</h3>
+                      <p className="text-[#46c34c] font-bold text-lg">{products[0].price}</p>
+                    </div>
+                    {/* Always Visible Cart Icon */}
+                    <button
+                      onClick={() => addToCart(products[0].name)}
+                      className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
 
-              {/* Image 2 */}
-              <div className="relative rounded-2xl cursor-pointer w-full transition-shadow duration-300 group overflow-hidden">
+              {/* Product 2 */}
+              <div className="relative rounded-2xl cursor-pointer w-full transition-shadow duration-300 group overflow-hidden bg-white shadow-sm hover:shadow-lg">
                 <Link href="/shop">
-                  <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-full h-full flex items-center justify-center p-4">
                     <Image
-                      src="/3.png"
-                      alt="Product 2"
+                      src={products[1].image}
+                      alt={products[1].name}
                       width={600}
                       height={600}
                       className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 </Link>
-                {/* Add to Cart Icon */}
-                <button
-                  onClick={() => addToCart('Product 2')}
-                  className="absolute bottom-4 right-4 bg-[#46c34c] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
-                  </svg>
-                </button>
+                
+                {/* Product Info */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold text-black text-sm">{products[1].name}</h3>
+                      <p className="text-[#46c34c] font-bold text-lg">{products[1].price}</p>
+                    </div>
+                    {/* Always Visible Cart Icon */}
+                    <button
+                      onClick={() => addToCart(products[1].name)}
+                      className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -258,28 +284,38 @@ export default function BrandGrowthSection() {
                 />
               </div>
 
-              {/* Image 4 */}
-              <div className="relative rounded-2xl cursor-pointer w-full overflow-hidden transition-shadow duration-300 group">
+              {/* Product 3 */}
+              <div className="relative rounded-2xl cursor-pointer w-full overflow-hidden transition-shadow duration-300 group bg-white shadow-sm hover:shadow-lg">
                 <Link href="/shop">
-                  <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-full h-full flex items-center justify-center p-4">
                     <Image
-                      src="/4.png"
-                      alt="Product 4"
+                      src={products[2].image}
+                      alt={products[2].name}
                       width={400}
                       height={400}
                       className="w-full h-auto max-h-[600px] object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 </Link>
-                {/* Add to Cart Icon */}
-                <button
-                  onClick={() => addToCart('Product 4')}
-                  className="absolute bottom-4 right-4 bg-[#46c34c] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
-                  </svg>
-                </button>
+                
+                {/* Product Info */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold text-black text-sm">{products[2].name}</h3>
+                      <p className="text-[#46c34c] font-bold text-lg">{products[2].price}</p>
+                    </div>
+                    {/* Always Visible Cart Icon */}
+                    <button
+                      onClick={() => addToCart(products[2].name)}
+                      className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
 
