@@ -48,7 +48,7 @@ function ContactUsSection() {
           >
             <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-black">
               Get In
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400">
+              <span className="block text-[#46c34c]">
                 Touch
               </span>
             </h1>
@@ -187,7 +187,7 @@ function ContactUsSection() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-2xl p-8 text-white">
+              <div className=" rounded-2xl p-8 text-black">
                 <h3 className="text-2xl font-bold mb-4">
                   Ready to Get Started?
                 </h3>
@@ -195,7 +195,7 @@ function ContactUsSection() {
                   Join hundreds of satisfied clients who have transformed their vision into reality with our help.
                 </p>
                 <motion.button
-                  className="bg-white text-[#46c34c] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+                  className="bg-[#46c34c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#479f78] transition-colors duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

@@ -56,9 +56,16 @@ export default function Footer() {
               <li><Link href="/shop" className="text-gray-700 hover:text-black transition-colors text-sm">Shop</Link></li>
               <li><Link href="/blog" className="text-gray-700 hover:text-black transition-colors text-sm">Blog</Link></li>
               <li><Link href="/contact" className="text-gray-700 hover:text-black transition-colors text-sm">Contact</Link></li>
-              <li><Link href="/privacy" className="text-gray-700 hover:text-black transition-colors text-sm">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-gray-700 hover:text-black transition-colors text-sm">Terms of Service</Link></li>
-              <li><Link href="/shipping" className="text-gray-700 hover:text-black transition-colors text-sm">Shipping Policy</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal Links */}
+          <div className="space-y-4">
+            <h3 className="text-black font-semibold mb-4 text-sm sm:text-base">Legal</h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li><Link href="/privacy-policy" className="text-gray-700 hover:text-black transition-colors text-sm">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="text-gray-700 hover:text-black transition-colors text-sm">Terms of Service</Link></li>
+              <li><Link href="/shipping-policy" className="text-gray-700 hover:text-black transition-colors text-sm">Shipping Policy</Link></li>
             </ul>
           </div>
 
@@ -138,6 +145,26 @@ export default function Footer() {
             >
               {slides[currentSlide]}
             </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Copyright Section */}
+      <div className="bg-white border-t border-gray-200 py-6">
+        <div className="max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} STEPHEN™. All rights reserved.</p>
+            <p className="mt-2 sm:mt-0">
+              Powered by{' '}
+              <Link 
+                href="https://marqnetworks.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-black hover:text-gray-700 transition-colors font-medium"
+              >
+                marqnetworks
+              </Link>
+            </p>
           </div>
         </div>
       </div>
