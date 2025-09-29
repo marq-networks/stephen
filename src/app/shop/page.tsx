@@ -38,7 +38,7 @@ const products: Product[] = [
     slug: "processor-tee",
     category: "Tees",
     label: "Popular",
-    labelColor: "bg-blue-400"
+    labelColor: "bg-[#46c34c]"
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const products: Product[] = [
     slug: "whats-your-forecast-tee",
     category: "Tees",
     label: "Sale",
-    labelColor: "bg-yellow-400"
+    labelColor: "bg-[#46c34c]"
   },
   {
     id: 4,
@@ -78,7 +78,7 @@ const products: Product[] = [
     slug: "mindful-statement-tee",
     category: "Tees",
     label: "Sale",
-    labelColor: "bg-yellow-400"
+    labelColor: "bg-[#46c34c]"
   }
 ];
 
