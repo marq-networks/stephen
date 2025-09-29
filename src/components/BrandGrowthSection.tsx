@@ -44,7 +44,7 @@ export default function BrandGrowthSection() {
           >
             {/* Massive Number */}
             <motion.h2 
-              className="text-[4rem] sm:text-[6rem] lg:text-[8rem] font-black text-black leading-none select-none"
+              className="text-[4rem] sm:text-[6rem] lg:text-[8rem]  text-black leading-none select-none"
               initial={{ scale: 0.5, opacity: 0, rotateX: -90 }}
               whileInView={{ scale: 1, opacity: 1, rotateX: 0 }}
               transition={{ 

@@ -56,7 +56,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="hover:text-gray-300 transition-colors">
-              STEPHEN
+              ExClaimStatedTs
             </Link>
           </motion.div>
 

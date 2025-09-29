@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Main Heading - Centered */}
         <motion.h1 
-          className="text-white text-4xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-left"
+          className="text-white text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl  leading-tight text-left capitalize" 
           initial={{ y: 50, opacity: 0, scale: 0.8 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ 
@@ -59,7 +59,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-           Life is
+           Creative is
           </motion.span>
           <br />
           <motion.span
