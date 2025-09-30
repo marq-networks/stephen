@@ -164,7 +164,7 @@ export default function BrandGrowthSection() {
             viewport={{ once: false }}
           >
             <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
-              We help brands grow with strategic design that s{' '}
+              We create statement tees that are{' '}
               <motion.span
                 className="text-[#46c34c]"
                 initial={{ opacity: 0 }}
@@ -174,7 +174,7 @@ export default function BrandGrowthSection() {
               >
                 thoughtful
               </motion.span>
-              , visually bold, and built to make an impression.
+              ,visually bold, and made to leave a lasting impression. Crafted in bamboo cotton for comfort, built for culture, and worn to spark conversation.
             </h4>
           </motion.div>
         </div>
