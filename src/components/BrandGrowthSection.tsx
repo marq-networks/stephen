@@ -188,15 +188,15 @@ export default function BrandGrowthSection() {
               {/* Text Card */}
               <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm w-full flex flex-col justify-around hover:shadow-lg transition-shadow duration-300">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">Premium Quality</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">Premium Bamboo Cotton Quality</h3>
                   <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                    Crafted from the finest materials with attention to every detail. Our products are designed to last and provide unmatched comfort.
+                    Our statement tees are made from a breathable bamboo-cotton blend — softer than regular cotton, longer-lasting, and eco-conscious. Every stitch is designed for comfort, durability, and a fit that feels as good as it looks.
                   </p>
                 </div>
                 <div className="mt-6">
                   <Link href="/shop">
                     <button className="bg-[#46c34c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#46c34c]/80 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
-                      Explore Collection
+                      Explore the Collection
                     </button>
                   </Link>
                 </div>
