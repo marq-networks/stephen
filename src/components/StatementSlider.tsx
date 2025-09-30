@@ -259,7 +259,7 @@ export default function StatementSlider() {
 
         {/* SEO-optimized content section */}
         <div className="mt-16 sm:mt-20 text-center">
-          <div className="max-w-4xl mx-auto">
+          <div className=" mx-auto">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Why Choose Our Statement Collection?
             </h3>
