@@ -16,8 +16,7 @@ export default function HowProductFeels() {
 
   const [activeCategory, setActiveCategory] = useState('All');
   const [cart, setCart] = useState<{id: number, quantity: number}[]>([]);
-  
-  const categories = ['All', 'New Arrivals', 'Dresses', 'Tops', 'Outerwear', 'Bottoms'];
+  const categories = ['All', 'New Arrivals', 'Dresses', ];
   
   const products = [
     {
