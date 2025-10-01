@@ -168,7 +168,7 @@ function ContactUsSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-black mb-1">Phone</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+1 414 999 8833</p>
                     </div>
                   </div>
 

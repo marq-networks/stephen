@@ -73,8 +73,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-black font-semibold mb-4 text-sm sm:text-base">Contact</h3>
             <div className="space-y-2 sm:space-y-3">
-              <p className="text-gray-700 text-sm">hello@stephen.studio</p>
-              <p className="text-gray-700 text-sm">(0023) 6763-362</p>
+              <p className="text-gray-700 text-sm">info@ExClaimStatedTs.com</p>
+              <p className="text-gray-700 text-sm">+1 414 999 8833</p>
               <p className="text-gray-700 text-sm">Los Angeles</p>
             </div>
           </div>

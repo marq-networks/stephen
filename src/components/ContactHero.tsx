@@ -28,7 +28,7 @@ export default function ContactHero() {
           "@type": "ContactPoint",
           "telephone": "+1-555-STEPHEN",
           "contactType": "customer service",
-          "email": "hello@stephen.com",
+          "email": "info@ExClaimStatedTs.com",
           "availableLanguage": "English"
         },
         {
@@ -65,7 +65,7 @@ export default function ContactHero() {
     "description": "Sustainable statement tee brand creating meaningful fashion with eco-friendly materials",
     "url": "https://stephen.com",
     "logo": "https://stephen.com/logo.png",
-    "email": "hello@stephen.com",
+    "email": "info@ExClaimStatedTs.com",
     "telephone": "+1-555-STEPHEN",
     "address": {
       "@type": "PostalAddress",
@@ -165,7 +165,7 @@ export default function ContactHero() {
                   transition={{ delay: 1.6, duration: 0.8 }}
                 >
                   <motion.a
-                    href="mailto:hello@stephen.com"
+                    href="mailto:info@ExClaimStatedTs.com"
                     className="inline-flex items-center justify-center px-8 py-4 bg-[#46c34c] text-white font-semibold rounded-lg hover:bg-[#38db41] transition-colors duration-300 text-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -194,7 +194,7 @@ export default function ContactHero() {
                 >
                   <div className="text-center lg:text-left">
                     <div className="text-green-400 font-bold text-lg">Customer Service</div>
-                    <div className="text-white/70" itemProp="email">hello@stephen.com</div>
+                    <div className="text-white/70" itemProp="email">info@ExClaimStatedTs.com</div>
                   </div>
                   <div className="text-center lg:text-left">
                     <div className="text-green-400 font-bold text-lg">Wholesale Inquiries</div>
