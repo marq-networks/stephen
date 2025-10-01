@@ -153,7 +153,7 @@ export default function Shop() {
                     transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                     viewport={{ once: true }}
                   >
-                    Shop Our Collection
+                    Sustainable Statement Tees Collection
                   </motion.h2>
                   
                   <motion.p 
@@ -163,7 +163,7 @@ export default function Shop() {
                     transition={{ duration: 1, delay: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    Experience the perfect blend of comfort, style, and quality. Each piece is crafted with care to make you feel confident and comfortable all day long.
+                    Discover premium bamboo-cotton statement tees that combine meaningful messages with eco-friendly fashion. Each sustainable garment is ethically crafted to express your values while protecting our planet. Shop conscious clothing that makes a statement.
                   </motion.p>
                 </motion.div>
 
