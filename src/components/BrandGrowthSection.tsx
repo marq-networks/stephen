@@ -273,20 +273,9 @@ export default function BrandGrowthSection() {
 
             {/* Second Row */}
             <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 sm:gap-6 w-full">
-              {/* Chart Image */}
-              {/* <div className="rounded-2xl w-full overflow-hidden transition-shadow duration-300">
-                <Image 
-                  src="/chart.png" 
-                  alt="Chart" 
-                  width={600} 
-                  height={400} 
-                  className="w-full h-auto rounded-2xl" 
-                />
-              </div> */}
-
-              {/* Process Timeline Section */}
+              
               <div className="rounded-2xl w-full overflow-hidden transition-shadow duration-300 bg-gradient-to-br from-gray-50 to-white p-8 shadow-sm hover:shadow-lg">
-                <div className="space-y-8">
+                <div className="flex flex-col justify-between h-full">
                   {/* Header */}
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
@@ -300,43 +289,41 @@ export default function BrandGrowthSection() {
                   </div>
 
                   {/* Timeline */}
-                  <div className="relative">
-                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between space-y-6 md:space-y-0 md:space-x-4">
-                      {/* Timeline Steps */}
-                      <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 w-full">
-                        {/* Step 1 */}
-                        <div className="flex flex-col items-center text-center">
-                          <div className="bg-orange-200 text-orange-800 px-4 py-2 rounded-full font-medium text-sm mb-2">
-                            Design
-                          </div>
-                          <div className="text-xs text-gray-500">1 Week</div>
+                  <div className="relative mt-8">
+                    {/* Timeline Steps */}
+                    <div className="flex items-center justify-between w-full">
+                      {/* Step 1 */}
+                      <div className="flex flex-col items-center text-center flex-1">
+                        <div className="bg-orange-200 text-orange-800 px-4 py-2 rounded-full font-medium text-sm mb-2">
+                          Design
                         </div>
+                        <div className="text-xs text-gray-500">1 Week</div>
+                      </div>
 
-                        {/* Connector Line */}
-                        <div className="hidden md:block flex-1 h-px bg-gray-200 relative">
-                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-300 rounded-full"></div>
-                        </div>
+                      {/* Connector Line */}
+                      <div className="flex-1 h-px bg-gray-200 relative mx-4">
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-300 rounded-full"></div>
+                      </div>
 
-                        {/* Step 2 */}
-                        <div className="flex flex-col items-center text-center">
-                          <div className="bg-orange-300 text-orange-900 px-4 py-2 rounded-full font-medium text-sm mb-2">
-                            Sourcing
-                          </div>
-                          <div className="text-xs text-gray-500">2 Weeks</div>
+                      {/* Step 2 */}
+                      <div className="flex flex-col items-center text-center flex-1">
+                        <div className="bg-orange-300 text-orange-900 px-4 py-2 rounded-full font-medium text-sm mb-2">
+                          Sourcing
                         </div>
+                        <div className="text-xs text-gray-500">2 Weeks</div>
+                      </div>
 
-                        {/* Connector Line */}
-                        <div className="hidden md:block flex-1 h-px bg-gray-200 relative">
-                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-300 rounded-full"></div>
-                        </div>
+                      {/* Connector Line */}
+                      <div className="flex-1 h-px bg-gray-200 relative mx-4">
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-300 rounded-full"></div>
+                      </div>
 
-                        {/* Step 3 */}
-                        <div className="flex flex-col items-center text-center">
-                          <div className="bg-orange-400 text-white px-4 py-2 rounded-full font-medium text-sm mb-2">
-                            Production
-                          </div>
-                          <div className="text-xs text-gray-500">3 Weeks</div>
+                      {/* Step 3 */}
+                      <div className="flex flex-col items-center text-center flex-1">
+                        <div className="bg-orange-400 text-white px-4 py-2 rounded-full font-medium text-sm mb-2">
+                          Production
                         </div>
+                        <div className="text-xs text-gray-500">3 Weeks</div>
                       </div>
                     </div>
 
