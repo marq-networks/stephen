@@ -348,7 +348,7 @@ export default function HowProductFeels() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-black mb-8">
-            The Stephen Experience: More Than Just a Tee
+            The Exclaim Experience: More Than Just a Tee
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
