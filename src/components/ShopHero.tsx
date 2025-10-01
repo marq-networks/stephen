@@ -78,7 +78,16 @@ export default function ShopHero() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Stephen",
+            "url": "https://stephen.com",
+            "logo": "/LOGO.png",
+            "description": "Sustainable statement tees with meaningful messages"
+          })
+        }}
       />
       
       <motion.section 

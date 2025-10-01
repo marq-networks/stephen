@@ -50,6 +50,20 @@ export default function EditorialFashion() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Stephen",
+            "url": "https://stephen.com",
+            "logo": "/LOGO.png",
+            "description": "Sustainable statement tees with meaningful messages for conscious consumers"
+          })
+        }}
+      />
+
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left Side - Content */}

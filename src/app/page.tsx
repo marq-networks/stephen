@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import BrandGrowthSection from '../components/BrandGrowthSection';
@@ -10,6 +11,18 @@ import Clients from '../components/Clients';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+
+export const metadata: Metadata = {
+  title: "Stephen - Sustainable Statement Tees | Premium Eco-Friendly Apparel",
+  description: "Discover Stephen's collection of sustainable statement tees made from premium bamboo-cotton blend. Express yourself with meaningful fashion that protects our planet.",
+  keywords: "sustainable fashion, statement tees, eco-friendly clothing, bamboo cotton, organic apparel, conscious fashion, meaningful clothing, premium tees",
+  openGraph: {
+    title: "Stephen - Sustainable Statement Tees | Premium Eco-Friendly Apparel",
+    description: "Discover Stephen's collection of sustainable statement tees made from premium bamboo-cotton blend.",
+    type: "website",
+    images: ['/LOGO.png'],
+  },
+};
 
 export default function Home() {
   return (

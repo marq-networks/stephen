@@ -16,7 +16,7 @@ export default function HowProductFeels() {
 
   const [activeCategory, setActiveCategory] = useState('All');
   const [cart, setCart] = useState<{id: number, quantity: number}[]>([]);
-  const categories = ['All', 'Statement Tees', 'Mindful Collection', 'Empowerment Series'];
+  const categories = ['All', 'Statement Tees', 'Empowerment Series', 'Mindful Collection'];
   
   const products = [
     {
@@ -254,89 +254,113 @@ export default function HowProductFeels() {
           role="grid"
           aria-label="Statement tee collection"
         >
-          {filteredProducts.map((product, index) => (
-            <motion.article
-              key={product.id}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
-              initial={{ y: 80, opacity: 0, scale: 0.9 }}
-              whileInView={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ 
-                duration: 0.8, 
-                delay: 1.4 + (index * 0.1),
-                type: "spring",
-                stiffness: 100
-              }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              role="gridcell"
-            >
-              {/* Product Image */}
-              <div className="overflow-hidden h-[40vh] sm:h-[50vh] lg:h-[60vh] relative">
-                {product.label && (
-                  <div 
-                    className={`absolute top-2 sm:top-4 left-2 sm:left-4 ${product.labelColor} text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium z-10`}
-                  >
-                    {product.label}
-                  </div>
-                )}
-                <Image
-                  src={product.image}
-                  alt={`${product.name} - ${product.description}`}
-                  fill
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-              </div>
-
-              {/* Product Info */}
-              <div className="p-3 sm:p-4">
-                <h2 className="text-base sm:text-lg font-semibold text-black mb-2 group-hover:text-[#46c34c] transition-colors">
-                  {product.name}
-                </h2>
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                  {product.description}
-                </p>
-                <div className="flex items-center space-x-2 mb-2">
-                  <span className="text-lg sm:text-xl font-bold text-black">{product.price}</span>
-                  {product.originalPrice && (
-                    <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
-                  )}
-                </div>
-                <p className="text-xs text-gray-500 italic">
-                  Feel: {product.feelDescription}
-                </p>
-                
-                {/* Hidden SEO content */}
-                <div className="sr-only">
-                  <span>Keywords: {product.keywords}</span>
-                  <span>Material: 100% Organic Cotton</span>
-                  <span>Category: {product.category}</span>
-                </div>
-              </div>
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="flex flex-col gap-3 px-4">
-                  <Link href={`/product/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-                    <button 
-                      className="bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full"
-                      aria-label={`View details for ${product.name}`}
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product, index) => (
+              <motion.article
+                key={product.id}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+                initial={{ y: 80, opacity: 0, scale: 0.9 }}
+                whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 1.4 + (index * 0.1),
+                  type: "spring",
+                  stiffness: 100
+                }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                role="gridcell"
+              >
+                {/* Product Image */}
+                <div className="overflow-hidden h-[40vh] sm:h-[50vh] lg:h-[60vh] relative">
+                  {product.label && (
+                    <div 
+                      className={`absolute top-2 sm:top-4 left-2 sm:left-4 ${product.labelColor} text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium z-10`}
                     >
-                      View Details
-                    </button>
-                  </Link>
-                  <button 
-                    onClick={() => addToCart(product.id)}
-                    className="bg-[#46c34c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-[#46c34c]/80 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full"
-                    aria-label={`Add ${product.name} to cart`}
-                  >
-                    Add to Cart
-                  </button>
+                      {product.label}
+                    </div>
+                  )}
+                  <Image
+                    src={product.image}
+                    alt={`${product.name} - ${product.description}`}
+                    fill
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                 </div>
-              </div>
-            </motion.article>
-          ))}
+
+                {/* Product Info */}
+                <div className="p-3 sm:p-4">
+                  <h2 className="text-base sm:text-lg font-semibold text-black mb-2 group-hover:text-[#46c34c] transition-colors">
+                    {product.name}
+                  </h2>
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                    {product.description}
+                  </p>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <span className="text-lg sm:text-xl font-bold text-black">{product.price}</span>
+                    {product.originalPrice && (
+                      <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-500 italic">
+                    Feel: {product.feelDescription}
+                  </p>
+                  
+                  {/* Hidden SEO content */}
+                  <div className="sr-only">
+                    <span>Keywords: {product.keywords}</span>
+                    <span>Material: 100% Organic Cotton</span>
+                    <span>Category: {product.category}</span>
+                  </div>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="flex flex-col gap-3 px-4">
+                    <Link href={`/product/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+                      <button 
+                        className="bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-gray-100 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full"
+                        aria-label={`View details for ${product.name}`}
+                      >
+                        View Details
+                      </button>
+                    </Link>
+                    <button 
+                      onClick={() => addToCart(product.id)}
+                      className="bg-[#46c34c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-[#46c34c]/80 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm sm:text-base w-full"
+                      aria-label={`Add ${product.name} to cart`}
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </motion.article>
+            ))
+          ) : (
+            <motion.div 
+              className="col-span-full text-center py-16"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-6xl mb-6">🔍</div>
+              <h3 className="text-2xl font-bold text-black mb-4">No Products Available</h3>
+              <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                We could not find any products in the {activeCategory} category. Try selecting a different category or check back later.
+              </p>
+              <motion.button
+                onClick={() => setActiveCategory('All')}
+                className="bg-[#46c34c] text-white px-8 py-3 rounded-full font-medium hover:bg-[#46c34c]/80 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View All Products
+              </motion.button>
+            </motion.div>
+          )}
         </motion.div>
 
         {/* Feel & Quality Section */}

@@ -50,7 +50,20 @@ export default function Hero() {
       {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(heroStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Stephen",
+            "url": "https://stephen.com",
+            "logo": "/LOGO.png",
+            "description": "Sustainable statement tees with meaningful messages for conscious consumers",
+            "sameAs": [
+              "https://instagram.com/stephen",
+              "https://twitter.com/stephen"
+            ]
+          })
+        }}
       />
       
       <motion.section 

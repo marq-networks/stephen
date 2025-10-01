@@ -26,7 +26,7 @@ const products: Product[] = [
     price: "$40",
     image: "/2.png",
     slug: "processing-tee",
-    category: "Tees",
+    category: "Statement Tees",
     label: "New",
     labelColor: "bg-green-400"
   },
@@ -36,7 +36,7 @@ const products: Product[] = [
     price: "$40",
     image: "/3.png",
     slug: "processor-tee",
-    category: "Tees",
+    category: "Statement Tees",
     label: "Popular",
     labelColor: "bg-[#46c34c]"
   },
@@ -47,7 +47,7 @@ const products: Product[] = [
     originalPrice: "$50",
     image: "/4.png",
     slug: "whats-your-forecast-tee",
-    category: "Tees",
+    category: "Statement Tees",
     label: "Sale",
     labelColor: "bg-[#46c34c]"
   },
@@ -57,7 +57,7 @@ const products: Product[] = [
     price: "$40",
     image: "/one.png",
     slug: "the-whether-is-in-u-tee",
-    category: "Tees"
+    category: "Empowerment Series"
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ const products: Product[] = [
     price: "$45",
     image: "/hero.png",
     slug: "life-is-beautiful-tee",
-    category: "Tees",
+    category: "Mindful Collection",
     label: "New",
     labelColor: "bg-green-400"
   },
@@ -76,7 +76,7 @@ const products: Product[] = [
     originalPrice: "$55",
     image: "/howporduct1.png",
     slug: "mindful-statement-tee",
-    category: "Tees",
+    category: "Mindful Collection",
     label: "Sale",
     labelColor: "bg-[#46c34c]"
   }
@@ -86,19 +86,11 @@ export default function Shop() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [cart, setCart] = useState<{id: number, quantity: number}[]>([]);
   
-  const categories = ['All', 'New Arrivals', 'Tees'];
+  const categories = ['All', 'Statement Tees', 'Empowerment Series', 'Mindful Collection'];
   
-  // Show all products for each filter category
-  const filteredProducts = (() => {
-    if (activeCategory === 'All') {
-      return products;
-    } else if (activeCategory === 'New Arrivals') {
-      return products; // Show all products in New Arrivals
-    } else if (activeCategory === 'Tees') {
-      return products; // Show all products in Tees
-    }
-    return products;
-  })();
+  const filteredProducts = activeCategory === 'All' 
+    ? products 
+    : products.filter(product => product.category === activeCategory);
 
   const addToCart = (productId: number) => {
     setCart(prevCart => {
@@ -204,79 +196,103 @@ export default function Shop() {
                   transition={{ duration: 1, delay: 1 }}
                   viewport={{ once: true }}
                 >
-                  {filteredProducts.map((product, index) => (
-                    <motion.div
-                      key={product.id}
-                      className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
-                      initial={{ opacity: 0, y: 50 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ 
-                        duration: 0.8, 
-                        delay: 1.2 + index * 0.1,
-                        ease: "easeOut"
-                      }}
-                      viewport={{ once: true }}
-                      whileHover={{ y: -8 }}
-                    >
-                      {/* Product Label */}
-                      {product.label && (
-                        <div className={`absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-xs font-semibold text-white ${product.labelColor}`}>
-                          {product.label}
-                        </div>
-                      )}
-
-                      {/* Product Image */}
-                      <div className="relative aspect-square bg-gray-50 overflow-hidden">
-                        <Link href={`/product/${product.slug}`}>
-                          <Image
-                            src={product.image}
-                            alt={product.name}
-                            fill
-                            className="object-cover group-hover:scale-110 transition-transform duration-700"
-                          />
-                        </Link>
-                        
-                        {/* Quick Add to Cart Button */}
-                        <motion.button
-                          onClick={() => addToCart(product.id)}
-                          className="absolute bottom-4 right-4 bg-black text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-gray-800"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                          </svg>
-                        </motion.button>
-                      </div>
-
-                      {/* Product Info */}
-                      <div className="p-6">
-                        <Link href={`/product/${product.slug}`}>
-                          <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-[#46c34c] transition-colors duration-200">
-                            {product.name}
-                          </h3>
-                        </Link>
-                        
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
-                            <span className="text-xl font-bold text-gray-900">{product.price}</span>
-                            {product.originalPrice && (
-                              <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
-                            )}
+                  {filteredProducts.length > 0 ? (
+                    filteredProducts.map((product, index) => (
+                      <motion.div
+                        key={product.id}
+                        className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          duration: 0.8, 
+                          delay: 1.2 + index * 0.1,
+                          ease: "easeOut"
+                        }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -8 }}
+                      >
+                        {/* Product Label */}
+                        {product.label && (
+                          <div className={`absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-xs font-semibold text-white ${product.labelColor}`}>
+                            {product.label}
                           </div>
+                        )}
+
+                        {/* Product Image */}
+                        <div className="relative aspect-square bg-gray-50 overflow-hidden">
+                          <Link href={`/product/${product.slug}`}>
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-700"
+                            />
+                          </Link>
                           
+                          {/* Quick Add to Cart Button */}
                           <motion.button
                             onClick={() => addToCart(product.id)}
-                            className="bg-[#46c34c] hover:bg-[#479f78] text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            className="absolute bottom-4 right-4 bg-black text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-gray-800"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                           >
-                            Add to Cart
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
                           </motion.button>
                         </div>
-                      </div>
+
+                        {/* Product Info */}
+                        <div className="p-6">
+                          <Link href={`/product/${product.slug}`}>
+                            <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-[#46c34c] transition-colors duration-200">
+                              {product.name}
+                            </h3>
+                          </Link>
+                          
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-2">
+                              <span className="text-xl font-bold text-gray-900">{product.price}</span>
+                              {product.originalPrice && (
+                                <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
+                              )}
+                            </div>
+                            
+                            <motion.button
+                              onClick={() => addToCart(product.id)}
+                              className="bg-[#46c34c] hover:bg-[#479f78] text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              Add to Cart
+                            </motion.button>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))
+                  ) : (
+                    <motion.div 
+                      className="col-span-full text-center py-20"
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="text-6xl mb-6">🔍</div>
+                      <h3 className="text-2xl font-bold text-black mb-4">No Products Available</h3>
+                      <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                        We could n0t find any products in the {activeCategory} category. Try selecting a different category or check back later.
+                      </p>
+                      <motion.button
+                        onClick={() => setActiveCategory('All')}
+                        className="bg-[#46c34c] text-white px-8 py-3 rounded-full font-medium hover:bg-[#46c34c]/80 transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        View All Products
+                      </motion.button>
                     </motion.div>
-                  ))}
+                  )}
                 </motion.div>
               </div>
             </section>

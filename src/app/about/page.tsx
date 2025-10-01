@@ -1,4 +1,5 @@
 'use client';
+import type { Metadata } from "next";
 import Navbar from '../../components/Navbar';
 import AboutHero from '../../components/about/AboutHero';
 import AboutContent from '../../components/about/AboutContent';
@@ -7,6 +8,9 @@ import Founder from '@/components/about/founder';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
+// Note: Since this is a client component, we'll need to handle metadata differently
+// We'll create a separate layout.tsx file for this route
 
 export default function About() {
   const products = [

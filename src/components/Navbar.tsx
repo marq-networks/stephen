@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar() {
@@ -50,13 +51,20 @@ export default function Navbar() {
         >
           {/* Brand/Logo */}
           <motion.div 
-            className="text-2xl font-bold"
+            className="flex items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="hover:text-gray-300 transition-colors">
-              ExClaimStatedTs
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              <Image
+                src="/LOGO.png"
+                alt="Stephen - Sustainable Statement Tees Logo"
+                width={260}
+                height={80}
+                className="h-[160px] w-[200px]"
+                priority
+              />
             </Link>
           </motion.div>
 
@@ -123,13 +131,20 @@ export default function Navbar() {
         >
           {/* Brand/Logo */}
           <motion.div 
-            className="text-xl font-bold"
+            className="flex items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="hover:text-gray-300 transition-colors">
-              STEPHEN
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              <Image
+                src="/LOGO.png"
+                alt="Stephen - Sustainable Statement Tees Logo"
+                width={100}
+                height={32}
+                className="h-6 w-auto"
+                priority
+              />
             </Link>
           </motion.div>
 
@@ -169,13 +184,20 @@ export default function Navbar() {
         {/* Mobile Navigation Toggle */}
         <div className="md:hidden flex justify-between items-center">
           <motion.div 
-            className="text-xl sm:text-2xl font-bold"
+            className="flex items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="hover:text-gray-300 transition-colors">
-              STEPHEN
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              <Image
+                src="/LOGO.png"
+                alt="Stephen - Sustainable Statement Tees Logo"
+                width={80}
+                height={26}
+                className="h-5 w-auto"
+                priority
+              />
             </Link>
           </motion.div>
           

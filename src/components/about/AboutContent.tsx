@@ -228,3 +228,29 @@ export default function AboutContent() {
     </>
   );
 }
+
+// ...existing code ...
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": "About Stephen - Sustainable Statement Tees",
+              "description": "Learn about Stephen's mission to create meaningful, sustainable statement tees using eco-friendly materials and ethical manufacturing practices.",
+              "author": {
+                "@type": "Organization",
+                "name": "Stephen",
+                "url": "/LOGO.png"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Stephen",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "/LOGO.png"
+                }
+              }
+            })
+          }}
+        />

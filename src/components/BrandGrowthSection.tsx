@@ -202,7 +202,7 @@ export default function BrandGrowthSection() {
                 </div>
               </div>
 
-              {/* Product 1 */}
+      
               <div className="relative rounded-2xl cursor-pointer w-full transition-shadow duration-300 group overflow-hidden bg-white shadow-sm hover:shadow-lg">
                 <Link href="/shop">
                   <div className="w-full h-full flex items-center justify-center p-4">
@@ -274,7 +274,7 @@ export default function BrandGrowthSection() {
             {/* Second Row */}
             <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 sm:gap-6 w-full">
               {/* Chart Image */}
-              <div className="rounded-2xl w-full overflow-hidden transition-shadow duration-300">
+              {/* <div className="rounded-2xl w-full overflow-hidden transition-shadow duration-300">
                 <Image 
                   src="/chart.png" 
                   alt="Chart" 
@@ -282,8 +282,85 @@ export default function BrandGrowthSection() {
                   height={400} 
                   className="w-full h-auto rounded-2xl" 
                 />
-              </div>
+              </div> */}
 
+              {/* Process Timeline Section */}
+              <div className="rounded-2xl w-full overflow-hidden transition-shadow duration-300 bg-gradient-to-br from-gray-50 to-white p-8 shadow-sm hover:shadow-lg">
+                <div className="space-y-8">
+                  {/* Header */}
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
+                      A sustainable process,<br />
+                      <span className="text-gray-600">executed with ethical care.</span>
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed max-w-md">
+                      We transform meaningful messages into sustainable statement tees, 
+                      built to reflect quality, purpose, and environmental responsibility.
+                    </p>
+                  </div>
+
+                  {/* Timeline */}
+                  <div className="relative">
+                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between space-y-6 md:space-y-0 md:space-x-4">
+                      {/* Timeline Steps */}
+                      <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 w-full">
+                        {/* Step 1 */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-orange-200 text-orange-800 px-4 py-2 rounded-full font-medium text-sm mb-2">
+                            Design
+                          </div>
+                          <div className="text-xs text-gray-500">1 Week</div>
+                        </div>
+
+                        {/* Connector Line */}
+                        <div className="hidden md:block flex-1 h-px bg-gray-200 relative">
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-300 rounded-full"></div>
+                        </div>
+
+                        {/* Step 2 */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-orange-300 text-orange-900 px-4 py-2 rounded-full font-medium text-sm mb-2">
+                            Sourcing
+                          </div>
+                          <div className="text-xs text-gray-500">2 Weeks</div>
+                        </div>
+
+                        {/* Connector Line */}
+                        <div className="hidden md:block flex-1 h-px bg-gray-200 relative">
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-300 rounded-full"></div>
+                        </div>
+
+                        {/* Step 3 */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-orange-400 text-white px-4 py-2 rounded-full font-medium text-sm mb-2">
+                            Production
+                          </div>
+                          <div className="text-xs text-gray-500">3 Weeks</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Timeline Labels */}
+                    <div className="mt-8 text-right">
+                      <p className="text-sm text-gray-500 mb-2">Timeline</p>
+                      <p className="text-xs text-gray-400">Sustainable statement tees for conscious consumers</p>
+                    </div>
+                  </div>
+
+                  {/* Call to Action */}
+                  <div className="pt-4">
+                    <Link 
+                      href="/about" 
+                      className="inline-flex items-center text-[#46c34c] hover:text-[#38db41] font-medium text-sm transition-colors duration-200"
+                    >
+                      <span>Learn about our process</span>
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
               {/* Product 3 */}
               <div className="relative rounded-2xl cursor-pointer w-full overflow-hidden transition-shadow duration-300 group bg-white shadow-sm hover:shadow-lg">
                 <Link href="/shop">

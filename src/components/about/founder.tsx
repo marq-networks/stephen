@@ -67,7 +67,7 @@ const Founder = () => {
                         transition={{ duration: 0.3 }}
                     >
                         <img
-                            src="/prduct.png"
+                            src="/founder.jpg"
                             alt="Product"
                             className="w-full h-full object-cover"
                         />

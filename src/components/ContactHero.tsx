@@ -86,6 +86,24 @@ export default function ContactHero() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Stephen",
+            "url": "https://stephen.com",
+            "logo": "/LOGO.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-STEPHEN",
+              "contactType": "customer service",
+              "email": "hello@stephen.com"
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
       />
       
