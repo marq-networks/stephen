@@ -212,7 +212,7 @@ export default function HowProductFeels() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
           viewport={{ once: true }}
-          role="tablist"
+          role="group"
           aria-label="Product category filters"
         >
           {categories.map((category, index) => (
@@ -235,9 +235,9 @@ export default function HowProductFeels() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              role="tab"
-              aria-selected={activeCategory === category}
+              aria-pressed={activeCategory === category}
               aria-label={`Filter by ${category}`}
+              type="button"
             >
               {category}
             </motion.button>
@@ -251,7 +251,7 @@ export default function HowProductFeels() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2 }}
           viewport={{ once: true }}
-          role="grid"
+          role="list"
           aria-label="Statement tee collection"
         >
           {filteredProducts.length > 0 ? (
@@ -269,7 +269,7 @@ export default function HowProductFeels() {
                 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                role="gridcell"
+                role="listitem"
               >
                 {/* Product Image */}
                 <div className="overflow-hidden h-[40vh] sm:h-[50vh] lg:h-[60vh] relative">

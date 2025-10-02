@@ -145,7 +145,13 @@ export default function StatementSlider() {
         </motion.div>
 
         {/* Slider Container */}
-        <div className="relative" role="tabpanel" aria-live="polite">
+        <div
+          className="relative"
+          role="tabpanel"
+          id="slide-panel"
+          aria-live="polite"
+          aria-labelledby={`slide-tab-${currentSlide}`}
+        >
           {/* Main Slider Content */}
           <div className="relative h-80 sm:h-96 lg:h-[28rem] flex items-center justify-center">
             <AnimatePresence mode="wait">
@@ -242,17 +248,30 @@ export default function StatementSlider() {
           </div>
 
           {/* Slide Indicators */}
-          <div className="flex justify-center space-x-2 sm:space-x-3 mt-8 sm:mt-12" role="tablist" aria-label="Slide navigation">
+          <div
+            className="flex justify-center space-x-2 sm:space-x-3 mt-8 sm:mt-12"
+            role="tablist"
+            aria-label="Slide navigation"
+          >
             {slides.map((slide, index) => (
               <button
                 key={index}
+                id={`slide-tab-${index}`}
                 onClick={() => goToSlide(index)}
+                onKeyDown={(e) => {
+                  if (e.key === 'ArrowRight') goToSlide((index + 1) % slides.length);
+                  if (e.key === 'ArrowLeft') goToSlide((index - 1 + slides.length) % slides.length);
+                  if (e.key === 'Home') goToSlide(0);
+                  if (e.key === 'End') goToSlide(slides.length - 1);
+                }}
                 className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#46c34c] focus:ring-opacity-50 ${
                   index === currentSlide ? 'bg-[#46c34c]' : 'bg-gray-300'
                 }`}
                 role="tab"
                 aria-selected={index === currentSlide}
                 aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+                aria-controls="slide-panel"
+                tabIndex={index === currentSlide ? 0 : -1}
                 type="button"
               />
             ))}

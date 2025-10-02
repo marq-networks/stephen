@@ -216,19 +216,20 @@ export default function BrandGrowthSection() {
                   </div>
                 </Link>
                 
-                {/* Product Info */}
+                {/* Product Info (Product 1) */}
                 <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t">
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold text-black text-sm">{products[0].name}</h3>
                       <p className="text-[#46c34c] font-bold text-lg">{products[0].price}</p>
                     </div>
-                    {/* Always Visible Cart Icon */}
                     <button
                       onClick={() => addToCart(products[0].name)}
                       className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                      aria-label={`Add ${products[0].name} to cart`}
+                      type="button"
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
                       </svg>
                     </button>
@@ -250,19 +251,20 @@ export default function BrandGrowthSection() {
                   </div>
                 </Link>
                 
-                {/* Product Info */}
+                {/* Product Info (Product 2) */}
                 <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t">
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold text-black text-sm">{products[1].name}</h3>
                       <p className="text-[#46c34c] font-bold text-lg">{products[1].price}</p>
                     </div>
-                    {/* Always Visible Cart Icon */}
                     <button
                       onClick={() => addToCart(products[1].name)}
                       className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                      aria-label={`Add ${products[1].name} to cart`}
+                      type="button"
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
                       </svg>
                     </button>

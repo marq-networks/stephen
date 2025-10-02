@@ -72,7 +72,6 @@ export default function Hero() {
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/WebPageElement"
-        role="banner"
         aria-label="Hero section showcasing Stephen's sustainable statement tees"
       >
         {/* Background Image - Hero T-shirt */}

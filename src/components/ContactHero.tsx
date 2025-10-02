@@ -113,7 +113,6 @@ export default function ContactHero() {
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/WebPageElement"
-        role="banner"
         aria-label="Contact hero section for Stephen's sustainable statement tee brand"
       >
         {/* Background Image */}

@@ -97,7 +97,9 @@ export default function Footer() {
               Join our newsletter and stay updated on the latest trends in digital design.
             </p>
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
+              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
               <input
+                id="newsletter-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -108,6 +110,7 @@ export default function Footer() {
               <button
                 type="submit"
                 className="bg-black text-white px-6 py-2 rounded-full sm:rounded-l-none sm:rounded-r-full hover:bg-gray-800 transition-colors text-sm"
+                aria-label="Subscribe to newsletter"
               >
                 →
               </button>

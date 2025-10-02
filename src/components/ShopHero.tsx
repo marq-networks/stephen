@@ -96,7 +96,6 @@ export default function ShopHero() {
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/WebPageElement"
-        role="banner"
         aria-label="Shop hero section featuring Stephen's sustainable statement tee collection"
       >
         {/* Background Image */}

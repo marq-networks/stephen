@@ -56,11 +56,10 @@ export default function AboutHero() {
       
       <motion.section 
         ref={sectionRef}
-        className="relative text-white min-h-screen flex items-center justify-start overflow-hidden"
+        className="relative text-white min-h-screen flex items-center justify-center overflow-hidden"
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/AboutPage"
-        role="banner"
         aria-label="About Stephen - Our story and mission"
       >
         {/* Background Image */}
