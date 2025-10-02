@@ -186,10 +186,10 @@ export default function Navbar() {
 
           {/* Icons */}
           <div className="flex items-center space-x-3">
-            <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors" aria-label="View favorites">
               <HeartIcon />
             </Link>
-            <Link href="/cart" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/cart" className="text-gray-300 hover:text-white transition-colors" aria-label="View cart">
               <CartIcon />
             </Link>
           </div>
@@ -222,10 +222,10 @@ export default function Navbar() {
           
           {/* Mobile Cart and Favorites Icons */}
           <div className="flex items-center space-x-3">
-            <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors" aria-label="View favorites">
               <HeartIcon />
             </Link>
-            <Link href="/cart" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/cart" className="text-gray-300 hover:text-white transition-colors" aria-label="View cart">
               <CartIcon />
             </Link>
             <motion.button
@@ -264,6 +264,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               role="dialog"
               aria-modal="true"
+              aria-label="Mobile navigation menu"
             >
               <motion.div 
                 className="flex flex-col space-y-3 sm:space-y-4"

@@ -331,8 +331,8 @@ export default function BrandGrowthSection() {
 
                     {/* Timeline Labels */}
                     <div className="mt-8 text-right">
-                      <p className="text-sm text-gray-500 mb-2">Timeline</p>
-                      <p className="text-xs text-gray-400">Sustainable statement tees for conscious consumers</p>
+                      <p className="text-sm text-gray-600 mb-2">Timeline</p>
+                      <p className="text-xs text-gray-600">Sustainable statement tees for conscious consumers</p>
                     </div>
                   </div>
 

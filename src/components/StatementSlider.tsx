@@ -248,11 +248,7 @@ export default function StatementSlider() {
           </div>
 
           {/* Slide Indicators */}
-          <div
-            className="flex justify-center space-x-2 sm:space-x-3 mt-8 sm:mt-12"
-            role="tablist"
-            aria-label="Slide navigation"
-          >
+          <div className="flex justify-center space-x-2 sm:space-x-3 mt-8 sm:mt-12" role="tablist" aria-label="Slide navigation">
             {slides.map((slide, index) => (
               <button
                 key={index}

@@ -226,12 +226,7 @@ export default function HowProductFeels() {
               }`}
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ 
-                duration: 0.5, 
-                delay: 1.0 + (index * 0.1),
-                type: "spring",
-                stiffness: 200
-              }}
+              transition={{ duration: 0.5, delay: 1.0 + (index * 0.1), type: "spring", stiffness: 200 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -261,12 +256,7 @@ export default function HowProductFeels() {
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
                 initial={{ y: 80, opacity: 0, scale: 0.9 }}
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: 1.4 + (index * 0.1),
-                  type: "spring",
-                  stiffness: 100
-                }}
+                transition={{ duration: 0.8, delay: 1.4 + (index * 0.1), type: "spring", stiffness: 100 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10, scale: 1.02 }}
                 role="listitem"

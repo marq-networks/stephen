@@ -32,7 +32,7 @@ export default function Blogs() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">Blogs</h2>
-          <p className="text-gray-500 text-base max-w-lg mx-auto">
+          <p className="text-gray-700 text-base max-w-lg mx-auto">
             Fresh reads, sharp takes. Stories, ideas, and updates from our world.
           </p>
         </div>
