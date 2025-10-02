@@ -56,15 +56,20 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/LOGO.png"
-                alt="Stephen - Sustainable Statement Tees Logo"
-                width={260}
-                height={80}
-                className="h-[160px] w-[200px]"
-                priority
-              />
+            <Link href="/" className="relative group inline-block hover:opacity-90 transition">
+              <span
+                className="relative inline-block text-5xl lg:text-6xl font-black tracking-[0.08em] bg-gradient-to-r from-[#46c34c] via-[#2eb54b] to-[#46c34c] bg-clip-text text-transparent drop-shadow-lg transition-transform duration-300 group-hover:scale-[1.03] group-hover:skew-x-1"
+                style={{ WebkitTextStroke: '1.25px rgba(0,0,0,0.35)' }}
+              >
+                EXCLAIM!
+              </span>
+              <span
+                aria-hidden="true"
+                className="absolute top-0 left-0 text-5xl lg:text-6xl font-black bg-gradient-to-r from-black/20 to-black/10 bg-clip-text text-transparent blur-[1.5px]"
+                style={{ transform: 'translate(3px, 4px)', WebkitTextStroke: '0px transparent' }}
+              >
+                EXCLAIM!
+              </span>
             </Link>
           </motion.div>
 
@@ -136,18 +141,22 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/LOGO.png"
-                alt="Stephen - Sustainable Statement Tees Logo"
-                width={100}
-                height={32}
-                className="h-6 w-auto"
-                priority
-              />
+            <Link href="/" className="relative group inline-block hover:opacity-90 transition">
+              <span
+                className="relative inline-block text-3xl font-extrabold tracking-[0.08em] bg-gradient-to-r from-[#46c34c] via-[#2eb54b] to-[#46c34c] bg-clip-text text-transparent drop-shadow-lg transition-transform duration-300 group-hover:scale-[1.03] group-hover:skew-x-1"
+                style={{ WebkitTextStroke: '1px rgba(0,0,0,0.35)' }}
+              >
+                EXCLAIM!
+              </span>
+              <span
+                aria-hidden="true"
+                className="absolute top-0 left-0 text-3xl font-extrabold bg-gradient-to-r from-black/20 to-black/10 bg-clip-text text-transparent blur-[1.5px]"
+                style={{ transform: 'translate(2px, 3px)', WebkitTextStroke: '0px transparent' }}
+              >
+                EXCLAIM!
+              </span>
             </Link>
           </motion.div>
-
           {/* Condensed Navigation */}
           <div className="flex items-center space-x-6">
             {[
@@ -189,15 +198,20 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/LOGO.png"
-                alt="Stephen - Sustainable Statement Tees Logo"
-                width={80}
-                height={26}
-                className="h-5 w-auto"
-                priority
-              />
+            <Link href="/" className="relative group inline-block hover:opacity-90 transition">
+              <span
+                className="relative inline-block text-2xl font-extrabold tracking-[0.07em] bg-gradient-to-r from-[#46c34c] via-[#2eb54b] to-[#46c34c] bg-clip-text text-transparent drop-shadow-lg transition-transform duration-300 group-hover:scale-[1.03]"
+                style={{ WebkitTextStroke: '0.8px rgba(0,0,0,0.35)' }}
+              >
+                EXCLAIM!
+              </span>
+              <span
+                aria-hidden="true"
+                className="absolute top-0 left-0 text-2xl font-extrabold bg-gradient-to-r from-black/20 to-black/10 bg-clip-text text-transparent blur-[1.2px]"
+                style={{ transform: 'translate(1.5px, 2px)', WebkitTextStroke: '0px transparent' }}
+              >
+                EXCLAIM!
+              </span>
             </Link>
           </motion.div>
           
