@@ -33,12 +33,10 @@ export default function Home() {
       <div className="fixed top-0 left-0 w-full z-0">
         <Hero />
       </div>
-
       {/* Scrollable content that overlays the hero */}
-      <div className="relative z-10">
+      <main id="main-content" role="main" className="relative z-10" tabIndex={-1}>
         {/* Spacer to push content down initially */}
         <div className="h-screen"></div>
-
         {/* Brand Growth Section */}
         <div className="relative z-10 bg-[#fff] overflow-hidden">
           <LogoWatermark position="center" size={600} opacity={0.06} rotation={-10} />
@@ -94,8 +92,7 @@ export default function Home() {
             <Contact />
           </div>
         </div>
-      </div>
-
+      </main>
       {/* Footer - Normal flow */}
       <Footer />
     </div>

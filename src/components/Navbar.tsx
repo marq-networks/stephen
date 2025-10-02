@@ -56,7 +56,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="relative group inline-block hover:opacity-90 transition">
+            <Link href="/" aria-label="Go to homepage" className="relative group inline-block hover:opacity-90 transition">
               <span
                 className="relative inline-block text-5xl lg:text-6xl font-black tracking-[0.08em] bg-gradient-to-r from-[#46c34c] via-[#2eb54b] to-[#46c34c] bg-clip-text text-transparent drop-shadow-lg transition-transform duration-300 group-hover:scale-[1.03] group-hover:skew-x-1"
                 style={{ WebkitTextStroke: '1.25px rgba(0,0,0,0.35)' }}
@@ -104,7 +104,7 @@ export default function Navbar() {
               transition={{ duration: 0.5, delay: 0.6 }}
               whileHover={{ scale: 1.1 }}
             >
-              <Link href="/favorites" className="text-gray-300 hover:text-white transition-colors relative group">
+              <Link href="/favorites" aria-label="View favorites" className="text-gray-300 hover:text-white transition-colors relative group">
                 <HeartIcon />
                 <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   Favorites
@@ -117,7 +117,7 @@ export default function Navbar() {
               transition={{ duration: 0.5, delay: 0.7 }}
               whileHover={{ scale: 1.1 }}
             >
-              <Link href="/cart" className="text-gray-300 hover:text-white transition-colors relative group">
+              <Link href="/cart" aria-label="View cart" className="text-gray-300 hover:text-white transition-colors relative group">
                 <CartIcon />
                 <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   Cart
@@ -230,12 +230,16 @@ export default function Navbar() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-controls="mobile-menu"
+              aria-expanded={isMenuOpen}
+              type="button"
             >
               <motion.div
                 animate={{ rotate: isMenuOpen ? 45 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </motion.div>
@@ -247,11 +251,14 @@ export default function Navbar() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-menu"
               className="md:hidden mt-4 bg-black/90 rounded-lg p-4 sm:p-6"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
+              role="dialog"
+              aria-modal="true"
             >
               <motion.div 
                 className="flex flex-col space-y-3 sm:space-y-4"

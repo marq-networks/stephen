@@ -48,17 +48,25 @@ export default function Contact() {
               <form className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">First Name</label>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-black mb-2">First Name</label>
                     <input
+                      id="firstName"
+                      name="firstName"
                       type="text"
+                      required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="John"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">Last Name</label>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-black mb-2">Last Name</label>
                     <input
+                      id="lastName"
+                      name="lastName"
                       type="text"
+                      required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="Doe"
                     />
@@ -66,18 +74,26 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-black mb-2">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-black mb-2">Email</label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
+                    required
+                    aria-required="true"
                     className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="john@example.com"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-black mb-2">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-black mb-2">Message</label>
                   <textarea
+                    id="message"
+                    name="message"
                     rows={4}
+                    required
+                    aria-required="true"
                     className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project..."
                   ></textarea>
@@ -85,7 +101,8 @@ export default function Contact() {
                 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#46c34c] to-[#46c34c] text-white py-3 sm:py-4 rounded-lg font-semibold hover:from-[#38db41] hover:to-[#38dd40] transition-colors duration-300"
+                  className="w-full bg-gradient-to-r from-[#46c34c] to-[#46c34c] text-white py-3 sm:py-4 rounded-lg font-semibold hover:from-[#38db41] hover:to-[#38dd40] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black/30"
+                  aria-label="Send message"
                 >
                   Send Message
                 </button>

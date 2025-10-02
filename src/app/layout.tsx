@@ -56,6 +56,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ fontFamily: 'sans-serif' }}
       >
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-white text-black px-3 py-2 rounded-md shadow"
+        >
+          Skip to content
+        </a>
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
