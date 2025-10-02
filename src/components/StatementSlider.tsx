@@ -86,6 +86,8 @@ export default function StatementSlider() {
       ref={sectionRef}
       role="region"
       aria-label="Brand Philosophy and Statement Collection"
+      aria-live="polite"
+      aria-atomic="true"
     >
       {/* SEO-optimized structured data */}
       <script
@@ -132,7 +134,7 @@ export default function StatementSlider() {
             Statements That Define You
           </motion.h1>
           <motion.p 
-            className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto px-4"
+            className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto px-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}

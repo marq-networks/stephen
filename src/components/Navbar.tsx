@@ -34,6 +34,8 @@ export default function Navbar() {
 
   return (
     <motion.nav 
+      role="navigation"
+      aria-label="Primary"
       className={`sticky top-0 left-0 right-0 z-50 text-white py-4 md:py-6 transition-colors duration-300 ${
         scrolled ? 'bg-black' : 'bg-transparent'
       }`}
@@ -89,7 +91,10 @@ export default function Navbar() {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 whileHover={{ scale: 1.05 }}
               >
-                <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-lg font-medium">
+                <Link 
+                  href={item.href} 
+                  className="text-gray-300 hover:text-white transition-colors text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   {item.label}
                 </Link>
               </motion.div>
