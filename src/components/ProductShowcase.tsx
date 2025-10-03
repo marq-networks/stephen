@@ -41,7 +41,7 @@ export default function ProductShowcase() {
                 </p>
               </div>
               <div className="mt-6">
-                <Link href="/shop">
+                <Link href="/shop" aria-label="Explore the statement tees collection">
                   <button className="bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition-colors duration-300">
                     Explore the Collection
                   </button>
@@ -50,12 +50,12 @@ export default function ProductShowcase() {
             </div>
 
             {/* Image 1 */}
-            <Link href="/shop">
+            <Link href="/shop" aria-label="Shop Product 1">
               <div className="rounded-2xl cursor-pointer w-full transition-shadow duration-300">
                 <div className="w-full h-full flex items-center justify-center">
                   <Image
                     src="/2.png"
-                    alt="Product 1"
+                    alt="Product 1 — shop the statement tees collection"
                     width={600}
                     height={600}
                     className="w-full h-auto"
@@ -65,12 +65,12 @@ export default function ProductShowcase() {
             </Link>
 
             {/* Image 2 */}
-            <Link href="/shop">
+            <Link href="/shop" aria-label="Shop Product 2">
               <div className="rounded-2xl cursor-pointer w-full transition-shadow duration-300">
                 <div className="w-full h-full flex items-center justify-center">
                   <Image
                     src="/3.png"
-                    alt="Product 2"
+                    alt="Product 2 — shop the statement tees collection"
                     width={600}
                     height={600}
                     className="w-full h-auto"
@@ -94,12 +94,12 @@ export default function ProductShowcase() {
             </div>
 
             {/* Image 4 */}
-            <Link href="/shop">
+            <Link href="/shop" aria-label="Shop Product 4">
               <div className="rounded-2xl cursor-pointer w-full overflow-hidden transition-shadow duration-300"> 
                 <div className="w-full h-full flex items-center justify-center">
                   <Image
                     src="/4.png"
-                    alt="Product 4"
+                    alt="Product 4 — shop the statement tees collection"
                     width={400}
                     height={400}
                     className="w-full h-auto max-h-[600px] object-contain"
