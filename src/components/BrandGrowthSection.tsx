@@ -195,7 +195,7 @@ export default function BrandGrowthSection() {
                 </div>
                 <div className="mt-6">
                   <Link href="/shop">
-                    <button className="bg-[#1f4b27] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#173a1f] transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
+                    <button className="bg-green-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-green-800 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
                       Explore the Collection
                     </button>
                   </Link>
@@ -221,11 +221,11 @@ export default function BrandGrowthSection() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold text-black text-sm">{products[0].name}</h3>
-                      <p className="text-[#46c34c] font-bold text-lg">{products[0].price}</p>
+                      <p className="text-green-700 font-bold text-lg">{products[0].price}</p>
                     </div>
                     <button
                       onClick={() => addToCart(products[0].name)}
-                      className="bg-[#1f4b27] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#173a1f] hover:scale-110 shadow-lg"
+                      className="bg-green-700 text-white p-2.5 rounded-full transition-all duration-300 hover:bg-green-800 hover:scale-110 shadow-lg"
                       aria-label={`Add ${products[0].name} to cart`}
                       type="button"
                     >
@@ -256,11 +256,11 @@ export default function BrandGrowthSection() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold text-black text-sm">{products[1].name}</h3>
-                      <p className="text-[#46c34c] font-bold text-lg">{products[1].price}</p>
+                      <p className="text-green-700 font-bold text-lg">{products[1].price}</p>
                     </div>
                     <button
                       onClick={() => addToCart(products[1].name)}
-                      className="bg-[#1f4b27] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#173a1f] hover:scale-110 shadow-lg"
+                      className="bg-green-700 text-white p-2.5 rounded-full transition-all duration-300 hover:bg-green-800 hover:scale-110 shadow-lg"
                       aria-label={`Add ${products[1].name} to cart`}
                       type="button"
                     >
@@ -296,10 +296,10 @@ export default function BrandGrowthSection() {
                     <div className="flex items-center justify-between w-full">
                       {/* Step 1 */}
                       <div className="flex flex-col items-center text-center flex-1">
-                        <div className="bg-orange-200 text-orange-800 px-4 py-2 rounded-full font-medium text-sm mb-2">
+                        <div className="bg-orange-300 text-orange-900 px-4 py-2 rounded-full font-medium text-sm mb-2">
                           Design
                         </div>
-                        <div className="text-xs text-gray-500">1 Week</div>
+                        <div className="text-xs text-gray-700">1 Week</div>
                       </div>
 
                       {/* Connector Line */}
@@ -309,10 +309,10 @@ export default function BrandGrowthSection() {
 
                       {/* Step 2 */}
                       <div className="flex flex-col items-center text-center flex-1">
-                        <div className="bg-orange-300 text-orange-900 px-4 py-2 rounded-full font-medium text-sm mb-2">
+                        <div className="bg-orange-500 text-white px-4 py-2 rounded-full font-medium text-sm mb-2">
                           Sourcing
                         </div>
-                        <div className="text-xs text-gray-500">2 Weeks</div>
+                        <div className="text-xs text-gray-700">2 Weeks</div>
                       </div>
 
                       {/* Connector Line */}
@@ -322,10 +322,10 @@ export default function BrandGrowthSection() {
 
                       {/* Step 3 */}
                       <div className="flex flex-col items-center text-center flex-1">
-                        <div className="bg-orange-400 text-white px-4 py-2 rounded-full font-medium text-sm mb-2">
+                        <div className="bg-orange-700 text-white px-4 py-2 rounded-full font-medium text-sm mb-2">
                           Production
                         </div>
-                        <div className="text-xs text-gray-500">3 Weeks</div>
+                        <div className="text-xs text-gray-700">3 Weeks</div>
                       </div>
                     </div>
 
@@ -369,12 +369,12 @@ export default function BrandGrowthSection() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold text-black text-sm">{products[2].name}</h3>
-                      <p className="text-[#46c34c] font-bold text-lg">{products[2].price}</p>
+                      <p className="text-green-700 font-bold text-lg">{products[2].price}</p>
                     </div>
                     {/* Always Visible Cart Icon */}
                     <button
                       onClick={() => addToCart(products[2].name)}
-                      className="bg-[#1f4b27] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#173a1f] hover:scale-110 shadow-lg"
+                      className="bg-green-700 text-white p-2.5 rounded-full transition-all duration-300 hover:bg-green-800 hover:scale-110 shadow-lg"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
@@ -388,7 +388,7 @@ export default function BrandGrowthSection() {
             {/* CTA Button */}
             <div className="text-center mt-8 sm:mt-12">
               <Link href="/shop">
-                <button className="bg-[#1f4b27] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-[#173a1f] transition-colors duration-300 w-full sm:w-auto">
+                <button className="bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-green-800 transition-colors duration-300 w-full sm:w-auto">
                   Shop Now
                 </button>
               </Link>

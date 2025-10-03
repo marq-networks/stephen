@@ -42,7 +42,7 @@ export default function ProductShowcase() {
               </div>
               <div className="mt-6">
                 <Link href="/shop">
-                  <button className="bg-[#1f4b27] text-white px-6 py-3 rounded-full hover:bg-[#173a1f] transition-colors duration-300">
+                  <button className="bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition-colors duration-300">
                     Explore the Collection
                   </button>
                 </Link>

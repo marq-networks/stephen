@@ -134,7 +134,7 @@ export default function StatementSlider() {
             Statements That Define You
           </motion.h1>
           <motion.p 
-            className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto px-4"
+            className="text-gray-800 text-base sm:text-lg max-w-3xl mx-auto px-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -165,7 +165,7 @@ export default function StatementSlider() {
                 aria-label={`Slide ${currentSlide + 1} of ${slides.length}: ${slides[currentSlide].title}`}
               >
                 <motion.p 
-                  className="text-[#46c34c] text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4 sm:mb-6"
+                  className="text-green-800 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4 sm:mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -208,7 +208,7 @@ export default function StatementSlider() {
                 >
                   <a 
                     href="/shop" 
-                    className="inline-block bg-[#1f4b27] text-white px-6 py-3 rounded-full hover:bg-[#173a1f] transition-colors duration-300 font-medium text-sm sm:text-base"
+                    className="inline-block bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition-colors duration-300 font-medium text-sm sm:text-base"
                     aria-label={`Shop ${slides[currentSlide].title.replace(/"/g, '')} collection`}
                   >
                     Explore This Collection
