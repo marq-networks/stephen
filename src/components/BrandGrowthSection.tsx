@@ -195,7 +195,7 @@ export default function BrandGrowthSection() {
                 </div>
                 <div className="mt-6">
                   <Link href="/shop">
-                    <button className="bg-[#46c34c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#46c34c]/80 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
+                    <button className="bg-[#1f4b27] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#173a1f] transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto">
                       Explore the Collection
                     </button>
                   </Link>
@@ -225,7 +225,7 @@ export default function BrandGrowthSection() {
                     </div>
                     <button
                       onClick={() => addToCart(products[0].name)}
-                      className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                      className="bg-[#1f4b27] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#173a1f] hover:scale-110 shadow-lg"
                       aria-label={`Add ${products[0].name} to cart`}
                       type="button"
                     >
@@ -260,7 +260,7 @@ export default function BrandGrowthSection() {
                     </div>
                     <button
                       onClick={() => addToCart(products[1].name)}
-                      className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                      className="bg-[#1f4b27] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#173a1f] hover:scale-110 shadow-lg"
                       aria-label={`Add ${products[1].name} to cart`}
                       type="button"
                     >
@@ -374,7 +374,7 @@ export default function BrandGrowthSection() {
                     {/* Always Visible Cart Icon */}
                     <button
                       onClick={() => addToCart(products[2].name)}
-                      className="bg-[#46c34c] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#46c34c]/80 hover:scale-110 shadow-lg"
+                      className="bg-[#1f4b27] text-white p-2.5 rounded-full transition-all duration-300 hover:bg-[#173a1f] hover:scale-110 shadow-lg"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 10-4 0v4.01" />
@@ -388,7 +388,7 @@ export default function BrandGrowthSection() {
             {/* CTA Button */}
             <div className="text-center mt-8 sm:mt-12">
               <Link href="/shop">
-                <button className="bg-[#46c34c] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-[#46c34c]/80 transition-colors duration-300 w-full sm:w-auto">
+                <button className="bg-[#1f4b27] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-[#173a1f] transition-colors duration-300 w-full sm:w-auto">
                   Shop Now
                 </button>
               </Link>

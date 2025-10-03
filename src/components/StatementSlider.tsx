@@ -208,7 +208,7 @@ export default function StatementSlider() {
                 >
                   <a 
                     href="/shop" 
-                    className="inline-block bg-[#46c34c] text-white px-6 py-3 rounded-full hover:bg-[#46c34c]/90 transition-colors duration-300 font-medium text-sm sm:text-base"
+                    className="inline-block bg-[#1f4b27] text-white px-6 py-3 rounded-full hover:bg-[#173a1f] transition-colors duration-300 font-medium text-sm sm:text-base"
                     aria-label={`Shop ${slides[currentSlide].title.replace(/"/g, '')} collection`}
                   >
                     Explore This Collection

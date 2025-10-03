@@ -240,26 +240,29 @@ export default function HowProductFeels() {
         </motion.div>
 
         {/* Products Grid */}
-        <motion.div 
+        <motion.ul 
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2 }}
           viewport={{ once: true }}
-          role="list"
           aria-label="Statement tee collection"
         >
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product, index) => (
-              <motion.article
+              <motion.li
                 key={product.id}
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
                 initial={{ y: 80, opacity: 0, scale: 0.9 }}
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 + (index * 0.1), type: "spring", stiffness: 100 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 1.4 + (index * 0.1),
+                  type: "spring",
+                  stiffness: 100
+                }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                role="listitem"
               >
                 {/* Product Image */}
                 <div className="overflow-hidden h-[40vh] sm:h-[50vh] lg:h-[60vh] relative">
@@ -326,7 +329,7 @@ export default function HowProductFeels() {
                     </button>
                   </div>
                 </div>
-              </motion.article>
+              </motion.li>
             ))
           ) : (
             <motion.div 
@@ -351,7 +354,7 @@ export default function HowProductFeels() {
               </motion.button>
             </motion.div>
           )}
-        </motion.div>
+        </motion.ul>
 
         {/* Feel & Quality Section */}
         <motion.div 
