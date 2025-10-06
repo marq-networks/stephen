@@ -28,7 +28,7 @@ export default function ContactHero() {
           "@type": "ContactPoint",
           "telephone": "+1-555-STEPHEN",
           "contactType": "customer service",
-          "email": "info@ExClaimStatedTs.com",
+          "email": "info@exclaimstatedts.com",
           "availableLanguage": "English"
         },
         {
@@ -211,11 +211,11 @@ export default function ContactHero() {
                 >
                   <div className="text-center lg:text-left">
                     <div className="text-green-400 font-bold text-lg">Customer Service</div>
-                    <div className="text-white/70" itemProp="email">info@ExClaimStatedTs.com</div>
+                    <a href="mailto:info@exclaimstatedts.com" className="text-white/70" itemProp="email">info@exclaimstatedts.com</a>
                   </div>
                   <div className="text-center lg:text-left">
                     <div className="text-green-400 font-bold text-lg">Wholesale Inquiries</div>
-                    <div className="text-white/70">wholesale@stephen.com</div>
+                    <a href="mailto:info@exclaimstatedts.com" className="text-white/70">info@exclaimstatedts.com</a>
                   </div>
                   <div className="text-center lg:text-left">
                     <div className="text-green-400 font-bold text-lg">Response Time</div>

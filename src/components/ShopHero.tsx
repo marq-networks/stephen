@@ -65,7 +65,7 @@ export default function ShopHero() {
       "@type": "ContactPoint",
       "telephone": "+1-555-STEPHEN",
       "contactType": "customer service",
-      "email": "info@ExClaimStatedTs.com"
+      "email": "info@exclaimstatedts.com"
     }
   };
 

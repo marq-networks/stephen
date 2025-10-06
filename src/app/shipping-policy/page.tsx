@@ -95,105 +95,61 @@ function ShippingPolicyContent() {
         >
           <div className="text-black space-y-8">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Shipping Methods & Timeframes</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                We offer several shipping options to meet your needs:
-              </p>
-              <div className="space-y-4">
-                <div className="border-l-4 border-[#46c34c] pl-4">
-                  <h3 className="text-xl font-semibold">Standard Shipping (FREE)</h3>
-                  <p>5-7 business days | Orders over $75</p>
-                </div>
-                <div className="border-l-4 border-[#46c34c] pl-4">
-                  <h3 className="text-xl font-semibold">Express Shipping ($9.99)</h3>
-                  <p>2-3 business days</p>
-                </div>
-                <div className="border-l-4 border-[#46c34c] pl-4">
-                  <h3 className="text-xl font-semibold">Overnight Shipping ($24.99)</h3>
-                  <p>Next business day (orders placed before 2 PM EST)</p>
-                </div>
-              </div>
+              <h2 className="text-3xl font-bold mb-4">🚚 Shipping Policy</h2>
             </div>
 
+            {/* Processing Time */}
             <div>
-              <h2 className="text-3xl font-bold mb-4">Processing Time</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                All orders are processed within 1-2 business days. Orders are not shipped or delivered on weekends or holidays.
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Orders placed before 2 PM EST ship the same day</li>
-                <li>Orders placed after 2 PM EST ship the next business day</li>
-                <li>Custom or personalized items may require additional processing time</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Shipping Destinations</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                We currently ship to:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>All 50 United States</li>
-                <li>Canada (additional fees may apply)</li>
-                <li>International shipping available to select countries</li>
-              </ul>
-              <p className="text-lg leading-relaxed mt-4">
-                International customers are responsible for any customs duties, taxes, or fees imposed by their country.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Order Tracking</h2>
+              <h3 className="text-2xl font-semibold mb-3">Processing Time</h3>
               <p className="text-lg leading-relaxed">
-                Once your order ships, you ll receive a confirmation email with tracking information. You can track your package 
-                using the provided tracking number on our website or the carrier s website.
+                Orders are processed within <strong>3–5 business days</strong> after payment confirmation.
               </p>
             </div>
 
+            {/* Delivery Time */}
             <div>
-              <h2 className="text-3xl font-bold mb-4">Shipping Costs</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                Shipping costs are calculated based on the shipping method selected and your location:
-              </p>
+              <h3 className="text-2xl font-semibold mb-3">Delivery Time</h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Free standard shipping on orders over $75</li>
-                <li>Standard shipping under $75: $5.99</li>
-                <li>Express shipping: $9.99</li>
-                <li>Overnight shipping: $24.99</li>
+                <li><strong>USA Shipping:</strong> Approximately <strong>10–14 business days (2 weeks)</strong> after dispatch.</li>
+                <li><strong>International Shipping:</strong> Coming soon.</li>
               </ul>
             </div>
 
+            {/* Shipping Confirmation & Tracking */}
             <div>
-              <h2 className="text-3xl font-bold mb-4">Delivery Issues</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                If you experience any issues with your delivery:
+              <h3 className="text-2xl font-semibold mb-3">Shipping Confirmation & Tracking</h3>
+              <p className="text-lg leading-relaxed">
+                Once your order ships, you’ll receive a confirmation email with tracking details.
               </p>
+            </div>
+
+            {/* Shipping Fees */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-3">Shipping Fees</h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Contact us within 48 hours of expected delivery</li>
-                <li>We ll work with the carrier to locate your package</li>
-                <li>If the package is lost, we ll send a replacement at no charge</li>
-                <li>Damaged packages should be reported immediately</li>
+                <li>Calculated at checkout.</li>
+                <li>Free shipping promotions may apply at select times.</li>
               </ul>
             </div>
 
+            {/* Delays */}
             <div>
-              <h2 className="text-3xl font-bold mb-4">Address Changes</h2>
+              <h3 className="text-2xl font-semibold mb-3">Delays</h3>
               <p className="text-lg leading-relaxed">
-                Once an order is placed, shipping addresses cannot be changed. Please ensure your shipping information is correct 
-                before completing your purchase. We are not responsible for packages shipped to incorrect addresses provided by the customer.
+                While we do our best to deliver on time, occasional delays may occur due to weather, customs, or courier issues.
               </p>
             </div>
 
+            {/* Incorrect Address Disclaimer */}
             <div>
-              <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
+              <h3 className="text-2xl font-semibold mb-3">Incorrect Address Disclaimer</h3>
               <p className="text-lg leading-relaxed">
-                For questions about shipping or to track your order, contact us at shipping@stephen.com or 
-                through our contact page.
+                Please double-check your shipping address before confirming your order. ExClaim is not responsible for packages lost due to incorrect or incomplete addresses.
               </p>
             </div>
 
             <div className="text-sm text-gray-600 pt-8 border-t">
-              <p>Last updated: January 2025</p>
+              <p>Last updated: October 2025</p>
             </div>
           </div>
         </motion.div>

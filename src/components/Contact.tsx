@@ -30,7 +30,9 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <span className="text-base sm:text-lg">info@ExClaimStatedTs.com</span>
+                  <span className="text-base sm:text-lg">
+                    <a href="mailto:info@exclaimstatedts.com" className="underline-offset-2 hover:underline">info@exclaimstatedts.com</a>
+                  </span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#46c34c] to-[#46c34c] rounded-full flex items-center justify-center" aria-hidden="true">

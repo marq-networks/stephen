@@ -66,14 +66,14 @@ export default function Footer() {
               <li><Link href="/privacy-policy" className="text-gray-700 hover:text-black transition-colors text-sm">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service" className="text-gray-700 hover:text-black transition-colors text-sm">Terms of Service</Link></li>
               <li><Link href="/shipping-policy" className="text-gray-700 hover:text-black transition-colors text-sm">Shipping Policy</Link></li>
+              <li><Link href="/refund-return-policy" className="text-gray-700 hover:text-black transition-colors text-sm">Refund & Return Policy</Link></li>
             </ul>
           </div>
-
           {/* Contact Information */}
           <div className="space-y-4">
             <h3 className="text-black font-semibold mb-4 text-sm sm:text-base">Contact</h3>
             <div className="space-y-2 sm:space-y-3">
-              <p className="text-gray-700 text-sm">info@ExClaimStatedTs.com</p>
+              <a href="mailto:info@exclaimstatedts.com" className="text-gray-700 text-sm">info@exclaimstatedts.com</a>
               <p className="text-gray-700 text-sm">+1 414 999 8833</p>
               <p className="text-gray-700 text-sm">Los Angeles</p>
             </div>

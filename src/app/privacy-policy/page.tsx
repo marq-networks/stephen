@@ -94,74 +94,55 @@ function PrivacyPolicyContent() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="text-black space-y-8">
+            {/* Effective Date */}
+            <div>
+              <h2 className="text-3xl font-bold mb-4">Privacy Policy</h2>
+              <p className="text-lg leading-relaxed">
+                <strong>Effective Date:</strong> October 6, 2025
+              </p>
+              <p className="text-lg leading-relaxed">
+                At <strong>ExClaim Statement Tees</strong>, we value your trust and are committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information when you visit <strong>exclaimstatedts.com</strong>.
+              </p>
+            </div>
+
+            {/* Information We Collect */}
             <div>
               <h2 className="text-3xl font-bold mb-4">Information We Collect</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                We collect information you provide directly to us, such as when you create an account, make a purchase, 
-                subscribe to our newsletter, or contact us for support.
-              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Personal information (name, email address, phone number)</li>
-                <li>Billing and shipping addresses</li>
-                <li>Payment information (processed securely through third-party providers)</li>
-                <li>Order history and preferences</li>
+                <li>Personal details such as name, email, phone number, and shipping address.</li>
+                <li>Payment information processed securely through trusted gateways.</li>
+                <li>Site usage data (cookies, analytics) to improve your browsing experience.</li>
               </ul>
             </div>
 
+            {/* How We Use Your Information */}
             <div>
               <h2 className="text-3xl font-bold mb-4">How We Use Your Information</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                We use the information we collect to provide, maintain, and improve our services:
-              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Process and fulfill your orders</li>
-                <li>Send you order confirmations and shipping updates</li>
-                <li>Provide customer support</li>
-                <li>Send marketing communications (with your consent)</li>
-                <li>Improve our products and services</li>
+                <li>To process orders and deliver products.</li>
+                <li>To provide customer support and shipping updates.</li>
+                <li>To send updates and offers (only if you opt in).</li>
               </ul>
             </div>
 
+            {/* How We Protect Your Data */}
             <div>
-              <h2 className="text-3xl font-bold mb-4">Information Sharing</h2>
+              <h2 className="text-3xl font-bold mb-4">How We Protect Your Data</h2>
               <p className="text-lg leading-relaxed">
-                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, 
-                except as described in this policy. We may share your information with trusted service providers who assist 
-                us in operating our website and conducting our business.
+                We use SSL encryption and secure hosting to ensure your information stays private. Payment information is handled by verified third-party processors and <strong>never stored on our servers</strong>.
               </p>
             </div>
 
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Data Security</h2>
-              <p className="text-lg leading-relaxed">
-                We implement appropriate security measures to protect your personal information against unauthorized access, 
-                alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
-              </p>
-            </div>
-
+            {/* Your Rights */}
             <div>
               <h2 className="text-3xl font-bold mb-4">Your Rights</h2>
-              <p className="text-lg leading-relaxed mb-4">
-                You have the right to:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Access and update your personal information</li>
-                <li>Request deletion of your personal information</li>
-                <li>Opt out of marketing communications</li>
-                <li>Request a copy of your data</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
               <p className="text-lg leading-relaxed">
-                If you have any questions about this Privacy Policy, please contact us at privacy@stephen.com or 
-                through our contact page.
+                You may request access, correction, or deletion of your data at any time by contacting <a href="mailto:info@exclaimstatedts.com">info@exclaimstatedts.com</a>.
               </p>
             </div>
 
             <div className="text-sm text-gray-600 pt-8 border-t">
-              <p>Last updated: January 2025</p>
+              <p>Last updated: October 2025</p>
             </div>
           </div>
         </motion.div>

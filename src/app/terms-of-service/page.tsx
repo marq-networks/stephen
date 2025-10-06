@@ -165,7 +165,7 @@ function TermsOfServiceContent() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Contact Information</h2>
               <p className="text-lg leading-relaxed">
-                If you have any questions about these Terms of Service, please contact us at legal@stephen.com or 
+                If you have any questions about these Terms of Service, please contact us at <a href="mailto:info@exclaimstatedts.com">info@exclaimstatedts.com</a> or 
                 through our contact page.
               </p>
             </div>

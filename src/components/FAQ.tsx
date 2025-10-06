@@ -137,7 +137,7 @@ export default function FAQ() {
                   Contact Support
                 </a>
                 <a 
-                  href="mailto:support@stephen.com" 
+                  href="mailto:info@exclaimstatedts.com" 
                   className="inline-flex items-center justify-center px-6 py-3 border-2 border-black text-black font-semibold rounded-lg hover:bg-black hover:text-white transition-colors duration-200"
                 >
                   Email Us
