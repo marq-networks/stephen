@@ -84,14 +84,14 @@ export default function AboutHero() {
           </motion.div>
         </div>
 
-        {/* Responsive Container with max width */}
+        {/* Responsive Container with max width and proper padding */}
         <div className="relative z-10 w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Main Hero Content */}
-          <div className="flex items-center justify-start h-screen py-12 sm:py-16 lg:py-20">
+          {/* Main Hero Content with responsive positioning */}
+          <div className="flex items-center justify-start min-h-screen pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
             {/* Main About Us heading and content */}
             <header className="text-left w-full max-w-4xl">
               <motion.h1 
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ 
@@ -111,11 +111,9 @@ export default function AboutHero() {
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
-                className="space-y-6"
+                className="space-y-4 sm:space-y-6"
               >
-               
-                
-                <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl" itemProp="description">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl" itemProp="description">
                   We believe fashion should be a force for good. Stephen creates premium bamboo-cotton statement tees 
                   that combine meaningful messages with sustainable materials, empowering authentic self-expression 
                   while caring for our planet.

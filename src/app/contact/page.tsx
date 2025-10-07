@@ -41,12 +41,12 @@ function ContactUsSection() {
         <div className="relative z-10 w-full">
           {/* Header */}
           <motion.div 
-            className="text-center mb-16"
+            className="text-center md:mb-16 mb-2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-black">
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight text-black">
               Get In
               <span className="block text-[#46c34c]">
                 Touch

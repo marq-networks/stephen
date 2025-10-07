@@ -137,10 +137,10 @@ export default function ContactHero() {
           </motion.div>
         </div>
 
-        <div className="relative z-10 max-w-[1570px] mx-auto px-6 w-full h-full">
-          {/* Main Hero Content */}
-          <div className="flex items-center justify-start h-screen py-20">
-            <header className="text-left max-w-3xl" itemScope itemType="https://schema.org/WPHeader">
+        <div className="relative z-10 w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Hero Content with responsive positioning */}
+          <div className="flex items-center justify-start min-h-screen pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
+            <header className="text-left w-full max-w-4xl" itemScope itemType="https://schema.org/WPHeader">
               {/* Main Contact heading */}
               <motion.div 
                 initial={{ x: -100, opacity: 0 }}
@@ -148,7 +148,7 @@ export default function ContactHero() {
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
                 <motion.h1 
-                  className="text-6xl lg:text-8xl font-bold mb-6"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ 
@@ -164,7 +164,7 @@ export default function ContactHero() {
                 </motion.h1>
 
                 <motion.p 
-                  className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-2xl"
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1.2, duration: 0.8 }}
@@ -176,36 +176,31 @@ export default function ContactHero() {
 
                 {/* Contact Methods */}
                 <motion.div 
-                  className="flex flex-col sm:flex-row gap-4 mb-12"
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1.6, duration: 0.8 }}
                 >
-                  <motion.a
-                    href="mailto:info@ExClaimStatedTs.com"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-[#46c34c] text-white font-semibold rounded-lg hover:bg-[#38db41] transition-colors duration-300 text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label="Email Stephen for sustainable fashion inquiries"
+                  <a
+                    href="mailto:info@exclaimstatedts.com"
+                    className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300 text-sm sm:text-base"
                   >
-                    Email Us
-                  </motion.a>
-                  <motion.a
-                    href="#contact-form"
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-colors duration-300 text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    Send Email
+                  </a>
+                  <a
+                    href="tel:+14149998833"
+                    className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-colors duration-300 text-sm sm:text-base"
                   >
-                    Contact Form
-                  </motion.a>
+                    Call Us
+                  </a>
                 </motion.div>
 
                 {/* Contact Information */}
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 2.0 }}
-                  className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-sm"
+                  className="grid grid-cols-2 lg:grid-cols-3 gap-6 text-sm"
                   itemScope
                   itemType="https://schema.org/ContactPoint"
                 >
@@ -221,7 +216,7 @@ export default function ContactHero() {
                     <div className="text-green-400 font-bold text-lg">Response Time</div>
                     <div className="text-white/70">Within 24 Hours</div>
                   </div>
-                </motion.div>
+                </motion.div> */}
               </motion.div>
             </header>
           </div>

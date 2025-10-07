@@ -96,74 +96,73 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative z-10 max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          {/* Main Content Container */}
-          <header className="text-center lg:text-left">
-            {/* Main Heading */}
-            <motion.h1 
-              className="text-white text-6xl sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl leading-tight text-left capitalize mb-6" 
-              initial={{ y: 50, opacity: 0, scale: 0.8 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ 
-                duration: 1.2, 
-                delay: 0.5, 
-                ease: "easeOut",
-                type: "spring",
-                stiffness: 100
-              }}
-              itemProp="headline"
-            >
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.0 }}
+        {/* Responsive Container with proper padding for navbar */}
+        <div className="relative z-10 w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Content Container with responsive positioning */}
+          <div className="flex items-center justify-start min-h-screen pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
+            <header className="text-left w-full max-w-4xl">
+              {/* Main Heading - More responsive sizing */}
+              <motion.h1 
+                className="text-white text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-bold mb-4 sm:mb-6" 
+                initial={{ y: 50, opacity: 0, scale: 0.8 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 1.2, 
+                  delay: 0.5, 
+                  ease: "easeOut",
+                  type: "spring",
+                  stiffness: 100
+                }}
+                itemProp="headline"
               >
-               Life is
-              </motion.span>
-              <br />
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-              >
-                Beautiful
-              </motion.span>
-            </motion.h1>
-
-            {/* Subtitle and Description */}
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.5 }}
-              className="max-w-2xl"
-            >
-             
-              <p className="text-lg sm:text-xl text-white/80 mb-8 leading-relaxed" itemProp="description">
-                Discover Stephens premium bamboo-cotton blend tees featuring meaningful messages. 
-                Sustainable fashion that combines comfort, style, and authentic self-expression.
-              </p>
-              
-              {/* Call-to-Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <motion.a
-                  href="/shop"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300 text-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <motion.span
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 2.0 }}
+                  transition={{ duration: 0.8, delay: 1.0 }}
                 >
-                  Shop Statement Tees
-                </motion.a>
-             
-              </div>
-            </motion.div>
+                 Life is
+                </motion.span>
+                <br />
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 1.2 }}
+                >
+                  Beautiful
+                </motion.span>
+              </motion.h1>
 
-          
-          </header>
-
-        
+              {/* Subtitle and Description */}
+              <motion.div
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.5 }}
+                className="max-w-2xl space-y-4 sm:space-y-6"
+              >
+               
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 mb-6 sm:mb-8 leading-relaxed" itemProp="description">
+                  Discover Stephens premium bamboo-cotton blend tees featuring meaningful messages. 
+                  Sustainable fashion that combines comfort, style, and authentic self-expression.
+                </p>
+                
+                {/* Call-to-Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <motion.a
+                    href="/shop"
+                    className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm sm:text-base lg:text-lg"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2.0 }}
+                  >
+                    Shop Statement Tees
+                  </motion.a>
+               
+                </div>
+              </motion.div>
+            </header>
+          </div>
         </div>
       </motion.section>
     </>

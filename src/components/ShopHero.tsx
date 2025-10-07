@@ -120,10 +120,10 @@ export default function ShopHero() {
           </motion.div>
         </div>
 
-        <div className="relative z-10 max-w-[1570px] mx-auto px-6 w-full h-full">
-          {/* Main Hero Content */}
-          <div className="flex items-center justify-start h-screen py-20">
-            <header className="text-left max-w-3xl" itemScope itemType="https://schema.org/WPHeader">
+        <div className="relative z-10 w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Hero Content with responsive positioning */}
+          <div className="flex items-center justify-start min-h-screen pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
+            <header className="text-left w-full max-w-4xl" itemScope itemType="https://schema.org/WPHeader">
               {/* Main Shop heading */}
               <motion.div 
                 initial={{ x: -100, opacity: 0 }}
@@ -131,7 +131,7 @@ export default function ShopHero() {
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
                 <motion.h1 
-                  className="text-6xl lg:text-8xl font-bold mb-6"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ 
@@ -146,7 +146,15 @@ export default function ShopHero() {
                   Shop <span className="text-green-400">Statement</span> Tees
                 </motion.h1>
 
-            
+                <motion.p 
+                  className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-2xl"
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 1.2, duration: 0.8 }}
+                >
+                  Discover our collection of premium bamboo-cotton statement tees. 
+                  Sustainable fashion with meaningful messages for conscious consumers.
+                </motion.p>
 
                
 

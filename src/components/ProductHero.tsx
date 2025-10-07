@@ -44,18 +44,18 @@ export default function ProductHero({ productName }: ProductHeroProps) {
         </motion.div>
       </div>
 
-      <div className="relative z-10 max-w-[1570px] mx-auto px-6 w-full h-full">
-        {/* Main Hero Content */}
-        <div className="flex items-center justify-start h-screen py-20">
+      <div className="relative z-10 w-full max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Hero Content with responsive positioning */}
+        <div className="flex items-center justify-start min-h-screen pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
           {/* Product name heading */}
           <motion.div 
-            className="text-left"
+            className="text-left w-full max-w-4xl"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <motion.h2 
-              className="text-4xl lg:text-6xl font-bold max-w-4xl"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ 

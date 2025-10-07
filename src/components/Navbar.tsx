@@ -287,7 +287,7 @@ export default function Navbar() {
                   >
                     <Link 
                       href={item.href} 
-                      className="text-gray-300 hover:text-white transition-colors text-2xl sm:text-3xl font-medium block py-2"
+                      className="text-gray-300 hover:text-white transition-colors text-lg sm:text-3xl font-medium block py-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
