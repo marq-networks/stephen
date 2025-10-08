@@ -5,8 +5,8 @@ import { motion } from 'motion/react';
 
 export default function EditorialFashion() {
   return (
-    <section 
-      className="py-12 sm:py-16 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8" 
+    <section
+      className="py-12 sm:py-16 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8"
       style={{ maxWidth: '1570px', width: '100%' }}
       role="region"
       aria-label="Editorial Fashion Philosophy and Brand Story"
@@ -41,7 +41,7 @@ export default function EditorialFashion() {
             },
             "values": [
               "Sustainability",
-              "Authentic Self-Expression", 
+              "Authentic Self-Expression",
               "Mindful Living",
               "Quality Craftsmanship",
               "Environmental Responsibility"
@@ -67,14 +67,14 @@ export default function EditorialFashion() {
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left Side - Content */}
-          <motion.div 
+          <motion.div
             className="space-y-6 sm:space-y-8 text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,28 +84,28 @@ export default function EditorialFashion() {
               Statement<br />
               <span className="text-[#46c34c]">Fashion</span>
             </motion.h1>
-            
-            <motion.div 
+
+            <motion.div
               className="space-y-4 sm:space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p>
-              Since its founding, ExClaim has stood at the forefront of sustainable statement fashion — creating premium tees that challenge conventions and celebrate authentic self-expression.
-              </p>
-              
-              <p>
-             Our philosophy is simple: clothing should be a form of storytelling, a reflection of thought, and a celebration of individuality. Each design begins with an idea — a spark of reflection on culture, consciousness, or truth — and transforms into something tangible that can be worn with pride.
+                Since its founding, ExClaim has stood at the forefront of sustainable statement fashion — creating premium tees that challenge conventions and celebrate authentic self-expression.
               </p>
 
               <p>
-              Our philosophy is simple: clothing should be a form of storytelling, a reflection of thought, and a celebration of individuality. Each design begins with an idea — a spark of reflection on culture, consciousness, or truth — and transforms into something tangible that can be worn with pride.
+                Our philosophy is simple: clothing should be a form of storytelling, a reflection of thought, and a celebration of individuality. Each design begins with an idea — a spark of reflection on culture, consciousness, or truth — and transforms into something tangible that can be worn with pride.
+              </p>
+
+              <p>
+                Our philosophy is simple: clothing should be a form of storytelling, a reflection of thought, and a celebration of individuality. Each design begins with an idea — a spark of reflection on culture, consciousness, or truth — and transforms into something tangible that can be worn with pride.
               </p>
             </motion.div>
 
             {/* Key Features */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-2 gap-4 text-sm"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -129,14 +129,14 @@ export default function EditorialFashion() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <Link href="/about">
-                <button 
+                <button
                   className="bg-[#46c34c] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#46c34c]/90 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto font-medium"
                   aria-label="Learn more about Stephen's sustainable fashion story"
                 >
@@ -144,7 +144,7 @@ export default function EditorialFashion() {
                 </button>
               </Link>
               <Link href="/shop">
-                <button 
+                <button
                   className="border-2 border-[#46c34c] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#46c34c] hover:text-white transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto font-medium"
                   aria-label="Shop Stephen's statement tee collection"
                 >
@@ -155,7 +155,7 @@ export default function EditorialFashion() {
           </motion.div>
 
           {/* Right Side - Image */}
-          <motion.div 
+          <motion.div
             className="relative"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -172,7 +172,7 @@ export default function EditorialFashion() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 priority={false}
               />
-              
+
               {/* Overlay with brand stats */}
               <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
                 <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg">
@@ -190,7 +190,7 @@ export default function EditorialFashion() {
                       <div className="text-xs sm:text-sm text-gray-600">Organic Cotton</div>
                     </div>
                   </div>
-                  
+
                   {/* Additional brand values */}
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <div className="flex justify-center space-x-4 text-xs text-gray-600">
@@ -215,7 +215,7 @@ export default function EditorialFashion() {
         </div>
 
         {/* Additional SEO Content Section */}
-        <motion.div 
+        <motion.div
           className="mt-16 sm:mt-20 text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -225,9 +225,9 @@ export default function EditorialFashion() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
             Why Choose Stephen Statement Fashion?
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <motion.div 
+            <motion.div
               className="text-center p-6 bg-gray-50 rounded-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +242,7 @@ export default function EditorialFashion() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center p-6 bg-gray-50 rounded-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -257,7 +257,7 @@ export default function EditorialFashion() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center p-6 bg-gray-50 rounded-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -272,7 +272,7 @@ export default function EditorialFashion() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center p-6 bg-gray-50 rounded-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -293,15 +293,15 @@ export default function EditorialFashion() {
         <div className="sr-only">
           <h2>Stephen Sustainable Statement Fashion Keywords</h2>
           <p>
-            Keywords: sustainable fashion, statement tees, organic cotton t-shirts, eco-friendly apparel, 
-            mindful fashion, conscious clothing, authentic self-expression, meaningful messages, 
-            sustainable statement fashion, organic cotton tees, eco-conscious apparel, 
-            philosophical fashion, mindful living clothing, sustainable t-shirts, 
-            ethical fashion brand, conscious fashion choices, meaningful apparel, 
+            Keywords: sustainable fashion, statement tees, organic cotton t-shirts, eco-friendly apparel,
+            mindful fashion, conscious clothing, authentic self-expression, meaningful messages,
+            sustainable statement fashion, organic cotton tees, eco-conscious apparel,
+            philosophical fashion, mindful living clothing, sustainable t-shirts,
+            ethical fashion brand, conscious fashion choices, meaningful apparel,
             sustainable clothing brand, organic statement tees, eco-friendly fashion
           </p>
           <p>
-            Categories: Sustainable Fashion, Statement T-Shirts, Organic Cotton Apparel, 
+            Categories: Sustainable Fashion, Statement T-Shirts, Organic Cotton Apparel,
             Eco-Friendly Clothing, Mindful Fashion, Conscious Living, Authentic Expression
           </p>
         </div>
