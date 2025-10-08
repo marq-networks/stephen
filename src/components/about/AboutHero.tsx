@@ -182,14 +182,14 @@ export default function AboutHero() {
                 <div className="text-2xl sm:text-3xl font-bold text-white">50+</div>
                 <div className="text-white/70 text-sm">Meaningful Designs</div>
               </div>
-              <div>
+              {/* <div>
                 <div className="text-2xl sm:text-3xl font-bold text-white">1000+</div>
                 <div className="text-white/70 text-sm">Happy Customers</div>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <div className="text-2xl sm:text-3xl font-bold text-white">30 Day</div>
                 <div className="text-white/70 text-sm">Return Policy</div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
