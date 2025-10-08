@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Stephen - Sustainable Statement Tees",
+  title: "Exclaim - Sustainable Statement Tees",
   description: "Express yourself with our premium collection of sustainable statement tees. Eco-friendly bamboo-cotton blend clothing with meaningful messages for conscious consumers.",
   keywords: "sustainable fashion, statement tees, eco-friendly clothing, bamboo cotton, organic apparel, conscious fashion, meaningful clothing",
   authors: [{ name: "Stephen" }],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Stephen - Sustainable Statement Tees",
+    title: "Exclaim - Sustainable Statement Tees",
     description: "Express yourself with our premium collection of sustainable statement tees.",
     type: "website",
     images: ['/LOGO.png'],
