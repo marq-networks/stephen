@@ -55,8 +55,7 @@ export default function Features() {
             What Makes Stephen Statement Tees Special
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Every Stephen tee combines sustainable materials, meaningful messages, and premium quality 
-            to create clothing that feels as good as the values it represents.
+            Every ExClaim tee combines sustainable materials, meaningful statements, and premium craftsmanship to create clothing that feels as good as the values it represents.
           </p>
         </motion.div>
 
