@@ -91,14 +91,14 @@ export default function AboutContent() {
             {/* Middle - First Paragraph */}
             <motion.div className="lg:col-span-1" variants={itemVariants}>
               <p className="text-black text-sm leading-relaxed">
-                Stephen believes in the transformative power of fashion to tell stories, evoke emotions, and create meaningful connections. Our approach combines sustainable materials with thoughtful design to deliver statement tees that not only look exceptional but also reflect your authentic self.
+                ExClaim believes in the transformative power of fashion to tell stories, evoke emotions, and create meaningful connections. Our approach blends sustainable materials with thoughtful design, crafting statement tees that not only look exceptional but also reflect the wearer’s authentic self.
               </p>
             </motion.div>
 
             {/* Right - Second Paragraph */}
             <motion.div className="lg:col-span-1" variants={itemVariants}>
               <p className="text-black text-sm leading-relaxed">
-                Our team consists of passionate designers, sustainability advocates, and storytellers who are dedicated to pushing boundaries in eco-friendly fashion. We believe that great clothing should be accessible, sustainable, and impactful - principles that guide every tee we create.
+                Our team brings together passionate designers, sustainability advocates, and storytellers who share one mission — to push boundaries in conscious fashion. We believe that great clothing should be accessible, sustainable, and impactful — principles that shape every tee we create.
               </p>
             </motion.div>
           </motion.div>

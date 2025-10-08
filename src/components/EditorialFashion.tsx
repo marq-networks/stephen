@@ -181,10 +181,10 @@ export default function EditorialFashion() {
                       <div className="text-xl sm:text-2xl font-bold text-gray-900">50+</div>
                       <div className="text-xs sm:text-sm text-gray-600">Statement Designs</div>
                     </div>
-                    <div>
+                    {/* <div>
                       <div className="text-xl sm:text-2xl font-bold text-gray-900">10K+</div>
                       <div className="text-xs sm:text-sm text-gray-600">Conscious Customers</div>
-                    </div>
+                    </div> */}
                     <div>
                       <div className="text-xl sm:text-2xl font-bold text-gray-900">100%</div>
                       <div className="text-xs sm:text-sm text-gray-600">Organic Cotton</div>
