@@ -28,7 +28,7 @@ export default function AboutContent() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Stephen's Mission: Sustainable Statement Tees That Speak Your Truth",
-    "description": "Learn about Stephen's commitment to creating meaningful statement tees using sustainable bamboo-cotton materials, our design philosophy, and why we believe fashion should be a force for positive change.",
+    "description": "Learn About ExClaim's commitment to creating meaningful statement tees using sustainable bamboo-cotton materials, our design philosophy, and why we believe fashion should be a force for positive change.",
     "author": {
       "@type": "Organization",
       "name": "Stephen"
@@ -236,8 +236,8 @@ export default function AboutContent() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Article",
-              "headline": "About Stephen - Sustainable Statement Tees",
-              "description": "Learn about Stephen's mission to create meaningful, sustainable statement tees using eco-friendly materials and ethical manufacturing practices.",
+              "headline": "About ExClaim - Sustainable Statement Tees",
+              "description": "Learn About ExClaim's mission to create meaningful, sustainable statement tees using eco-friendly materials and ethical manufacturing practices.",
               "author": {
                 "@type": "Organization",
                 "name": "Stephen",

@@ -250,7 +250,7 @@ export default function Features() {
             <a 
               href="/about" 
               className="border-2 border-[#46c34c] text-black px-8 py-4 rounded-full hover:bg-[#46c34c] hover:text-white transition-colors duration-300 font-medium text-lg"
-              aria-label="Learn more about Stephen's sustainable fashion mission"
+              aria-label="Learn more About ExClaim's sustainable fashion mission"
             >
               Our Mission
             </a>

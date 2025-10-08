@@ -65,7 +65,7 @@ export default function FAQ() {
               Frequently Asked Questions
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Everything you need to know about Stephens sustainable statement tees, from materials to shipping and care instructions.
+              Everything you need to know About ExClaims sustainable statement tees, from materials to shipping and care instructions.
             </p>
           </header>
 

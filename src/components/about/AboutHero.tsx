@@ -17,8 +17,8 @@ export default function AboutHero() {
   const aboutStructuredData = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About Stephen - Sustainable Statement Tees",
-    "description": "Learn about Stephen's mission to create meaningful statement tees using sustainable bamboo-cotton blend materials. Discover our story of authentic self-expression through fashion.",
+    "name": "About ExClaim - Sustainable Statement Tees",
+    "description": "Learn About ExClaim's mission to create meaningful statement tees using sustainable bamboo-cotton blend materials. Discover our story of authentic self-expression through fashion.",
     "url": "https://stephen.com/about",
     "mainEntity": {
       "@type": "Organization",
@@ -60,7 +60,7 @@ export default function AboutHero() {
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/AboutPage"
-        aria-label="About Stephen - Our story and mission"
+        aria-label="About ExClaim - Our story and mission"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -103,7 +103,7 @@ export default function AboutHero() {
                 }}
                 itemProp="headline"
               >
-                About Stephen.
+                About ExClaim.
               </motion.h1>
 
               {/* Subtitle and Mission */}

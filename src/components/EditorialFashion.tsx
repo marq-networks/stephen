@@ -138,7 +138,7 @@ export default function EditorialFashion() {
               <Link href="/about">
                 <button
                   className="bg-[#46c34c] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#46c34c]/90 transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto font-medium"
-                  aria-label="Learn more about Stephen's sustainable fashion story"
+                  aria-label="Learn more About ExClaim's sustainable fashion story"
                 >
                   Our Sustainable Story
                 </button>
