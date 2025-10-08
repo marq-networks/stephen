@@ -114,9 +114,7 @@ export default function AboutHero() {
                 className="space-y-4 sm:space-y-6"
               >
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl" itemProp="description">
-                  We believe fashion should be a force for good. Stephen creates premium bamboo-cotton statement tees 
-                  that combine meaningful messages with sustainable materials, empowering authentic self-expression 
-                  while caring for our planet.
+                   We believe fashion should be a force for good. ExClaim creates premium bamboo-cotton statement tees that unite meaningful design with sustainable materials — empowering authentic self-expression while caring for our planet.
                 </p>
 
                 {/* Key Values */}
