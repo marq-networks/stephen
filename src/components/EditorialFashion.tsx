@@ -92,23 +92,15 @@ export default function EditorialFashion() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p>
-                Since our founding, <strong>Stephen</strong> has been at the forefront of <em>sustainable statement fashion</em>, 
-                creating premium organic cotton tees that challenge conventions and celebrate authentic self-expression. 
-                Our design philosophy centers on the belief that clothing should be a powerful form of personal storytelling 
-                and mindful living.
+              Since its founding, ExClaim has stood at the forefront of sustainable statement fashion — creating premium tees that challenge conventions and celebrate authentic self-expression.
               </p>
               
               <p>
-                Every <strong>statement tee</strong> in our collection is carefully crafted with attention to detail, 
-                <em>eco-friendly practices</em>, and a commitment to empowering those who wear them to express their truth 
-                and make their mark on the world. From Processing to The Whether is in U each design carries 
-                deep philosophical meaning.
+             Our philosophy is simple: clothing should be a form of storytelling, a reflection of thought, and a celebration of individuality. Each design begins with an idea — a spark of reflection on culture, consciousness, or truth — and transforms into something tangible that can be worn with pride.
               </p>
 
               <p>
-                We believe in <strong>conscious fashion</strong> that doesnt compromise on comfort or style. 
-                Our 100% organic cotton tees are pre-shrunk, reinforced, and printed with eco-friendly inks, 
-                ensuring lasting quality while respecting our planets resources.
+              Our philosophy is simple: clothing should be a form of storytelling, a reflection of thought, and a celebration of individuality. Each design begins with an idea — a spark of reflection on culture, consciousness, or truth — and transforms into something tangible that can be worn with pride.
               </p>
             </motion.div>
 
