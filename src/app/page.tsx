@@ -14,12 +14,12 @@ import Footer from '../components/Footer';
 import LogoWatermark from "@/components/common/LogoWatermark";
 
 export const metadata: Metadata = {
-  title: "Stephen - Sustainable Statement Tees | Premium Eco-Friendly Apparel",
-  description: "Discover Stephen's collection of sustainable statement tees made from premium bamboo-cotton blend. Express yourself with meaningful fashion that protects our planet.",
+  title: "Exclaim - Sustainable Statement Tees | Premium Eco-Friendly Apparel",
+  description: "Discover Exclaim's collection of sustainable statement tees made from premium bamboo-cotton blend. Express yourself with meaningful fashion that protects our planet.",
   keywords: "sustainable fashion, statement tees, eco-friendly clothing, bamboo cotton, organic apparel, conscious fashion, meaningful clothing, premium tees",
   openGraph: {
-    title: "Stephen - Sustainable Statement Tees | Premium Eco-Friendly Apparel",
-    description: "Discover Stephen's collection of sustainable statement tees made from premium bamboo-cotton blend.",
+    title: "Exclaim - Sustainable Statement Tees | Premium Eco-Friendly Apparel",
+    description: "Discover Exclaim's collection of sustainable statement tees made from premium bamboo-cotton blend.",
     type: "website",
     images: ['/LOGO.png'],
   },
