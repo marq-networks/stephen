@@ -17,9 +17,9 @@ export default function ShopHero() {
   const shopStructuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Stephen Statement Tees - Sustainable Fashion Collection",
-    "description": "Shop premium sustainable statement tees from Stephen. Eco-friendly bamboo-cotton blend clothing with meaningful messages. Free shipping on orders over $75.",
-    "url": "https://stephen.com/shop",
+    "name": "Exclaim Statement Tees - Sustainable Fashion Collection",
+    "description": "Shop premium sustainable statement tees from Exclaim. Eco-friendly bamboo-cotton blend clothing with meaningful messages. Free shipping on orders over $75.",
+    "url": "https://Exclaim.com/shop",
     "mainEntity": {
       "@type": "ItemList",
       "name": "Statement Tee Collection",
@@ -33,19 +33,19 @@ export default function ShopHero() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://stephen.com"
+          "item": "https://Exclaim.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Shop",
-          "item": "https://stephen.com/shop"
+          "item": "https://Exclaim.com/shop"
         }
       ]
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://stephen.com/shop?search={search_term_string}",
+      "target": "https://Exclaim.com/shop?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -53,17 +53,17 @@ export default function ShopHero() {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Stephen",
+    "name": "Exclaim",
     "description": "Sustainable statement tee brand creating meaningful fashion with eco-friendly materials",
-    "url": "https://stephen.com",
-    "logo": "https://stephen.com/logo.png",
+    "url": "https://Exclaim.com",
+    "logo": "https://Exclaim.com/logo.png",
     "sameAs": [
-      "https://instagram.com/stephen",
-      "https://facebook.com/stephen"
+      "https://instagram.com/Exclaim",
+      "https://facebook.com/Exclaim"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-STEPHEN",
+      "telephone": "+1-555-Exclaim",
       "contactType": "customer service",
       "email": "info@exclaimstatedts.com"
     }
@@ -82,8 +82,8 @@ export default function ShopHero() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Stephen",
-            "url": "https://stephen.com",
+            "name": "Exclaim",
+            "url": "https://Exclaim.com",
             "logo": "/LOGO.png",
             "description": "Sustainable statement tees with meaningful messages"
           })
@@ -96,7 +96,7 @@ export default function ShopHero() {
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/WebPageElement"
-        aria-label="Shop hero section featuring Stephen's sustainable statement tee collection"
+        aria-label="Shop hero section featuring Exclaim's sustainable statement tee collection"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -108,7 +108,7 @@ export default function ShopHero() {
           >
             <Image
               src="/homeherobg.png"
-              alt="Stephen's sustainable statement tee collection - premium bamboo-cotton blend clothing with meaningful messages"
+              alt="Exclaim's sustainable statement tee collection - premium bamboo-cotton blend clothing with meaningful messages"
               width={1400}
               height={1400}
               className="w-full h-full object-cover object-center"

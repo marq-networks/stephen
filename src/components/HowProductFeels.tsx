@@ -132,7 +132,7 @@ export default function HowProductFeels() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "name": "Stephen Statement Tee Collection",
+            "name": "Exclaim Statement Tee Collection",
             "description": "Premium organic cotton statement tees with meaningful messages for authentic self-expression",
             "numberOfItems": products.length,
             "itemListElement": products.map((product, index) => ({
@@ -148,12 +148,12 @@ export default function HowProductFeels() {
                 "availability": "https://schema.org/InStock",
                 "seller": {
                   "@type": "Organization",
-                  "name": "Stephen Fashion"
+                  "name": "Exclaim Fashion"
                 }
               },
               "brand": {
                 "@type": "Brand",
-                "name": "Stephen"
+                "name": "Exclaim"
               },
               "category": "Apparel > T-Shirts",
               "material": "Organic Cotton",

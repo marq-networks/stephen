@@ -19,15 +19,15 @@ export default function AboutHero() {
     "@type": "AboutPage",
     "name": "About ExClaim - Sustainable Statement Tees",
     "description": "Learn About ExClaim's mission to create meaningful statement tees using sustainable bamboo-cotton blend materials. Discover our story of authentic self-expression through fashion.",
-    "url": "https://stephen.com/about",
+    "url": "https://Exclaim.com/about",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Stephen",
+      "name": "Exclaim",
       "description": "Sustainable statement tees that speak your truth. Premium bamboo-cotton blend clothing for authentic self-expression.",
       "foundingDate": "2024",
       "founder": {
         "@type": "Person",
-        "name": "Stephen"
+        "name": "Exclaim"
       },
       "mission": "To create meaningful statement tees that combine sustainability, comfort, and authentic self-expression",
       "values": [
@@ -72,7 +72,7 @@ export default function AboutHero() {
           >
             <Image
               src="/homeherobg.png"
-              alt="Stephen's sustainable statement tee showcasing our brand philosophy - Life is Beautiful message on premium bamboo-cotton blend"
+              alt="Exclaim's sustainable statement tee showcasing our brand philosophy - Life is Beautiful message on premium bamboo-cotton blend"
               width={1400}
               height={1400}
               className="w-full h-full object-cover object-center"

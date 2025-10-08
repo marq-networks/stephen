@@ -75,7 +75,7 @@ export default function BrandGrowthSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: false }}
             >
-              <h3 className="text-sm font-bold text-black mb-4 tracking-[0.2em] uppercase">STEPHEN™</h3>
+              <h3 className="text-sm font-bold text-black mb-4 tracking-[0.2em] uppercase">Exclaim™</h3>
             </motion.div>
 
             {/* Client Avatars */}

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Exclaim - Sustainable Statement Tees",
   description: "Express yourself with our premium collection of sustainable statement tees. Eco-friendly bamboo-cotton blend clothing with meaningful messages for conscious consumers.",
   keywords: "sustainable fashion, statement tees, eco-friendly clothing, bamboo cotton, organic apparel, conscious fashion, meaningful clothing",
-  authors: [{ name: "Stephen" }],
+  authors: [{ name: "Exclaim" }],
   icons: {
     icon: [
       { url: '/LOGO.png?v=3', sizes: '32x32', type: 'image/png' },

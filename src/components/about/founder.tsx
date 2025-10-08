@@ -117,7 +117,7 @@ const Founder = () => {
                         </p>
 
                         <div className="pt-2 sm:pt-4">
-                            <p className="font-medium text-black">Stephen Gardner</p>
+                            <p className="font-medium text-black">Exclaim Gardner</p>
                             <p className="text-sm text-black">CEO at IDEO</p>
                         </div>
                     </motion.div>

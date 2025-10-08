@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About ExClaim - Our Sustainable Fashion Mission | Stephen",
+  title: "About ExClaim - Our Sustainable Fashion Mission | Exclaim",
   description: "Learn About ExClaim's commitment to sustainable fashion. Discover our story, mission, and dedication to creating meaningful statement tees with eco-friendly materials.",
   keywords: "About ExClaim, sustainable fashion mission, eco-friendly clothing brand, bamboo cotton tees, conscious fashion story",
   openGraph: {

@@ -7,7 +7,7 @@ export default function Features() {
       className="py-12 sm:py-16 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8" 
       style={{ maxWidth: '1570px', width: '100%' }}
       role="region"
-      aria-label="Stephen Statement Fashion Features and Benefits"
+      aria-label="Exclaim Statement Fashion Features and Benefits"
     >
       {/* SEO-optimized structured data */}
       <script
@@ -16,11 +16,11 @@ export default function Features() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "Stephen Statement Tees",
+            "name": "Exclaim Statement Tees",
             "description": "Premium organic cotton statement t-shirts with meaningful messages for authentic self-expression",
             "brand": {
               "@type": "Brand",
-              "name": "Stephen"
+              "name": "Exclaim"
             },
             "category": "Apparel",
             "material": "100% Organic Cotton",
@@ -52,7 +52,7 @@ export default function Features() {
           viewport={{ once: true }}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-            What Makes Stephen Statement Tees Special
+            What Makes Exclaim Statement Tees Special
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Every ExClaim tee combines sustainable materials, meaningful statements, and premium craftsmanship to create clothing that feels as good as the values it represents.
@@ -72,7 +72,7 @@ export default function Features() {
               Sustainable Materials
             </h2>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-              Our commitment to the planet starts with our choice of materials. Every Stephen tee is crafted 
+              Our commitment to the planet starts with our choice of materials. Every Exclaim tee is crafted 
               from premium organic cotton thats gentle on your skin and kind to the environment.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function Features() {
               Premium Quality
             </h2>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-              We believe in creating clothing that lasts. Every Stephen tee is built with attention to detail, 
+              We believe in creating clothing that lasts. Every Exclaim tee is built with attention to detail, 
               ensuring comfort, durability, and style that stands the test of time.
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function Features() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-            Experience the Stephen Difference
+            Experience the Exclaim Difference
           </h3>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
             Join thousands who have discovered the perfect blend of sustainability, comfort, and meaningful expression. 
@@ -243,7 +243,7 @@ export default function Features() {
             <a 
               href="/shop" 
               className="bg-[#46c34c] text-white px-8 py-4 rounded-full hover:bg-[#46c34c]/90 transition-colors duration-300 font-medium text-lg"
-              aria-label="Shop Stephen's sustainable statement tee collection"
+              aria-label="Shop Exclaim's sustainable statement tee collection"
             >
               Shop Statement Tees
             </a>
@@ -259,7 +259,7 @@ export default function Features() {
 
         {/* Hidden SEO content */}
         <div className="sr-only">
-          <h2>Stephen Statement Tee Features and Benefits</h2>
+          <h2>Exclaim Statement Tee Features and Benefits</h2>
           <p>
             Keywords: sustainable statement tees, organic cotton t-shirts, eco-friendly apparel, 
             meaningful message clothing, authentic self-expression, mindful fashion, conscious clothing, 

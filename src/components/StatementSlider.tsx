@@ -96,13 +96,13 @@ export default function StatementSlider() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Stephen Fashion",
+            "name": "Exclaim Fashion",
             "description": "Sustainable statement fashion for authentic self-expression",
             "url": typeof window !== 'undefined' ? window.location.origin : '',
             "sameAs": [],
             "brand": {
               "@type": "Brand",
-              "name": "Stephen",
+              "name": "Exclaim",
               "description": "Mindful fashion brand creating statement tees with meaningful messages"
             },
             "products": slides.map(slide => ({
@@ -110,7 +110,7 @@ export default function StatementSlider() {
               "name": slide.title.replace(/"/g, ''),
               "description": slide.description,
               "category": "Apparel",
-              "brand": "Stephen"
+              "brand": "Exclaim"
             }))
           })
         }}

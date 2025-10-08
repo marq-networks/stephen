@@ -45,7 +45,7 @@ const blogPosts: BlogPost[] = [
       
       <p>The digital transformation aspect was particularly crucial, as businesses needed to ensure their online presence matched their evolved brand identity. This meant not just updating websites, but rethinking the entire customer journey from first impression to post-purchase experience.</p>
     `,
-    author: "Stephen Design Team",
+    author: "Exclaim Design Team",
     date: "March 15, 2024",
     readTime: "5 min read"
   },
@@ -73,7 +73,7 @@ const blogPosts: BlogPost[] = [
       <h3>The Psychology Behind Maximalism</h3>
       <p>Maximalist design taps into consumers' desire for authentic, memorable experiences. In a world saturated with similar-looking minimalist sites, maximalist approaches help brands stand out and create emotional connections with their audience.</p>
     `,
-    author: "Stephen Design Team",
+    author: "Exclaim Design Team",
     date: "March 10, 2024",
     readTime: "4 min read"
   }

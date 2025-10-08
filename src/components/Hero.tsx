@@ -17,19 +17,19 @@ export default function Hero() {
   const heroStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Stephen - Sustainable Statement Tees",
-    "description": "Discover Stephen's premium bamboo-cotton statement tees. Sustainable fashion that speaks your truth with meaningful designs and eco-friendly materials.",
-    "url": "https://stephen.com",
+    "name": "Exclaim - Sustainable Statement Tees",
+    "description": "Discover Exclaim's premium bamboo-cotton statement tees. Sustainable fashion that speaks your truth with meaningful designs and eco-friendly materials.",
+    "url": "https://Exclaim.com",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Stephen",
+      "name": "Exclaim",
       "description": "Sustainable statement tees made from premium bamboo-cotton blend",
-      "url": "https://stephen.com",
-      "logo": "https://stephen.com/logo.png",
+      "url": "https://Exclaim.com",
+      "logo": "https://Exclaim.com/logo.png",
       "sameAs": [
-        "https://instagram.com/stephen",
-        "https://facebook.com/stephen",
-        "https://twitter.com/stephen"
+        "https://instagram.com/Exclaim",
+        "https://facebook.com/Exclaim",
+        "https://twitter.com/Exclaim"
       ]
     },
     "breadcrumb": {
@@ -39,7 +39,7 @@ export default function Hero() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://stephen.com"
+          "item": "https://Exclaim.com"
         }
       ]
     }
@@ -54,13 +54,13 @@ export default function Hero() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Stephen",
-            "url": "https://stephen.com",
+            "name": "Exclaim",
+            "url": "https://Exclaim.com",
             "logo": "/LOGO.png",
             "description": "Sustainable statement tees with meaningful messages for conscious consumers",
             "sameAs": [
-              "https://instagram.com/stephen",
-              "https://twitter.com/stephen"
+              "https://instagram.com/Exclaim",
+              "https://twitter.com/Exclaim"
             ]
           })
         }}
@@ -72,7 +72,7 @@ export default function Hero() {
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/WebPageElement"
-        aria-label="Hero section showcasing Stephen's sustainable statement tees"
+        aria-label="Hero section showcasing Exclaim's sustainable statement tees"
       >
         {/* Background Image - Hero T-shirt */}
         <div className="absolute inset-0 z-0">
@@ -84,7 +84,7 @@ export default function Hero() {
           >
             <Image
               src="/homeherobg.png"
-              alt="Stephen's sustainable statement tee featuring 'Life is Beautiful' message - premium bamboo-cotton blend clothing"
+              alt="Exclaim's sustainable statement tee featuring 'Life is Beautiful' message - premium bamboo-cotton blend clothing"
               width={1400}
               height={1400}
               className="w-full h-full object-cover object-center"
@@ -141,7 +141,7 @@ export default function Hero() {
               >
                
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 mb-6 sm:mb-8 leading-relaxed" itemProp="description">
-                  Discover Stephens premium bamboo-cotton blend tees featuring meaningful messages. 
+                  Discover Exclaims premium bamboo-cotton blend tees featuring meaningful messages. 
                   Sustainable fashion that combines comfort, style, and authentic self-expression.
                 </p>
                 

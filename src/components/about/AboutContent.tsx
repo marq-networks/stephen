@@ -27,23 +27,23 @@ export default function AboutContent() {
   const aboutContentStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Stephen's Mission: Sustainable Statement Tees That Speak Your Truth",
+    "headline": "Exclaim's Mission: Sustainable Statement Tees That Speak Your Truth",
     "description": "Learn About ExClaim's commitment to creating meaningful statement tees using sustainable bamboo-cotton materials, our design philosophy, and why we believe fashion should be a force for positive change.",
     "author": {
       "@type": "Organization",
-      "name": "Stephen"
+      "name": "Exclaim"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Stephen",
+      "name": "Exclaim",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://stephen.com/logo.png"
+        "url": "https://Exclaim.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://stephen.com/about"
+      "@id": "https://Exclaim.com/about"
     }
   };
 
@@ -113,7 +113,7 @@ export default function AboutContent() {
           >
             <Image
               src="/about.png"
-              alt="Stephen team working on sustainable statement tee designs - showcasing our collaborative approach to meaningful fashion"
+              alt="Exclaim team working on sustainable statement tee designs - showcasing our collaborative approach to meaningful fashion"
               width={1200}
               height={600}
               className="rounded-lg object-cover w-full h-auto"
@@ -193,7 +193,7 @@ We’re not just designing apparel; we’re building a community of conscious in
               </header>
               <div>
                 <p className="text-sm sm:text-md font-bold text-black leading-relaxed">
-                  Every Stephen tee represents a step toward a more sustainable future. We measure our success not just in sales, but in the positive environmental impact we create through our choice of materials, ethical manufacturing processes, and the meaningful messages we help our customers share with the world. From reducing water usage in production to supporting fair labor practices, we are committed to transparency and continuous improvement in our sustainability journey.
+                  Every Exclaim tee represents a step toward a more sustainable future. We measure our success not just in sales, but in the positive environmental impact we create through our choice of materials, ethical manufacturing processes, and the meaningful messages we help our customers share with the world. From reducing water usage in production to supporting fair labor practices, we are committed to transparency and continuous improvement in our sustainability journey.
                 </p>
               </div>
             </motion.div>
@@ -211,7 +211,7 @@ We’re not just designing apparel; we’re building a community of conscious in
               Ready to Make Your Statement?
             </h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands who have discovered the perfect blend of sustainability, comfort, and meaningful expression with Stephens statement tees.
+              Join thousands who have discovered the perfect blend of sustainability, comfort, and meaningful expression with Exclaims statement tees.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -245,12 +245,12 @@ We’re not just designing apparel; we’re building a community of conscious in
               "description": "Learn About ExClaim's mission to create meaningful, sustainable statement tees using eco-friendly materials and ethical manufacturing practices.",
               "author": {
                 "@type": "Organization",
-                "name": "Stephen",
+                "name": "Exclaim",
                 "url": "/LOGO.png"
               },
               "publisher": {
                 "@type": "Organization",
-                "name": "Stephen",
+                "name": "Exclaim",
                 "logo": {
                   "@type": "ImageObject",
                   "url": "/LOGO.png"

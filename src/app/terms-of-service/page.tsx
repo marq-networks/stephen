@@ -105,7 +105,7 @@ function TermsOfServiceContent() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Use License</h2>
               <p className="text-lg leading-relaxed mb-4">
-                Permission is granted to temporarily download one copy of the materials on STEPHENs website for personal, 
+                Permission is granted to temporarily download one copy of the materials on Exclaims website for personal, 
                 non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
               <ul className="list-disc pl-6 space-y-2">
@@ -149,8 +149,8 @@ function TermsOfServiceContent() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Limitation of Liability</h2>
               <p className="text-lg leading-relaxed">
-                In no event shall STEPHEN or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, 
-                or due to business interruption) arising out of the use or inability to use the materials on STEPHENs website.
+                In no event shall Exclaim or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, 
+                or due to business interruption) arising out of the use or inability to use the materials on Exclaims website.
               </p>
             </div>
 

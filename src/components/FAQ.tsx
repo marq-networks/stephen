@@ -7,7 +7,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "What materials do you use in your clothing?",
-      answer: "Every Stephen tee is made with a premium bamboo-cotton blend. This fabric is softer than standard cotton, naturally breathable, durable, and more eco-friendly."
+      answer: "Every Exclaim tee is made with a premium bamboo-cotton blend. This fabric is softer than standard cotton, naturally breathable, durable, and more eco-friendly."
     },
     {
       question: "How do I determine my size?",

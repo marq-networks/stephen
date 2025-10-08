@@ -18,7 +18,7 @@ export default function EditorialFashion() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Stephen Fashion",
+            "name": "Exclaim Fashion",
             "description": "Sustainable statement fashion brand creating meaningful apparel for authentic self-expression",
             "foundingDate": "2020",
             "url": typeof window !== 'undefined' ? window.location.origin : '',
@@ -26,7 +26,7 @@ export default function EditorialFashion() {
             "sameAs": [],
             "brand": {
               "@type": "Brand",
-              "name": "Stephen",
+              "name": "Exclaim",
               "description": "Editorial fashion meets conscious living through sustainable statement tees"
             },
             "makesOffer": {
@@ -56,8 +56,8 @@ export default function EditorialFashion() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Stephen",
-            "url": "https://stephen.com",
+            "name": "Exclaim",
+            "url": "https://Exclaim.com",
             "logo": "/LOGO.png",
             "description": "Sustainable statement tees with meaningful messages for conscious consumers"
           })
@@ -146,7 +146,7 @@ export default function EditorialFashion() {
               <Link href="/shop">
                 <button
                   className="border-2 border-[#46c34c] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#46c34c] hover:text-white transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto font-medium"
-                  aria-label="Shop Stephen's statement tee collection"
+                  aria-label="Shop Exclaim's statement tee collection"
                 >
                   Shop Statement Tees
                 </button>
@@ -165,7 +165,7 @@ export default function EditorialFashion() {
             <div className="relative rounded-2xl overflow-hidden">
               <Image
                 src="/about.png"
-                alt="Stephen sustainable statement fashion - organic cotton tees with meaningful messages for authentic self-expression"
+                alt="Exclaim sustainable statement fashion - organic cotton tees with meaningful messages for authentic self-expression"
                 width={600}
                 height={800}
                 className="w-full h-auto object-cover"
@@ -223,7 +223,7 @@ export default function EditorialFashion() {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-            Why Choose Stephen Statement Fashion?
+            Why Choose Exclaim Statement Fashion?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -291,7 +291,7 @@ export default function EditorialFashion() {
 
         {/* Hidden SEO content */}
         <div className="sr-only">
-          <h2>Stephen Sustainable Statement Fashion Keywords</h2>
+          <h2>Exclaim Sustainable Statement Fashion Keywords</h2>
           <p>
             Keywords: sustainable fashion, statement tees, organic cotton t-shirts, eco-friendly apparel,
             mindful fashion, conscious clothing, authentic self-expression, meaningful messages,

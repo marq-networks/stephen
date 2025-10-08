@@ -17,23 +17,23 @@ export default function ContactHero() {
   const contactStructuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact Stephen - Sustainable Statement Tee Brand",
-    "description": "Get in touch with Stephen for sustainable statement tees, custom orders, wholesale inquiries, and customer support. We're here to help with your eco-friendly fashion needs.",
-    "url": "https://stephen.com/contact",
+    "name": "Contact Exclaim - Sustainable Statement Tee Brand",
+    "description": "Get in touch with Exclaim for sustainable statement tees, custom orders, wholesale inquiries, and customer support. We're here to help with your eco-friendly fashion needs.",
+    "url": "https://Exclaim.com/contact",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Stephen",
+      "name": "Exclaim",
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+1-555-STEPHEN",
+          "telephone": "+1-555-Exclaim",
           "contactType": "customer service",
           "email": "info@exclaimstatedts.com",
           "availableLanguage": "English"
         },
         {
           "@type": "ContactPoint",
-          "email": "wholesale@stephen.com",
+          "email": "wholesale@Exclaim.com",
           "contactType": "sales",
           "availableLanguage": "English"
         }
@@ -46,13 +46,13 @@ export default function ContactHero() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://stephen.com"
+          "item": "https://Exclaim.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Contact",
-          "item": "https://stephen.com/contact"
+          "item": "https://Exclaim.com/contact"
         }
       ]
     }
@@ -61,19 +61,19 @@ export default function ContactHero() {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Stephen",
+    "name": "Exclaim",
     "description": "Sustainable statement tee brand creating meaningful fashion with eco-friendly materials",
-    "url": "https://stephen.com",
-    "logo": "https://stephen.com/logo.png",
+    "url": "https://Exclaim.com",
+    "logo": "https://Exclaim.com/logo.png",
     "email": "info@ExClaimStatedTs.com",
-    "telephone": "+1-555-STEPHEN",
+    "telephone": "+1-555-Exclaim",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://instagram.com/stephen",
-      "https://facebook.com/stephen"
+      "https://instagram.com/Exclaim",
+      "https://facebook.com/Exclaim"
     ]
   };
 
@@ -90,14 +90,14 @@ export default function ContactHero() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Stephen",
-            "url": "https://stephen.com",
+            "name": "Exclaim",
+            "url": "https://Exclaim.com",
             "logo": "/LOGO.png",
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+1-555-STEPHEN",
+              "telephone": "+1-555-Exclaim",
               "contactType": "customer service",
-              "email": "hello@stephen.com"
+              "email": "hello@Exclaim.com"
             }
           })
         }}
@@ -113,7 +113,7 @@ export default function ContactHero() {
         style={{ y, opacity }}
         itemScope
         itemType="https://schema.org/WebPageElement"
-        aria-label="Contact hero section for Stephen's sustainable statement tee brand"
+        aria-label="Contact hero section for Exclaim's sustainable statement tee brand"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -125,7 +125,7 @@ export default function ContactHero() {
           >
             <Image
               src="/homeherobg.png"
-              alt="Stephen's sustainable statement tee collection - contact us for eco-friendly fashion and meaningful clothing"
+              alt="Exclaim's sustainable statement tee collection - contact us for eco-friendly fashion and meaningful clothing"
               width={1400}
               height={1400}
               className="w-full h-full object-cover object-center"
@@ -170,7 +170,7 @@ export default function ContactHero() {
                   transition={{ delay: 1.2, duration: 0.8 }}
                   itemProp="description"
                 >
-                  Ready to make a statement? Contact Stephen for sustainable fashion inquiries, 
+                  Ready to make a statement? Contact Exclaim for sustainable fashion inquiries, 
                   custom orders, wholesale opportunities, or any questions about our eco-friendly statement tees.
                 </motion.p>
 
