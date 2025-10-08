@@ -98,7 +98,7 @@ export default function AboutContent() {
             {/* Right - Second Paragraph */}
             <motion.div className="lg:col-span-1" variants={itemVariants}>
               <p className="text-black text-sm leading-relaxed">
-                Our team brings together passionate designers, sustainability advocates, and storytellers who share one mission — to push boundaries in conscious fashion. We believe that great clothing should be accessible, sustainable, and impactful — principles that shape every tee we create.
+                Our team brings together passionate designers, sustainability advocates, and storytellers who share one mission to push boundaries in conscious fashion. We believe that great clothing should be accessible, sustainable, and impactful principles that shape every tee we create.
               </p>
             </motion.div>
           </motion.div>
@@ -136,11 +136,12 @@ export default function AboutContent() {
             >
               <header>
                 <h3 className="text-3xl sm:text-4xl font-bold text-black mb-3 sm:mb-4">Our Philosophy</h3>
-                <p className="text-sm sm:text-md text-black">Sustainable fashion through meaningful design.</p>
+                <p className="text-sm sm:text-md text-black">At ExClaim, we believe quality speaks louder than quantity.</p>
               </header>
               <div>
                 <p className="text-sm sm:text-md text-black font-bold leading-relaxed">
-                  At Stephen, we approach fashion and sustainability as a unified mission. We recognize that a successful statement tee is not just about aesthetics its about creating a meaningful experience that s thoughtfully crafted using premium bamboo-cotton blend materials. Every design is implemented with care for both the wearer and the environment, ensuring that your personal expression doesn t come at the cost of our planets wellbeing.
+                   We believe a true statement tee is more than just aesthetics it’s a form of self-expression that connects meaning, comfort, and mindfulness.
+Each piece is thoughtfully crafted from a premium bamboo-cotton blend, merging softness, strength, and environmental care. Every design is created with respect for both the wearer and the planet, proving that style and sustainability can coexist without compromise
                 </p>
               </div>
             </motion.div>
@@ -152,11 +153,13 @@ export default function AboutContent() {
             >
               <header>
                 <h3 className="text-3xl sm:text-4xl font-bold text-black mb-3 sm:mb-4">Materials & Craftsmanship</h3>
-                <p className="text-sm sm:text-md text-black">Premium bamboo-cotton blend for ultimate comfort.</p>
+                <p className="text-sm sm:text-md text-black">At ExClaim, we believe quality speaks louder than quantity.</p>
               </header>
               <div>
                 <p className="text-sm sm:text-md font-bold text-black leading-relaxed">
-                  At Stephen, we prioritize quality over quantity in every aspect of our production. We source premium bamboo-cotton blend materials that are naturally breathable, incredibly soft, and environmentally sustainable. By working closely with ethical manufacturers, we ensure that every statement tee meets our high standards for comfort, durability, and positive environmental impact. Our commitment to sustainable practices means you can wear your values with pride.
+                   Every statement tee begins with a premium bamboo-cotton blend naturally breathable, ultra-soft, and environmentally conscious.
+We collaborate with ethical manufacturers who share our dedication to responsible production, ensuring each piece meets the highest standards of comfort, durability, and design integrity.
+Our commitment to sustainable craftsmanship means you’re not just wearing a tee you’re wearing your values
                 </p>
               </div>
             </motion.div>
@@ -172,7 +175,9 @@ export default function AboutContent() {
               </header>
               <div>
                 <p className="text-sm sm:text-md font-bold text-black leading-relaxed">
-                  Our mission is to create statement tees that inspire, resonate, and drive meaningful change in both fashion and society. At Stephen, we believe that clothing is a powerful tool for self-expression and environmental stewardship. Each tee is an opportunity to make a statement—about who you are, what you believe in, and how you want to impact the world. We are not just creating clothing; we are fostering a community of conscious consumers who choose sustainability without compromising on style or comfort.
+                  At ExClaim, our mission is to create statement tees that inspire, resonate, and spark meaningful change — in both fashion and society.
+We believe clothing is more than fabric; it’s a medium for self-expression and environmental consciousness. Each tee is an opportunity to make a statement about who you are, what you believe in, and the change you want to see in the world.
+We’re not just designing apparel; we’re building a community of conscious individuals who choose sustainability, authenticity, and comfort without compromise.
                 </p>
               </div>
             </motion.div>
