@@ -18,18 +18,7 @@ export const metadata: Metadata = {
   description: "Express yourself with our premium collection of sustainable statement tees. Eco-friendly bamboo-cotton blend clothing with meaningful messages for conscious consumers.",
   keywords: "sustainable fashion, statement tees, eco-friendly clothing, bamboo cotton, organic apparel, conscious fashion, meaningful clothing",
   authors: [{ name: "Exclaim" }],
-  icons: {
-    icon: [
-      { url: '/LOGO.png?v=3', sizes: '32x32', type: 'image/png' },
-      { url: '/LOGO.png?v=3', sizes: '16x16', type: 'image/png' },
-    ],
-    shortcut: '/LOGO.png?v=3',
-    apple: '/LOGO.png?v=3',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/LOGO.png?v=3',
-    },
-  },
+  icons: '/LOGO.png?v=12',
   openGraph: {
     title: "Exclaim - Sustainable Statement Tees",
     description: "Express yourself with our premium collection of sustainable statement tees.",
@@ -46,11 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/LOGO.png?v=3" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/LOGO.png?v=3" />
-        <link rel="shortcut icon" href="/LOGO.png?v=3" />
-        <link rel="apple-touch-icon" href="/LOGO.png?v=3" />
-        <link rel="apple-touch-icon-precomposed" href="/LOGO.png?v=3" />
+        <link rel="icon" href="/LOGO.png?v=12" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
